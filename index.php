@@ -1,75 +1,38 @@
 <?php
-  session_start();
-  include("includes/db.php");
-  include("functions/functions.php");
+	// Including the datbase.
+	require("includes/db.php");
+	/*
+		Accoding to this function, if the file db.php is not present, then the website will not work.
+	*/
+	include("functions/functions.php");
+	// Creating a Query
+	$query_home = "SELECT * FROM home";
+	$query_section_control = "SELECT * FROM section_control";
+	$query_social_media = "SELECT * FROM social_media";
+
+	// Executing a Query
+	$run_home = mysqli_query($db,$query_home);
+	$run_section_control = mysqli_query($db,$query_section_control);
+	$run_social_media = mysqli_query($db,$query_social_media);
+	
+	// Fetching the Data
+	$user_data_home = mysqli_fetch_array($run_home);
+	$user_data_section_control = mysqli_fetch_array($run_section_control);
+	$user_data_social_media = mysqli_fetch_array($run_social_media);
+
+	// Checking the obtained Data
+	// print_r($user_data_home);
+	// print_r($user_data_section_control);
+	// print_r($user_data_social_media);
 ?>
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>Aashish Bansal</title>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<meta name="description" content="I am a web developer, software engineer, and Data Analyst currently living in Alwar, Rajasthan, India. My interests range from Data Science to Machine Learning. I am also interested in Artificial Intelligence, Quantum Computing, and web development.">
-		<link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
-		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
-
-		<link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
-		<link rel="stylesheet" href="css/animate.css">
-		<link rel="stylesheet" href="css/owl.carousel.min.css">
-		<link rel="stylesheet" href="css/owl.theme.default.min.css">
-		<link rel="stylesheet" href="css/magnific-popup.css">
-
-		<link rel="stylesheet" href="css/aos.css">
-
-		<link rel="stylesheet" href="css/ionicons.min.css">
-		
-		<link rel="stylesheet" href="css/flaticon.css">
-		<link rel="stylesheet" href="css/icomoon.css">
-		<link rel="stylesheet" href="css/card.css">
-		<link rel="stylesheet" href="css/style.css">
-
-		<script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+		<title><?php print($user_data_home['title']); ?></title>
+		<?php require("includes/head.php"); ?>
 	</head>
 	<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
-		<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
-			<div class="container">
-				<a class="navbar-brand" href="index.html"><span>A</span>ashish Bansal</a>
-				<button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-					<span class="oi oi-menu"></span> Menu
-				</button>
-				<div class="collapse navbar-collapse" id="ftco-nav">
-					<ul class="navbar-nav nav ml-auto">
-						<li class="nav-item"><a href="index.html" class="nav-link"><span>Home</span></a></li>
-						<li class="nav-item"><a href="index.html" class="nav-link"><span>About</span></a></li>
-						<li class="nav-item"><a href="education.html" class="nav-link"><span>Education</span></a></li>
-						<li class="nav-item"><a href="experience.html" class="nav-link"><span>Experience</span></a></li>
-						<li class="nav-item"><a href="projects.html" class="nav-link"><span>Projects</span></a></li>
-						<li class="nav-item"><a href="skills.html" class="nav-link"><span>Skills & Languages</span></a></li>
-						<li class="nav-item"><a href="badges.html" class="nav-link"><span>Badges</span></a></li>
-						<li class="nav-item"><a href="certificates.html" class="nav-link"><span>Certificates</span></a></li>
-						<li class="nav-item"><a href="courses.html" class="nav-link"><span>Courses</span></a></li>
-						<li class="nav-item"><a href="organization.html" class="nav-link"><span>Organizations</span></a></li>
-						<li class="nav-item"><a href="competitions.html" class="nav-link"><span>Competitions</span></a></li>
-						<li class="nav-item"><a href="https://drive.google.com/file/d/1DthhTrXY11O14l2EvQvG1CsTNJoElosS/view?usp=sharing" class="nav-link"><span>Resume</span></a></li>
-						<li class="nav-item"><a href="contact.html" class="nav-link"><span>Contact Me</span></a></li>
-					</ul>
-					<!-- <ul>
-						<li><a href="education.html">Education</a></li>
-						<li><a href="experience.html">Experience</a></li>
-						<li><a href="projects.html">Projects</a></li>
-						<li><a href="skills.html">Skills</a></li>
-						<li><a href="languages.html">Languages</a></li>
-						<li><a href="#page-6">Industrial Training</a></li>
-						<li><a href="#page-7">Management Internship</a></li>
-						<li><a href="badges.html">Learning Badges</a></li>
-						<li><a href="badges.html">Skills Badge</a></li>
-						<li><a href="courses.html">Courses</a></li>
-						<li><a href="organization.html">Organizations</a></li>
-						<li><a href="competitions.html">Certificate of Participation</a></li>
-					</ul> -->
-				</div>
-			</div>
-		</nav>
+		<?php require("includes/navbar.php"); ?>
 		<section class="hero-wrap js-fullheight">
 			<div class="overlay"></div>
 			<div class="container">
@@ -77,12 +40,12 @@
 					<div class="col-lg-8 col-md-6 ftco-animate d-flex align-items-center">
 						<div class="text text-center">
 							<span class="subheading">Hey! I am</span>
-							<h1>Aashish Bansal</h1>
+							<h1><?php print($user_data_home['title']); ?></h1>
 							<h2>I'm a 
 								<span
 									class="txt-rotate"
 									data-period="500"
-									data-rotate='[ "Data Science Enthusiast.", "Information Technology Pre-final", "Web Developer.", "Software Developer.", "Blockchain Enthusiast", "eLearner"]'>
+									data-rotate='[ "Data Science Enthusiast.", "ML Engineer.", "Information Technology Pre-final.", "Web Developer.", "Software Developer.", "Blockchain Enthusiast.", "eLearner."]'>
 								</span>
 							</h2>
 						</div>
@@ -107,12 +70,12 @@
 								<h1 class="big">About</h1>
 								<h2 class="mb-4">About Me</h2>
 								<ul class="about-info mt-4 px-md-0 px-2">
-									<li class="d-flex"><span>Name:</span> <span>Aashish Bansal</span></li>
-									<li class="d-flex"><span>Date of birth:</span> <span>August 22, 2000</span></li>
-									<li class="d-flex"><span>Address:</span> <span>Bangalore, Karnataka, India</span></li>
-									<li class="d-flex"><span>Zip code:</span> <span>152107</span></li>
-									<li class="d-flex"><span>Email:</span> <span>aashish22bansal@gmail.com</span></li>
-									<li class="d-flex"><span>Phone: </span> <span>+91-7829140001</span></li>
+									<li class="d-flex"><span>Name:</span> <span><?php print($user_data_home['title']); ?></span></li>
+									<li class="d-flex"><span>Date of birth:</span> <span><?php print($user_data_home['dob']); ?></span></li>
+									<li class="d-flex"><span>Address:</span> <span><?php print($user_data_home['address']); ?></span></li>
+									<li class="d-flex"><span>Zip code:</span> <span><?php print($user_data_home['zip_code']); ?></span></li>
+									<li class="d-flex"><span>Email:</span> <span><?php print($user_data_home['email']); ?></span></li>
+									<li class="d-flex"><span>Phone: </span> <span>+91-<?php print($user_data_home['phone']); ?></span></li>
 								</ul>
 							</div>
 						</div>
@@ -149,128 +112,18 @@
 							<img class="card-img-top" src="images/Aashish2.jpeg" alt="Card image cap">
 							<div class="card-body">
 								<h5 class="card-title">Contact me</h5>
-								<p class="card-text"> I am a Hardworking, Sincere, and Analytical Professional. My Passion is to learn, code, and do sports. As a natural-born go-getter, my passion has continuously driven me to expand my knowledge, experience, and relationships. With a strong background and diverse skill set, I'm confident in the creative ideas and successful solutions I bring to the table. I am very interested in Coding and Learning. I've always tried to take up challenges and perform my best to improve my skills and efficiency to the highest level possible. I look forward to working with enthusiasm to have a chance to prove myself.</p>
+								<p class="card-text"><?php print($user_data_home['subtitle']); ?></p>
 								<a href="contact.html" class="btn btn-primary">Contact me</a>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</section>
-		<!--
-			<section class="ftco-section ftco-partner">
-				<div class="container">
-					<div class="row">
-						<div class="col-sm ftco-animate">
-							<a href="#" class="partner"><img src="images/partner-1.png" class="img-fluid" alt="Colorlib Template"></a>
-						</div>
-						<div class="col-sm ftco-animate">
-							<a href="#" class="partner"><img src="images/partner-2.png" class="img-fluid" alt="Colorlib Template"></a>
-						</div>
-						<div class="col-sm ftco-animate">
-							<a href="#" class="partner"><img src="images/partner-3.png" class="img-fluid" alt="Colorlib Template"></a>
-						</div>
-						<div class="col-sm ftco-animate">
-							<a href="#" class="partner"><img src="images/partner-4.png" class="img-fluid" alt="Colorlib Template"></a>
-						</div>
-						<div class="col-sm ftco-animate">
-							<a href="#" class="partner"><img src="images/partner-5.png" class="img-fluid" alt="Colorlib Template"></a>
-						</div>
-					</div>
-				</div>
-			</section>
-		-->
-		<!-- <section class="ftco-section ftco-no-pb goto-here" id="resume-section">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-3">
-						<nav id="navi">
-							<ul>
-                                <li><a href="education.html">Education</a></li>
-                                <li><a href="experience.html">Experience</a></li>
-                                <li><a href="projects.html">Projects</a></li>
-                                <li><a href="skills.html">Skills</a></li>
-                                <li><a href="languages.html">Languages</a></li>
-                                <!li><!a href="#page-6">Industrial Training<!/a><!/li>
-                                <!li><!a href="#page-7">Management Internship<!/a><!/li>
-                                <li><a href="badges.html">Learning Badges</a></li>
-                                <li><a href="badges.html">Skills Badge</a></li>
-                                <li><a href="courses.html">Courses</a></li>
-                                <li><a href="organization.html">Organizations</a></li>
-                                <li><a href="competitions.html">Certificate of Participation</a></li>
-							</ul>
-						</nav>
-					</div>
-				</div>
-			</div>
-		</section> -->
-
-		
-		<!-- FOOTER -->
-		<footer class="ftco-footer ftco-section">
-		<div class="container">
-			<div class="row mb-5">
-			<div class="col-md">
-				<div class="ftco-footer-widget">
-				<h2 class="ftco-heading-2">Let's be internet BFFs</h2>
-				<ul class="ftco-footer-social list-unstyled">
-					<li class="ftco-animate"><a href="https://www.linkedin.com/in/aashish22bansal/"  rel="noopener noreferrer" target="_blank"><span class="icon-linkedin"></span></a></li>
-					<li class="ftco-animate"><a href="https://www.facebook.com/profile.php?id=100005578695799&sk=about"  rel="noopener noreferrer" target="_blank"><span class="icon-facebook"></span></a></li>
-					<li class="ftco-animate"><a href="https://www.instagram.com/aashish2208bansal/"  rel="noopener noreferrer" target="_blank"><span class="icon-instagram"></span></a></li>
-					<li class="ftco-animate"><a href="mailto:aashish22bansal@gmail.com"><span class="icon-google"></span></a></li>
-					<li class="ftco-animate"><a href="https://api.whatsapp.com/send?phone=917829140001"  rel="noopener noreferrer" target="_blank"><span class="icon-whatsapp"></span></a></li>
-				</ul>
-				</div>
-			</div>
-			<div class="col-md">
-				<div class="ftco-footer-widget mb-4">
-				<h2 class="ftco-heading-2">Hire me</h2>
-				<ul class="list-unstyled">
-					<li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Data Science Enthusiast</a></li>
-					<li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Information Technology Pre-final</a></li>
-					<li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Web Development</a></li>
-					<li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Data Analysis</a></li>
-					<li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Blockchain</a></li>
-				</ul>
-				</div>
-			</div>
-			<div class="col-md">
-				<div class="ftco-footer-widget mb-4">
-					<h2 class="ftco-heading-2">Have a Questions?</h2>
-					<div class="block-23 mb-3">
-					<ul>
-						<li><span class="icon icon-map-marker"></span><span class="text">Punjab, India.</span></li>
-						<li><a href="tel://+917829140001"><span class="icon icon-phone"></span><span class="text">+91-7829140001</span></a></li>
-						<li><a href="mailto:aashish22bansal@gmail.com"><span class="icon icon-envelope"></span><span class="text">aashish22bansal@gmail.com</span></a></li>
-					</ul>
-					</div>
-				</div>
-			</div>
-			</div>
-
-		</div>
-		</footer>
-		
-	
-
-	<!-- loader -->
-	<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
-
-
-	<script src="js/jquery.min.js"></script>
-	<script src="js/jquery-migrate-3.0.1.min.js"></script>
-	<script src="js/popper.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/jquery.easing.1.3.js"></script>
-	<script src="js/jquery.waypoints.min.js"></script>
-	<script src="js/jquery.stellar.min.js"></script>
-	<script src="js/owl.carousel.min.js"></script>
-	<script src="js/jquery.magnific-popup.min.js"></script>
-	<script src="js/aos.js"></script>
-	<script src="js/jquery.animateNumber.min.js"></script>
-	<script src="js/scrollax.min.js"></script>
-	
-	<script src="js/main.js"></script>
+		</section>	
+		<?php
+			require("includes/footer.php");
+			require("includes/foot.php");
+		?>
 		
 	</body>
 </html>
