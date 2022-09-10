@@ -12,7 +12,7 @@ CREATE TABLE Education(
 );
 INSERT INTO Education VALUES("Vellore Institute of Technology","Vellore","Bachelor of Technology","Information Technology",2019,2023,"CGPA: 8.58","Bachelor's Degree");
 INSERT INTO Education VALUES("GEAR Innovative International School","Bangalore","Science","Science",2017,2019,"Percentage: 86.6%","Pre-University");
-INSERT INTO Education VALUES("GEAR Innovative International School","Bangalore","","",2016,2017,"CGOA: 9.4","Matriculation");
+INSERT INTO Education VALUES("GEAR Innovative International School","Bangalore","","",2016,2017,"CGPA: 9.4","Matriculation");
 
 CREATE TABLE Subjects_Undergraduate(
 	CourseCode VARCHAR(7) PRIMARY KEY,

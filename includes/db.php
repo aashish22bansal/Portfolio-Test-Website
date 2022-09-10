@@ -1,8 +1,8 @@
 <?php
     $servername = "localhost";
-    $username = "root";
-    $password = "123Aashish456";
-    $databaseName = "myportfolio";
+    $username = "id19547945_root";
+    $password = "AHgx=Wf0SXxCU5w~";
+    $databaseName = "id19547945_myportfolio";
     mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
     $db = mysqli_connect($servername,$username,$password,$databaseName,"8080") or die("Database Not Found!");
     // Create connection
