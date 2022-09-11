@@ -1,26 +1,114 @@
 CREATE DATABASE myportfolio;
+USE myportfolio;
+USE id19547945_myportfolio;
+
+CREATE TABLE HOME(
+                     ID INT PRIMARY KEY AUTO_INCREMENT,
+                     Title VARCHAR(50),
+                     DoB DATE,
+                     Address VARCHAR(1000),
+                     ZIP_Code INT,
+                     Email VARCHAR(100),
+                     Phone VARCHAR(10),
+                     Subtitle VARCHAR(2000),
+                     ShowIcones INT,
+                     Link_Resume VARCHAR(1000),
+                     Link_LinkedIn VARCHAR(1000),
+                     Link_Facebook VARCHAR(1000),
+                     Link_Instagram VARCHAR(1000),
+                     Link_YouTube VARCHAR(1000),
+                     Link_GitHub VARCHAR(1000),
+                     Link_HackerRank VARCHAR(1000),
+                     Link_CodeChef VARCHAR(1000),
+                     Link_CodeForces VARCHAR(1000),
+                     Link_LeetCode VARCHAR(1000)
+);
+INSERT INTO HOME VALUES(
+                           1,
+                           "Aashish Bansal",
+                           '2000-08-22',
+                           "Malout, Punjab, India",
+                           "152107",
+                           "developwithaashish@gmail.com",
+                           "7829140001",
+                           "I am a Hardworking, Sincere, and Analytical Professional. My Passion is to learn, code, and do sports. As a natural-born go-getter, my passion has continuously driven me to expand my knowledge, experience, and relationships. With a strong background and diverse skill set, I'm confident in the creative ideas and successful solutions I bring to the table. I am very interested in Coding and Learning. I've always tried to take up challenges and perform my best to improve my skills and efficiency to the highest level possible. I look forward to working with enthusiasm to have a chance to prove myself.",
+                           1,
+                           "https://drive.google.com/file/d/17RgJwHL4MLDQU41nWMK9GmYeGdRbDkAq/view",
+                           "https://linkedin.com/in/aashish22bansal",
+                           "https://facebook.com/aashish22bansal",
+                           "https://instagram.com/aashish2208bansal",
+                           "https://www.youtube.com/channel/UCA8NfnVLMgMz0Q7iqIz4-UQ",
+                           "https://github.com/aashish22bansal",
+                           "https://www.hackerrank.com/aashish22bansal?hr_r=1",
+                           "https://www.codechef.com/users/aashish_bansal",
+                           "https://codeforces.com/profile/aashish22bansal",
+                           "https://leetcode.com/aashish22bansal/"
+                       );
+
+CREATE TABLE Social_Media(
+                             Link_Resume VARCHAR(1000),
+                             Link_LinkedIn VARCHAR(1000),
+                             Link_Facebook VARCHAR(1000),
+                             Link_Instagram VARCHAR(1000),
+                             Link_YouTube VARCHAR(1000),
+                             Link_GitHub VARCHAR(1000),
+                             Link_HackerRank VARCHAR(1000),
+                             Link_CodeChef VARCHAR(1000),
+                             Link_CodeForces VARCHAR(1000),
+                             Link_LeetCode VARCHAR(1000)
+);
+INSERT INTO Social_Media VALUES(
+                                   "https://drive.google.com/file/d/17RgJwHL4MLDQU41nWMK9GmYeGdRbDkAq/view",
+                                   "https://linkedin.com/in/aashish22bansal",
+                                   "https://facebook.com/aashish22bansal",
+                                   "https://instagram.com/aashish2208bansal",
+                                   "https://www.youtube.com/channel/UCA8NfnVLMgMz0Q7iqIz4-UQ",
+                                   "https://github.com/aashish22bansal",
+                                   "https://www.hackerrank.com/aashish22bansal?hr_r=1",
+                                   "https://www.codechef.com/users/aashish_bansal",
+                                   "https://codeforces.com/profile/aashish22bansal",
+                                   "https://leetcode.com/aashish22bansal/"
+                               );
+
+CREATE TABLE Section_Control(
+                                ID INT PRIMARY KEY,
+                                Home INT,
+                                About INT,
+                                Education INT,
+                                Experience  INT,
+                                Projects INT,
+                                Skills_n_Languages INT,
+                                Badges INT,
+                                Certificates INT,
+                                Courses INT,
+                                Organizations INT,
+                                Competitions INT,
+                                Resume_Link INT,
+                                Contact  INT
+);
+INSERT INTO Section_Control VALUES(1,1,1,1,1,1,1,1,1,1,1,1,1,1);
 
 CREATE TABLE Education(
-	NameOfCollege VARCHAR(255),
-    City VARCHAR(255),
-    Program VARCHAR(255),
-    Department VARCHAR(255),
-    StartYear INT,
-    EndYear INT,
-    Score VARCHAR(30),
-    EducationCategory VARCHAR(50)
+                          NameOfCollege VARCHAR(255),
+                          City VARCHAR(255),
+                          Program VARCHAR(255),
+                          Department VARCHAR(255),
+                          StartYear INT,
+                          EndYear INT,
+                          Score VARCHAR(30),
+                          EducationCategory VARCHAR(50)
 );
 INSERT INTO Education VALUES("Vellore Institute of Technology","Vellore","Bachelor of Technology","Information Technology",2019,2023,"CGPA: 8.58","Bachelor's Degree");
 INSERT INTO Education VALUES("GEAR Innovative International School","Bangalore","Science","Science",2017,2019,"Percentage: 86.6%","Pre-University");
 INSERT INTO Education VALUES("GEAR Innovative International School","Bangalore","","",2016,2017,"CGPA: 9.4","Matriculation");
 
 CREATE TABLE Subjects_Undergraduate(
-	CourseCode VARCHAR(7) PRIMARY KEY,
-    CourseTitle VARCHAR(255),
-    CourseType VARCHAR(5),
-    Semester INT,
-    Credits INT,
-    CourseDistribution VARCHAR(10)
+                                       CourseCode VARCHAR(7) PRIMARY KEY,
+                                       CourseTitle VARCHAR(255),
+                                       CourseType VARCHAR(5),
+                                       Semester INT,
+                                       Credits INT,
+                                       CourseDistribution VARCHAR(10)
 );
 INSERT INTO Subjects_Undergraduate VALUES("CHY1002","Environmental Sciences","TH",1,3,"Non-Credit");
 INSERT INTO Subjects_Undergraduate VALUES("CHY1701","Engineering Chemistry","ETL",1,4,"UC");
@@ -76,8 +164,8 @@ INSERT INTO Subjects_Undergraduate VALUES("MGT1022","Lean Start-up Management","
 INSERT INTO Subjects_Undergraduate VALUES("STS3204","JAVA Programming and Software Engineering Fundamentals","SS",6,1,"UC");
 
 CREATE TABLE Subjects_Pre_University(
-	SubjectCode VARCHAR(3) PRIMARY KEY,
-    SubjectName VARCHAR(50)
+                                        SubjectCode VARCHAR(3) PRIMARY KEY,
+                                        SubjectName VARCHAR(50)
 );
 INSERT INTO Subjects_Pre_University VALUES("041","Mathematics");
 INSERT INTO Subjects_Pre_University VALUES("042","Physics");
@@ -89,8 +177,8 @@ INSERT INTO Subjects_Pre_University VALUES("502","Physical and Health Education"
 INSERT INTO Subjects_Pre_University VALUES("503","General Studies");
 
 CREATE TABLE Subjects_Matriculation(
-	SubjectCode VARCHAR(3) PRIMARY KEY,
-    SubjectName VARCHAR(50)
+                                       SubjectCode VARCHAR(3) PRIMARY KEY,
+                                       SubjectName VARCHAR(50)
 );
 INSERT INTO Subjects_Matriculation VALUES("041","Mathematics");
 INSERT INTO Subjects_Matriculation VALUES("085","Hindi Course-B");
@@ -99,20 +187,20 @@ INSERT INTO Subjects_Matriculation VALUES("087","Social Studies");
 INSERT INTO Subjects_Matriculation VALUES("101","English Communication");
 
 CREATE TABLE Experience(
-	StartMonth VARCHAR(10),
-    StartYear INT,
-    EndMonth VARCHAR(10),
-    EndYear INT,
-	Title VARCHAR(255),
-    EmploymentType VARCHAR(255),
-    CompanyName VARCHAR(255),
-    CompanyLink LONGTEXT,
-    Location VARCHAR(255),
-    DescriptionOfJob LONGTEXT,
-    NoOfCertificateImages INT,
-    CertificateImageNames LONGTEXT,
-    CertificateImageLinks LONGTEXT,
-    CompanyImageName VARCHAR(255)
+                           StartMonth VARCHAR(10),
+                           StartYear INT,
+                           EndMonth VARCHAR(10),
+                           EndYear INT,
+                           Title VARCHAR(255),
+                           EmploymentType VARCHAR(255),
+                           CompanyName VARCHAR(255),
+                           CompanyLink LONGTEXT,
+                           Location VARCHAR(255),
+                           DescriptionOfJob LONGTEXT,
+                           NoOfCertificateImages INT,
+                           CertificateImageNames LONGTEXT,
+                           CertificateImageLinks LONGTEXT,
+                           CompanyImageName VARCHAR(255)
 );
 INSERT INTO Experience VALUES("May",2022,"Sep",2022,"Jr. Developer",			"Internship",														"River Bend Data Solutions",				"https://www.linkedin.com/in/river-bend-data-solutions-3454281b8/?originalSubdomain=in","Remote","Development of Application to Help Medical Diagnosis.",0,"","","RBDS.jpg");
 INSERT INTO Experience VALUES("Jan",2022,"Feb",2022,"ML Engineer",				"Training & Internship - Data Science",								"NEO 5.0",									"https://neoeducation.in/",																"Remote","This was a five week Training & Internship program offered after clearing the Round 1 of NEO5. The project worked on at the end of this Internship is YouTube Adview Prediction.",4,"NEO5 - Participation Certificate.jpg,NEO5 - Round 1 Clearance Certificate.jpg,NEO5 - Certificate of Training.jpg,NEO5 - Certificate of Internship.jpg","https://drive.google.com/file/d/1JEHBHyv9Y2t6csntfyqLgCayfWbqsDdx/view,https://drive.google.com/file/d/1yWDfJYCbwXuxV5pyvjAquVUZtKlIpX0K/view,https://drive.google.com/file/d/1oUYo5C0e2RGCfb9qhfYwx5wZcTUcdyPz/view,https://drive.google.com/file/d/1mxonIQjN5qvQiwz0CoqLm37HoRnEYkwA/view","neo.png");
@@ -123,59 +211,59 @@ INSERT INTO Experience VALUES("Mar",2020,"Jul",2020,"Deep Learning Engineer",	"T
 INSERT INTO Experience VALUES("Dec",2019,"Jan",2020,"ML Engineer",				"Training & Internship - Artificial Intelligence",					"Verzeo",									"https://learn.verzeo.in/","Remote","",2,"Verzeo AI - Course Completion Certificate.jpg,Verzeo AI - internship certificate.jpg","https://drive.google.com/file/d/1xQXNHhRxoDS5QCRS5MSmk0XrqiAvw3gy/view,https://drive.google.com/file/d/1zzI9wDlg22RWqZPqy6hfBDQLfMD7RWmw/view","verzeo.png");
 
 CREATE TABLE Projects(
-	CompletionMonth VARCHAR(10),
-    CompletionYear INT,
-    TitleOfProject VARCHAR(255),
-    Company VARCHAR(255),
-    ProjectCategory VARCHAR(255),
-    ProjectType VARCHAR(255),
-    ProjectDescription LONGTEXT,
-    ProjectGitHubLink LONGTEXT,
-    ProjectDocumentLink LONGTEXT
+                         CompletionMonth VARCHAR(10),
+                         CompletionYear INT,
+                         TitleOfProject VARCHAR(255),
+                         Company VARCHAR(255),
+                         ProjectCategory VARCHAR(255),
+                         ProjectType VARCHAR(255),
+                         ProjectDescription LONGTEXT,
+                         ProjectGitHubLink LONGTEXT,
+                         ProjectDocumentLink LONGTEXT
 );
 
 CREATE TABLE IndustrySkills(
-	IndustrySkillName VARCHAR(255) PRIMARY KEY,
-    IndustrySkillImageName VARCHAR(255),
-	IndustrySkillCategory VARCHAR(255),
-    IndustrySkillProficiency INT
+                               IndustrySkillName VARCHAR(255) PRIMARY KEY,
+                               IndustrySkillImageName VARCHAR(255),
+                               IndustrySkillCategory VARCHAR(255),
+                               IndustrySkillProficiency INT
 );
 
 CREATE TABLE ProgrammingSkills(
-	ProgrammingLanguageName VARCHAR(255) PRIMARY KEY,
-    ProgrammingLanguageImageName VARCHAR(255),
-    ProgrammingLanguageCategory VARCHAR(255),
-    ProgrammingLanguageProficiency INT
+                                  ProgrammingLanguageName VARCHAR(255) PRIMARY KEY,
+                                  ProgrammingLanguageImageName VARCHAR(255),
+                                  ProgrammingLanguageCategory VARCHAR(255),
+                                  ProgrammingLanguageProficiency INT
 );
 
 CREATE TABLE BADGES(
-	BadgeTitle VARCHAR(255) PRIMARY KEY,
-	BadgeCompletionMonth VARCHAR(255),
-    BadgeCompletionYear INT,
-    BadgeIssuingCompanyName VARCHAR(255),
-    BadgeAuthorizationCompanyName VARCHAR(255),
-    BadgeDescription LONGTEXT,
-    BadgeLink LONGTEXT
+                       BadgeTitle VARCHAR(255) PRIMARY KEY,
+                       BadgeCompletionMonth VARCHAR(255),
+                       BadgeCompletionYear INT,
+                       BadgeIssuingCompanyName VARCHAR(255),
+                       BadgeAuthorizationCompanyName VARCHAR(255),
+                       BadgeDescription LONGTEXT,
+                       BadgeLink LONGTEXT
 );
 
 CREATE TABLE Certificates(
-	CertificateTitle VARCHAR(255) PRIMARY KEY,
-	CertificateIssueDate INT,
-    CertificateIssueMonth VARCHAR(255),
-    CertificateIssueYear INT,
-    CertificateIssueCompany VARCHAR(255),
-    CertificateImageName VARCHAR(255),
-    CertificateRemarks VARCHAR(255),
-    CertificateDescription LONGTEXT
+                             CertificateTitle VARCHAR(255) PRIMARY KEY,
+                             CertificateIssueDate INT,
+                             CertificateIssueMonth VARCHAR(255),
+                             CertificateIssueYear INT,
+                             CertificateIssueCompany VARCHAR(255),
+                             CertificateImageName VARCHAR(255),
+                             CertificateRemarks VARCHAR(255),
+                             CertificateDescription LONGTEXT
 );
 
 CREATE TABLE Courses(
-	CourseCertificateID VARCHAR(255) PRIMARY KEY,
-	CourseCompletionMonth VARCHAR(10),
-    CourseCompletionYear INT,
-    CourseTitle VARCHAR(255),
-    CourseCompanyProvider VARCHAR(255),
-    CertificateLink LONGTEXT,
-    CertificateCompanyImageName VARCHAR(255)
+                        CourseCertificateID VARCHAR(255) PRIMARY KEY,
+                        CourseCompletionMonth VARCHAR(10),
+                        CourseCompletionYear INT,
+                        CourseTitle VARCHAR(255),
+                        CourseCompanyProvider VARCHAR(255),
+                        CertificateLink LONGTEXT,
+                        CertificateCompanyImageName VARCHAR(255)
 );
 

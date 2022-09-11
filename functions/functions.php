@@ -18,9 +18,9 @@
 	// // $query_
 
 	// // Executing a Query
-	$run_home = mysqli_query($db,$query_home);
-	$run_section_control = mysqli_query($db,$query_section_control);
-	$run_social_media = mysqli_query($db,$query_social_media);
+	$run_home = mysqli_query($connection,$query_home);
+	$run_section_control = mysqli_query($connection,$query_section_control);
+	$run_social_media = mysqli_query($connection,$query_social_media);
 	
 	// // Fetching the Data
 	$user_data_home = mysqli_fetch_array($run_home);

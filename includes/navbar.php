@@ -8,12 +8,12 @@
 					<span class="oi oi-menu"></span> Menu
 				</button>
 				<?php 
-					if($user_data_home['showicons']){
+					if($user_data_home['ShowIcones']){
 				?>
 						<div class="collapse navbar-collapse" id="ftco-nav">
 							<ul class="navbar-nav nav ml-auto">
 								<?php 
-									if($user_data_section_control['home']){	
+									if($user_data_section_control['Home']){
 								?>
 										<li class="nav-item"><a href="index.php" class="nav-link"><span>Home</span></a></li>
 								<?php
@@ -21,7 +21,7 @@
 								?>
 
 								<?php 
-									if($user_data_section_control['education']){
+									if($user_data_section_control['Education']){
 										
 								?>
 										<li class="nav-item"><a href="education.php" class="nav-link"><span>Education</span></a></li>
@@ -30,7 +30,7 @@
 								?>
 
 								<?php 
-									if($user_data_section_control['experience']){
+									if($user_data_section_control['Experience']){
 								?>
 										<li class="nav-item"><a href="experience.html" class="nav-link"><span>Experience</span></a></li>
 								<?php
@@ -38,7 +38,7 @@
 								?>
 
 								<?php 
-									if($user_data_section_control['projects']){
+									if($user_data_section_control['Projects']){
 										
 								?>
 										<li class="nav-item"><a href="projects.html" class="nav-link"><span>Projects</span></a></li>
@@ -47,7 +47,7 @@
 								?>
 
 								<?php 
-									if($user_data_section_control['skills_languages']){
+									if($user_data_section_control['Skills_n_Languages']){
 										
 								?>
 										<li class="nav-item"><a href="skills.html" class="nav-link"><span>Skills & Languages</span></a></li>
@@ -56,7 +56,7 @@
 								?>
 
 								<?php 
-									if($user_data_section_control['badges']){
+									if($user_data_section_control['Badges']){
 										
 								?>
 										<li class="nav-item"><a href="badges.html" class="nav-link"><span>Badges</span></a></li>
@@ -65,7 +65,7 @@
 								?>
 
 								<?php 
-									if($user_data_section_control['certificates']){
+									if($user_data_section_control['Certificates']){
 										
 								?>
 										<li class="nav-item"><a href="certificates.html" class="nav-link"><span>Certificates</span></a></li>
@@ -74,7 +74,7 @@
 								?>
 
 								<?php 
-									if($user_data_section_control['courses']){
+									if($user_data_section_control['Courses']){
 										
 								?>
 										<li class="nav-item"><a href="courses.html" class="nav-link"><span>Courses</span></a></li>
@@ -83,7 +83,7 @@
 								?>
 
 								<?php 
-									if($user_data_section_control['organizations']){
+									if($user_data_section_control['Organizations']){
 										
 								?>
 										<li class="nav-item"><a href="organization.html" class="nav-link"><span>Organizations</span></a></li>
@@ -92,7 +92,7 @@
 								?>
 
 								<?php 
-									if($user_data_section_control['competitions']){
+									if($user_data_section_control['Competitions']){
 										
 								?>
 										<li class="nav-item"><a href="competitions.html" class="nav-link"><span>Competitions</span></a></li>
@@ -101,11 +101,11 @@
 								?>
 
 								<?php 
-									if($user_data_section_control['resume']){
+									if($user_data_section_control['Resume_Link']){
 										
 								?>
 										<li class="nav-item">
-											<a href="https://drive.google.com/file/d/1DthhTrXY11O14l2EvQvG1CsTNJoElosS/view?usp=sharing" class="nav-link">
+											<a href="<?php print($user_data_home['Link_Resume']); ?>" class="nav-link">
 												<span>Resume</span>
 											</a>
 										</li>
@@ -114,7 +114,7 @@
 								?>
 
 								<?php 
-									if($user_data_section_control['contact']){
+									if($user_data_section_control['Contact']){
 										
 								?>
 										<li class="nav-item"><a href="contact.html" class="nav-link"><span>Contact Me</span></a></li>
@@ -127,7 +127,7 @@
 						</div>
 
 				<?php 
-					} // end of if($user_data_home['showicons'])
+					} // end of if($user_data_home['ShowIcones'])
 				?>
 				
 			</div>

@@ -8,14 +8,20 @@
 	// Creating a Query
 	$query_list_of_EducationCategory = "SELECT DISTINCT EducationCategory FROM education";
     $query_UnderGraduate_Subject_Data = "SELECT * FROM subjects_undergraduate";
+    $query_PreUniversity_Subject_Data = "SELECT * FROM subjects_pre_university";
+    $query_Matriculation_Subject_Data = "SELECT * FROM subjects_matriculation";
 
 	// Executing a Query
-	$run_list_of_EducationCategory  = mysqli_query($db,$query_list_of_EducationCategory);
-    $run_UnderGraduate_Subject_Data  = mysqli_query($db,$query_UnderGraduate_Subject_Data);
+	$run_list_of_EducationCategory  = mysqli_query($connection,$query_list_of_EducationCategory);
+    $run_UnderGraduate_Subject_Data = mysqli_query($connection,$query_UnderGraduate_Subject_Data);
+    $run_PreUniversity_Subject_Data = mysqli_query($connection,$query_PreUniversity_Subject_Data);
+    $run_Matriculation_Subject_Data = mysqli_query($connection,$query_Matriculation_Subject_Data);
 	
 	// Fetching the Data
 	$user_data_list_of_EducationCategory  = mysqli_fetch_array($run_UnderGraduate_Subject_Data);
-    print_r(mysqli_fetch_array($run_UnderGraduate_Subject_Data));
+    $user_data_list_of_PreUniversity = mysqli_fetch_array($run_PreUniversity_Subject_Data);
+    $user_data_list_of_Matriculation = mysqli_fetch_array($run_Matriculation_Subject_Data);
+    // print_r(mysqli_fetch_array($run_UnderGraduate_Subject_Data));
 	// if ($result = $db -> query($query_list_of_EducationCategory)) {
     //     while ($obj = $result -> fetch_object()) {
     //         printf("%s \n", $obj->EducationCategory);
@@ -30,7 +36,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title><?php print($user_data_home['title']); ?></title>
+		<title><?php print($user_data_home['Title']); ?></title>
         <?php
             require("includes/head.php");
         ?>
@@ -47,7 +53,7 @@
 						<nav id="navi">
 							<ul>
                                 <?php
-                                    if ($result = $db -> query($query_list_of_EducationCategory)) {
+                                    if ($result = $connection -> query($query_list_of_EducationCategory)) {
                                         while ($obj = $result -> fetch_object()) {
                                             printf("<li><a href='#%s'>%s</a></li> \n", $obj->EducationCategory, $obj->EducationCategory);
                                         }
@@ -149,11 +155,25 @@
 												<!--th>Breed</th-->
 											</thead>
 											<tbody>
-												<tr><!--This is used to create a row of the table.-->
-													<td>041</td><!--This is used to add data to the rows of the table.-->
-													<td>Mathematics</td>
-												</tr>
-												
+<!--												<tr><This is used to create a row of the table.-->
+<!--													<td>041</td><This is used to add data to the rows of the table.-->-->
+<!--													<td>Mathematics</td>-->
+<!--												</tr>-->
+                                                <?php
+                                                    // if ($result = $mysqli -> query($run_UnderGraduate_Subject_Data)) {
+                                                    //     print_r($result);
+                                                    // Display field lengths
+                                                    while($row = mysqli_fetch_array($run_PreUniversity_Subject_Data)) {
+                                                        // $subject_undergraduate_id = $row['id'];
+                                                        $subject_PreUniversity_SubjectCode = $row['SubjectCode'];
+                                                        $subject_PreUniversity_SubjectName = $row['SubjectName'];
+                                                        // echo "<tr><td> $subject_undergraduate_id </td>";
+                                                        echo "<tr><td> $subject_PreUniversity_SubjectCode </td>";
+                                                        echo "<td> $subject_PreUniversity_SubjectName </td></tr>";;
+                                                    }
+                                                    // $result -> free_result();
+                                                    // }
+                                                ?>
 											</tbody>
 										</table>
 									</p>
@@ -177,11 +197,23 @@
 												<!--th>Breed</th-->
 											</thead>
 											<tbody>
-												<tr><!--This is used to create a row of the table.-->
-													<td>041</td><!--This is used to add data to the rows of the table.-->
-													<td>Mathematics</td>
-												</tr>
-												
+<!--												<tr><This is used to create a row of the table.-->
+<!--													<td>041</td><This is used to add data to the rows of the table.-->
+<!--													<td>Mathematics</td>-->
+<!--												</tr>-->
+                                                <?php
+                                                    // if ($result = $mysqli -> query($run_UnderGraduate_Subject_Data)) {
+                                                    //     print_r($result);
+                                                    // Display field lengths
+                                                    while($row = mysqli_fetch_array($run_Matriculation_Subject_Data)) {
+                                                        $subject_Matriculation_SubjectCode = $row['SubjectCode'];
+                                                        $subject_Matriculation_SubjectName = $row['SubjectName'];
+                                                        echo "<tr><td> $subject_Matriculation_SubjectCode </td>";
+                                                        echo "<td> $subject_Matriculation_SubjectName </td></tr>";;
+                                                    }
+                                                    // $result -> free_result();
+                                                    // }
+                                                ?>
 											</tbody>
 										</table>
 									</p>

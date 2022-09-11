@@ -1,34 +1,17 @@
 <?php
 	// Including the datbase.
 	require("includes/db.php");
+    require("functions/functions.php");
 	/*
 		Accoding to this function, if the file db.php is not present, then the website will not work.
 	*/
 	include("functions/functions.php");
-	// Creating a Query
-	$query_home = "SELECT * FROM home";
-	$query_section_control = "SELECT * FROM section_control";
-	$query_social_media = "SELECT * FROM social_media";
 
-	// Executing a Query
-	$run_home = mysqli_query($db,$query_home);
-	$run_section_control = mysqli_query($db,$query_section_control);
-	$run_social_media = mysqli_query($db,$query_social_media);
-	
-	// Fetching the Data
-	$user_data_home = mysqli_fetch_array($run_home);
-	$user_data_section_control = mysqli_fetch_array($run_section_control);
-	$user_data_social_media = mysqli_fetch_array($run_social_media);
-
-	// Checking the obtained Data
-	// print_r($user_data_home);
-	// print_r($user_data_section_control);
-	// print_r($user_data_social_media);
 ?>
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title><?php print($user_data_home['title']); ?></title>
+		<title><?php print($user_data_home['Title']); ?></title>
 		<?php require("includes/head.php"); ?>
 	</head>
 	<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
@@ -40,7 +23,7 @@
 					<div class="col-lg-8 col-md-6 ftco-animate d-flex align-items-center">
 						<div class="text text-center">
 							<span class="subheading">Hey! I am</span>
-							<h1><?php print($user_data_home['title']); ?></h1>
+							<h1><?php print($user_data_home['Title']); ?></h1>
 							<h2>I'm a 
 								<span
 									class="txt-rotate"
@@ -70,12 +53,12 @@
 								<h1 class="big">About</h1>
 								<h2 class="mb-4">About Me</h2>
 								<ul class="about-info mt-4 px-md-0 px-2">
-									<li class="d-flex"><span>Name:</span> <span><?php print($user_data_home['title']); ?></span></li>
-									<li class="d-flex"><span>Date of birth:</span> <span><?php print($user_data_home['dob']); ?></span></li>
-									<li class="d-flex"><span>Address:</span> <span><?php print($user_data_home['address']); ?></span></li>
-									<li class="d-flex"><span>Zip code:</span> <span><?php print($user_data_home['zip_code']); ?></span></li>
-									<li class="d-flex"><span>Email:</span> <span><?php print($user_data_home['email']); ?></span></li>
-									<li class="d-flex"><span>Phone: </span> <span>+91-<?php print($user_data_home['phone']); ?></span></li>
+									<li class="d-flex"><span>Name:</span> <span><?php print($user_data_home['Title']); ?></span></li>
+									<li class="d-flex"><span>Date of birth:</span> <span><?php print($user_data_home['DoB']); ?></span></li>
+									<li class="d-flex"><span>Address:</span> <span><?php print($user_data_home['Address']); ?></span></li>
+									<li class="d-flex"><span>Zip code:</span> <span><?php print($user_data_home['ZIP_Code']); ?></span></li>
+									<li class="d-flex"><span>Email:</span> <span><?php print($user_data_home['Email']); ?></span></li>
+									<li class="d-flex"><span>Phone: </span> <span>+91-<?php print($user_data_home['Phone']); ?></span></li>
 								</ul>
 							</div>
 						</div>
@@ -85,7 +68,7 @@
 									<span class="number" data-number="23">0</span>
 									<span>Projects complete</span>
 								</p>
-								<p><a href="https://drive.google.com/file/d/1DthhTrXY11O14l2EvQvG1CsTNJoElosS/view?usp=sharing" class="btn btn-primary py-3 px-3"  target="_blank">Download/View Resume</a></p>
+								<p><a href=<?php print($user_data_home['Link_Resume']); ?> class="btn btn-primary py-3 px-3"  target="_blank">Download/View Resume</a></p>
 							</div>
 						</div>
 					</div>
@@ -96,7 +79,6 @@
 							<div class="img d-flex align-self-stretch align-items-center"><!--style="background-image:url(images/about.jpg);" 
 								<style type="text/css">
 									[data-size="large"] {
-
 									}
 									-->
 								</style>
@@ -112,7 +94,7 @@
 							<img class="card-img-top" src="images/Aashish2.jpeg" alt="Card image cap">
 							<div class="card-body">
 								<h5 class="card-title">Contact me</h5>
-								<p class="card-text"><?php print($user_data_home['subtitle']); ?></p>
+								<p class="card-text"><?php print($user_data_home['Subtitle']); ?></p>
 								<a href="contact.html" class="btn btn-primary">Contact me</a>
 							</div>
 						</div>
