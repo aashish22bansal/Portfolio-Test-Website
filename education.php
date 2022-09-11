@@ -6,10 +6,10 @@
 	*/
 	include("functions/functions.php");
 	// Creating a Query
-	$query_list_of_EducationCategory = "SELECT DISTINCT EducationCategory FROM education";
-    $query_UnderGraduate_Subject_Data = "SELECT * FROM subjects_undergraduate";
-    $query_PreUniversity_Subject_Data = "SELECT * FROM subjects_pre_university";
-    $query_Matriculation_Subject_Data = "SELECT * FROM subjects_matriculation";
+	$query_list_of_EducationCategory = "SELECT DISTINCT EducationCategory FROM Education";
+    $query_UnderGraduate_Subject_Data = "SELECT * FROM Subjects_Undergraduate";
+    $query_PreUniversity_Subject_Data = "SELECT * FROM Subjects_Pre_University";
+    $query_Matriculation_Subject_Data = "SELECT * FROM Subjects_Matriculation";
 
 	// Executing a Query
 	$run_list_of_EducationCategory  = mysqli_query($connection,$query_list_of_EducationCategory);
