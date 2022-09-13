@@ -66,9 +66,10 @@
     // print_r($user_data_home);
     // print_r($user_data_section_control);
     // print_r($user_data_social_media);
-    foreach($user_data_social_media[0] as $value){
-        echo "$value <br>";
-    }
+//    foreach($user_data_social_media as $value){
+//        print_r($value);
+//        print("<br>");
+//    }
 
 
     // // FETCHING THE UNDERGRADUATE SUBJECTS

@@ -6,26 +6,26 @@
 // */
 // /*INDEX PAGE*/
 // // Creating a Query
-$query_section_control = "SELECT * FROM Section_Control";
-$query_social_media = "SELECT * FROM Social_Media";
+//$query_section_control = "SELECT * FROM Section_Control";
+//$query_social_media = "SELECT * FROM Social_Media";
 // $query_badges = "SELECT * FROM badges";
 // $query_certificates = "SELECT * FROM certificates";
 // $query_courses = "SELECT * FROM courses";
 // $query_education = "SELECT * FROM education";
 // $query_experience = "SELECT * FROM experience";
-$query_home = "SELECT * FROM HOME";
+//$query_home = "SELECT * FROM HOME";
 // $query_industryskills = "SELECT * FROM industryskills";
 // // $query_
 
 // // Executing a Query
-$run_home = mysqli_query($connection,$query_home);
-$run_section_control = mysqli_query($connection,$query_section_control);
-$run_social_media = mysqli_query($connection,$query_social_media);
+//$run_home = mysqli_query($connection,$query_home);
+//$run_section_control = mysqli_query($connection,$query_section_control);
+//$run_social_media = mysqli_query($connection,$query_social_media);
 
 // // Fetching the Data
-$user_data_home = mysqli_fetch_array($run_home);
-$user_data_section_control = mysqli_fetch_array($run_section_control);
-$user_data_social_media = mysqli_fetch_array($run_social_media);
+//$user_data_home = mysqli_fetch_array($run_home);
+//$user_data_section_control = mysqli_fetch_array($run_section_control);
+//$user_data_social_media = mysqli_fetch_array($run_social_media);
 
 // // Checking the obtained Data
 // // print_r($user_data_home);

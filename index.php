@@ -1,5 +1,5 @@
 <?php
-	// Including the datbase.
+	// Including the database.
 //    include("includes/db.php");
 	require("includes/db.php");
     require("functions/functions.php");
@@ -65,29 +65,31 @@
                         <div class="row justify-content-start pb-3">
                             <div class="col-md-12 heading-section ftco-animate">
                                 <h1 class="big">About</h1>
-                                <h3 class="mb-4">Development Profiles</h3>
+                                <h3 class="mb-4">Profiles</h3>
                                 <ul class="about-info mt-4 px-md-0 px-2">
                                     <?php
-                                        //$array = mysql_num_rows($user_data_social_media);
-                                        //print_r($array);
-//                                        while($row = mysqli_fetch_array($user_data_social_media)){
-//                                            $ID = $row['ID'];
-//                                            $Platform_Username = $row['Platform_Username'];
-//                                            $URL = $row['URL'];
-//                                            $Control = $row['Control'];
+                                        foreach($user_data_social_media as $row){
+                                            $ID = $row['0'];
+                                            $Platform_Username = $row['1'];
+                                            $URL = $row['2'];
+                                            $Username = $row['4'];
+                                            $Control = $row['3'];
+                                            if($Control==1){
                                     ?>
-                                            <li class="d-flex">
-                                                <span><?php //print($Platform_Username); ?>:</span>
-                                                <span>
-                                                    <a href="<?php //print($URL); ?>" target="_blank">
-                                                        <span><?php //print($Platform_Username); ?></span>
-                                                    </a>
-                                                </span>
-                                            </li>
+                                                <li class="d-flex">
+                                                    <span> <?php print("$Platform_Username"); ?> </span>
+                                                    <span >
+                                                        <button class="btn btn-primary py-3 px-3">
+                                                            <a href="<?php print($URL); ?>" target="_blank">
+                                                                <span style="text-decoration-color: white"> <?php print("$Username"); ?> </span>
+                                                            </a>
+                                                        </button>
+                                                    </span>
+                                                </li>
                                     <?php
-//                                        }
+                                            }
+                                        }
                                     ?>
-
                                 </ul>
                             </div>
                         </div>
@@ -109,12 +111,13 @@
 								<style type="text/css">
 									[data-size="large"] {
 									}
-									-->
-								</style>
+
+								</style-->
 								<!-- <div class="LI-profile-badge"  data-version="v1" data-size="large" data-locale="en_US" data-type="vertical" data-theme="dark" data-vanity="aashish22bansal">
 									<script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
 									<a class="LI-simple-link" href='https://www.linkedin.com/in/aashish22bansal/'>AASHISH BANSAL</a>
 								</div> -->
+
 							</div>
 						</div>
 					</div>
