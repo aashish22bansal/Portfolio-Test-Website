@@ -1,9 +1,9 @@
 <?php
 	// Including the datbase.
-    include("includes/db.php");
+//    include("includes/db.php");
 	require("includes/db.php");
     require("functions/functions.php");
-	include("functions/functions.php");
+//	include("functions/functions.php");
     /*
         Accoding to these functions, if the files are not present, then the website will not work.
     */
@@ -68,23 +68,24 @@
                                 <h3 class="mb-4">Development Profiles</h3>
                                 <ul class="about-info mt-4 px-md-0 px-2">
                                     <?php
-                                        while($row = mysqli_fetch_array($user_data_social_media)){
-                                            $ID = $row['ID'];
-                                            $Platform_Username = $row['Platform_Username'];
-                                            $URL = $row['URL'];
-                                            $Control = $row['Control'];
-
+                                        //$array = mysql_num_rows($user_data_social_media);
+                                        //print_r($array);
+//                                        while($row = mysqli_fetch_array($user_data_social_media)){
+//                                            $ID = $row['ID'];
+//                                            $Platform_Username = $row['Platform_Username'];
+//                                            $URL = $row['URL'];
+//                                            $Control = $row['Control'];
                                     ?>
                                             <li class="d-flex">
-                                                <span><?php print($Platform_Username); ?>:</span>
+                                                <span><?php //print($Platform_Username); ?>:</span>
                                                 <span>
-                                                    <a href="<?php print($URL); ?>" target="_blank">
-                                                        <span><?php print($Platform_Username); ?></span>
+                                                    <a href="<?php //print($URL); ?>" target="_blank">
+                                                        <span><?php //print($Platform_Username); ?></span>
                                                     </a>
                                                 </span>
                                             </li>
                                     <?php
-                                        }
+//                                        }
                                     ?>
 
                                 </ul>

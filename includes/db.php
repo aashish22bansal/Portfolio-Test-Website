@@ -30,7 +30,7 @@
         die("Connection failed: " . $connection->connect_error);
     }
 
-    //echo "Successfull created the connection";
+    //echo "Successfully created the connection";
     if($connection->connect_errno){
         echo "Failed to connect to MySQL: ".$connection->connect_error;
     }
@@ -60,12 +60,15 @@
     // Fetching the Data
     $user_data_home = mysqli_fetch_array($run_home);
     $user_data_section_control = mysqli_fetch_array($run_section_control);
-    $user_data_social_media = mysqli_fetch_array($run_social_media);
+    $user_data_social_media = mysqli_fetch_all($run_social_media);
 
     // Checking the obtained Data
     // print_r($user_data_home);
     // print_r($user_data_section_control);
     // print_r($user_data_social_media);
+    foreach($user_data_social_media[0] as $value){
+        echo "$value <br>";
+    }
 
 
     // // FETCHING THE UNDERGRADUATE SUBJECTS
