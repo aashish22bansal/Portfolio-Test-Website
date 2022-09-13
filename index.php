@@ -1,12 +1,12 @@
 <?php
 	// Including the datbase.
+    include("includes/db.php");
 	require("includes/db.php");
     require("functions/functions.php");
-	/*
-		Accoding to this function, if the file db.php is not present, then the website will not work.
-	*/
 	include("functions/functions.php");
-
+    /*
+        Accoding to these functions, if the files are not present, then the website will not work.
+    */
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -28,7 +28,7 @@
 								<span
 									class="txt-rotate"
 									data-period="500"
-									data-rotate='[ "Data Science Enthusiast.", "ML Engineer.", "Information Technology Pre-final.", "Web Developer.", "Software Developer.", "Blockchain Enthusiast.", "eLearner."]'>
+									data-rotate='[ "Data Science Enthusiast.", "ML Engineer.", "Information Technology Final Year Student.", "Web Developer.", "Software Developer.", "Blockchain Enthusiast.", "eLearner."]'>
 								</span>
 							</h2>
 						</div>
@@ -62,6 +62,34 @@
 								</ul>
 							</div>
 						</div>
+                        <div class="row justify-content-start pb-3">
+                            <div class="col-md-12 heading-section ftco-animate">
+                                <h1 class="big">About</h1>
+                                <h3 class="mb-4">Development Profiles</h3>
+                                <ul class="about-info mt-4 px-md-0 px-2">
+                                    <?php
+                                        while($row = mysqli_fetch_array($user_data_social_media)){
+                                            $ID = $row['ID'];
+                                            $Platform_Username = $row['Platform_Username'];
+                                            $URL = $row['URL'];
+                                            $Control = $row['Control'];
+
+                                    ?>
+                                            <li class="d-flex">
+                                                <span><?php print($Platform_Username); ?>:</span>
+                                                <span>
+                                                    <a href="<?php print($URL); ?>" target="_blank">
+                                                        <span><?php print($Platform_Username); ?></span>
+                                                    </a>
+                                                </span>
+                                            </li>
+                                    <?php
+                                        }
+                                    ?>
+
+                                </ul>
+                            </div>
+                        </div>
 						<div class="counter-wrap ftco-animate d-flex mt-md-3" style="padding-top: 50px;">
 							<div class="text">
 								<p class="mb-4">
@@ -91,7 +119,7 @@
 					</div>
 					<div class="col-lg-3 pl-md-5 py-5">
 						<div class="card" style="width: 23rem;">
-							<img class="card-img-top" src="images/Aashish2.jpeg" alt="Card image cap">
+							<img class="card-img-top" src="images/301395867_3173014973028972_4641983149066889399_n.jpg" alt="Card image cap">
 							<div class="card-body">
 								<h5 class="card-title">Contact me</h5>
 								<p class="card-text"><?php print($user_data_home['Subtitle']); ?></p>

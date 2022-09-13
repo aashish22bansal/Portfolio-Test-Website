@@ -1,4 +1,10 @@
 <?php
+    /*
+        THIS PAGE IS DESIGNED TO FETCH ALL THE DATA FROM THE ENTIRE DATABASE
+        AT ONCE SO THAT ALL THE DATA IS PRESENT WHEN THE WEBSITE IS FIRST LOADED
+        IN AN ATTEMPT TO IMPROVE THE PERFORMANCE OF THE WEBSITE.
+     */
+
     // Assigning Database Attributes to variables
     $servername = "localhost"; //"127.0.0.1:3307";
     $username = "root"; //"id19547945_root";
@@ -29,24 +35,13 @@
         echo "Failed to connect to MySQL: ".$connection->connect_error;
     }
 
-    // // Check connection
-    // if ($mysqli -> connect_errno) {
-    //     echo "Failed to connect to MySQL: " . $mysqli -> connect_error;
-    //     exit();
-    // }
-
 
     /*
      * INCLUDING ALL THE DATA INTO THE WEBSITE
      */
-    // /*
-// THIS PAGE IS DESIGNED TO FETCH ALL THE DATA FROM THE ENTIRE DATABASE
-// AT ONCE SO THAT ALL THE DATA IS PRESENT WHEN THE WEBSITE IS FIRST LOADED
-// IN AN ATTEMPT TO IMPROVE THE PERFORMANCE OF THE WEBSITE.
-// */
-// /*INDEX PAGE*/
-// // Creating a Query
-// Creating a Query
+
+    /*INDEX PAGE*/
+    // Creating Queries
     $query_home = "SELECT * FROM HOME WHERE ID=1";
     $query_section_control = "SELECT * FROM Section_Control WHERE ID=1";
     $query_social_media = "SELECT * FROM Social_Media";
@@ -57,7 +52,7 @@
     // $query_experience = "SELECT * FROM experience";
     // $query_industryskills = "SELECT * FROM industryskills";
 
-    // Executing a Query
+    // Executing Queries
     $run_home = mysqli_query($connection,$query_home);
     $run_section_control = mysqli_query($connection,$query_section_control);
     $run_social_media = mysqli_query($connection,$query_social_media);
@@ -71,11 +66,6 @@
     // print_r($user_data_home);
     // print_r($user_data_section_control);
     // print_r($user_data_social_media);
-
-    // // Checking the obtained Data
-    // // print_r($user_data_home);
-    // // print_r($user_data_section_control);
-    // // print_r($user_data_social_media);
 
 
     // // FETCHING THE UNDERGRADUATE SUBJECTS
