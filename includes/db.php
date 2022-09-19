@@ -49,18 +49,20 @@
     // $query_certificates = "SELECT * FROM certificates";
     // $query_courses = "SELECT * FROM courses";
     // $query_education = "SELECT * FROM education";
-    // $query_experience = "SELECT * FROM experience";
+    $query_experience = "SELECT * FROM experience";
     // $query_industryskills = "SELECT * FROM industryskills";
 
     // Executing Queries
     $run_home = mysqli_query($connection,$query_home);
     $run_section_control = mysqli_query($connection,$query_section_control);
     $run_social_media = mysqli_query($connection,$query_social_media);
+    $run_experience = mysqli_query($connection, $query_experience);
 
     // Fetching the Data
     $user_data_home = mysqli_fetch_array($run_home);
     $user_data_section_control = mysqli_fetch_array($run_section_control);
     $user_data_social_media = mysqli_fetch_all($run_social_media);
+    $user_data_experience = mysqli_fetch_all($run_experience);
 
     // Checking the obtained Data
     // print_r($user_data_home);

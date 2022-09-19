@@ -32,7 +32,7 @@
 								<?php 
 									if($user_data_section_control['Experience']){
 								?>
-										<li class="nav-item"><a href="experience.html" class="nav-link"><span>Experience</span></a></li>
+										<li class="nav-item"><a href="experience.php" class="nav-link"><span>Experience</span></a></li>
 								<?php
 									}
 								?>
@@ -41,7 +41,7 @@
 									if($user_data_section_control['Projects']){
 										
 								?>
-										<li class="nav-item"><a href="projects.html" class="nav-link"><span>Projects</span></a></li>
+										<li class="nav-item"><a href="projects.php" class="nav-link"><span>Projects</span></a></li>
 								<?php
 									}
 								?>
@@ -50,7 +50,7 @@
 									if($user_data_section_control['Skills_n_Languages']){
 										
 								?>
-										<li class="nav-item"><a href="skills.html" class="nav-link"><span>Skills & Languages</span></a></li>
+										<li class="nav-item"><a href="skills.php" class="nav-link"><span>Skills & Languages</span></a></li>
 								<?php
 									}
 								?>
@@ -59,7 +59,7 @@
 									if($user_data_section_control['Badges']){
 										
 								?>
-										<li class="nav-item"><a href="badges.html" class="nav-link"><span>Badges</span></a></li>
+										<li class="nav-item"><a href="badges.php" class="nav-link"><span>Badges</span></a></li>
 								<?php
 									}
 								?>
@@ -68,7 +68,7 @@
 									if($user_data_section_control['Certificates']){
 										
 								?>
-										<li class="nav-item"><a href="certificates.html" class="nav-link"><span>Certificates</span></a></li>
+										<li class="nav-item"><a href="certificates.php" class="nav-link"><span>Certificates</span></a></li>
 								<?php
 									}
 								?>
@@ -77,7 +77,7 @@
 									if($user_data_section_control['Courses']){
 										
 								?>
-										<li class="nav-item"><a href="courses.html" class="nav-link"><span>Courses</span></a></li>
+										<li class="nav-item"><a href="courses.php" class="nav-link"><span>Courses</span></a></li>
 								<?php
 									}
 								?>
@@ -86,7 +86,7 @@
 									if($user_data_section_control['Organizations']){
 										
 								?>
-										<li class="nav-item"><a href="organization.html" class="nav-link"><span>Organizations</span></a></li>
+										<li class="nav-item"><a href="organization.php" class="nav-link"><span>Organizations</span></a></li>
 								<?php
 									}
 								?>
@@ -95,7 +95,7 @@
 									if($user_data_section_control['Competitions']){
 										
 								?>
-										<li class="nav-item"><a href="competitions.html" class="nav-link"><span>Competitions</span></a></li>
+										<li class="nav-item"><a href="competitions.php" class="nav-link"><span>Competitions</span></a></li>
 								<?php
 									}
 								?>
@@ -117,7 +117,7 @@
 									if($user_data_section_control['Contact']){
 										
 								?>
-										<li class="nav-item"><a href="contact.html" class="nav-link"><span>Contact Me</span></a></li>
+										<li class="nav-item"><a href="contact.php" class="nav-link"><span>Contact Me</span></a></li>
 								<?php
 									}
 								?>
