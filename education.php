@@ -156,7 +156,7 @@
 											</thead>
 											<tbody>
 <!--												<tr><This is used to create a row of the table.-->
-<!--													<td>041</td><This is used to add data to the rows of the table.-->-->
+<!--													<td>041</td><This is used to add data to the rows of the table.-->
 <!--													<td>Mathematics</td>-->
 <!--												</tr>-->
                                                 <?php

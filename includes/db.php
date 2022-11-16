@@ -8,7 +8,7 @@
     // Assigning Database Attributes to variables
     $servername = "localhost"; //"127.0.0.1:3307";
     $username = "root"; //"id19547945_root";
-    $password = "123Aashish456"; //"AHgx=Wf0SXxCU5w~";
+    $password = ""; //"AHgx=Wf0SXxCU5w~";
     $databaseName = "id19547945_myportfolio"; //"id19547945_myportfolio";
 
     // Creating a Connection
