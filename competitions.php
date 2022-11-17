@@ -14,6 +14,7 @@
 
 			gtag('config', 'G-PS3GYE4L52');
 		</script>
+		<title><?php print($user_data_home['Title']); ?></title>
 		<?php
             require("includes/head.php");
         ?>
