@@ -45,50 +45,64 @@
 							<h2 class="heading">Projects</h2>
 							<?php
 							foreach($user_data_project_categories as $project_category){
-								foreach($user_data_projects as $project){
 							?>
-									<div id="<?php print($project_category[2]); //ProjectCategoryIDName?>" class="resume-wrap d-flex ftco-animate">
-										<div class="resume-wrap d-flex ftco-animate">
-											<div class="icon d-flex align-items-center justify-content-center">
-												<img src="images/<?php print((string)$project_category[3]); //ProjectCategoryImageName?>" class="rounded-circle">
-											</div>
-											<div class="text pl-3">
-												<h3 class="heading">
-													<?php print($project_category[1]); //ProjectCategoryName?>
-												</h3>
-												<div id="<?php print($project[1]); //'ProjectCode'?>">
-													<span class="date">
-														<?php print($project[2]); //'CompletionMonth'?>, <?php print($project[3]); //'CompletionYear'?>
-													</span>
-													<h2><?php print($project[4]); //'TitleOfProject'?></h2>
-													<span class="position">
-														<?php print($project[5]); //'Company'?>
-													</span>
-													<p>
-														<h6>
-															<?php print($project[8]); //'ProjectType'?>
-														</h6>
-													</p>
+								<div id="<?php print($project_category[2]); //ProjectCategoryIDName?>" class="resume-wrap d-flex ftco-animate">
+									<div class="resume-wrap d-flex ftco-animate">
+										<div class="icon d-flex align-items-center justify-content-center">
+											<img src="images/<?php print((string)$project_category[3]); //ProjectCategoryImageName?>" class="rounded-circle">
+										</div>
+										<div class="text pl-3">
+											<h3 class="heading">
+												<?php print($project_category[1]); //ProjectCategoryName?>
+											</h3>
+											<?php
+											foreach($user_data_projects as $project){
+												if($project[7] == $project_category[1]){ //ProjectCategory == ProjectCategoryName
+											?>
+													<div id="<?php print($project[1]); //'ProjectCode'?>">
+														<span class="date">
+															<?php print($project[2]); //'CompletionMonth'?>, <?php print($project[3]); //'CompletionYear'?>
+														</span>
+
+														<h2><?php print($project[4]); //'TitleOfProject'?></h2>
+
+														<span class="position">
+															<?php print($project[5]); //'Company'?>
+														</span>
+
+														<p>
+															<h6>
+																<?php print($project[8]); //'ProjectType'?>
+															</h6>
+														</p>
 														<br>
-													<p>
-														<?php print($project[9]); //'ProjectDescription' ?>
-													</p>
-													<p>Link: 
-														<a href="<?php print($project[11]); //'ProjectCodeLink'?>">
-															<?php print($project[10]); //'ProjectCodeLocation'?>
-														</a>
-													</p>
-													<p>Document: 
-														<a href="<?php print($project[13]); //'ProjectDocumentLink'?>">
-															<?php print($project[12]); //'ProjectDocumentLocation'?>
-														</a>
-													</p>
-												</div>
-											</div>
+														<p>
+															<?php print($project[9]); //'ProjectDescription' ?>
+														</p>
+
+														<p>Link: 
+															<a href="<?php print($project[11]); //'ProjectCodeLink'?>">
+																<?php print($project[10]); //'ProjectCodeLocation'?>
+															</a>
+														</p>
+														
+														<p>Document: 
+															<a href="<?php print($project[13]); //'ProjectDocumentLink'?>">
+																<?php print($project[12]); //'ProjectDocumentLocation'?>
+															</a>
+														</p>
+													</div>
+											<?php
+												}
+												else{
+													
+												}
+											} // end of inner foreach
+											?>
 										</div>
 									</div>
+								</div>
 							<?php
-								}
 							}
 							?>
 							<!-- End Projects -->
