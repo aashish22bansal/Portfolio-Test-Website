@@ -1,14 +1,11 @@
 <?php
     require('includes/db.php');
     require('functions/functions.php');
-    $query_industry_skill_categories = "SELECT * FROM industryskillcategories";
-    $run_industry_skill_categories = mysqli_query($connection, $query_industry_skill_categories);
-    $user_data_industry_skill_categories = mysqli_fetch_all($run_industry_skill_categories);
-    //print_r($user_data_project_categories);
 
-	$query_industry_skills = "SELECT * FROM industryskills";
+	$query_industry_skills = "SELECT * FROM badges_skills";
 	$run_industry_skills = mysqli_query($connection, $query_industry_skills);
 	$user_data_industry_skills = mysqli_fetch_all($run_industry_skills);
+	// print_r($user_data_industry_skills);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -66,11 +63,27 @@
 										<?php print($industry_skill[10]); //BadgeScript ?>
 										<script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
 										<div class="text pl-3">
-											<span class="date"><?php print($industry_skill[2]);//BadgeCompletionMonth  ?>/<?php print($industry_skill[3]); //BadgeCompletionYear ?></span>
+											<span class="date">
+												<?php print($industry_skill[2]);//BadgeCompletionMonth  ?>/<?php print($industry_skill[3]); //BadgeCompletionYear ?>
+											</span>
+
 											<h2><?php print($industry_skill[1]); //BadgeTitle ?></h2>
-											<span class="position"><a href="<?php print($industry_skill[5]); //BadgeIssuingCompanyLink ?>" class="r-link" rel="noopener noreferrer" target="_blank"><b>Issued By:</b> <?php print($industry_skill[4]); //BadgeIssuingCompanyName  ?></a></span><br>
-											<span class="position"><a href="<?php print($industry_skill[7]); //BadgeAuthorizationCompanyLink  ?>" class="r-link" rel="noopener noreferrer" target="_blank"><b>Authorized By:</b> <?php print($industry_skill[6]); //BadgeAuthorizationCompanyName ?></a></span>
-											<p><?php print($industry_skill[8]); //BadgeDescription ?></p>
+
+											<span class="position">
+												<a href="<?php print($industry_skill[5]); //BadgeIssuingCompanyLink ?>" class="r-link" rel="noopener noreferrer" target="_blank">
+													<b>Issued By:</b> <?php print($industry_skill[4]); //BadgeIssuingCompanyName  ?>
+												</a>
+											</span>
+											<br>
+											<span class="position">
+												<a href="<?php print($industry_skill[7]); //BadgeAuthorizationCompanyLink  ?>" class="r-link" rel="noopener noreferrer" target="_blank">
+													<b>Authorized By:</b> <?php print($industry_skill[6]); //BadgeAuthorizationCompanyName ?>
+												</a>
+											</span>
+
+											<p>
+												<?php print($industry_skill[8]); //BadgeDescription ?>
+											</p>
 										</div>
 									</div>
 									<br>

@@ -105,7 +105,7 @@
 										
 								?>
 										<li class="nav-item">
-											<a href="<?php print($user_data_home['Link_Resume']); ?>" class="nav-link">
+											<a href="<?php print($user_data_home['Link_Resume']); ?>" class="nav-link" target="_blank">
 												<span>Resume</span>
 											</a>
 										</li>
