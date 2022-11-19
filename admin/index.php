@@ -1,9 +1,18 @@
+<?php
+require('../includes/db.php');
+require('../functions/functions.php');
+
+if(!isset($_SESSION['isUserLoggedIn'])){
+  echo "<script>window.location.href = 'login.php';</script>";
+}
+$query_admin_index_page = ""
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AdminLTE 3 | Dashboard</title>
+  <title>Admin Panel | Dashboard</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -41,18 +50,18 @@
       <li class="nav-item">
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
-      <li class="nav-item d-none d-sm-inline-block">
+      <!-- <li class="nav-item d-none d-sm-inline-block">
         <a href="index3.html" class="nav-link">Home</a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
         <a href="#" class="nav-link">Contact</a>
-      </li>
+      </li> -->
     </ul>
 
     <!-- Right navbar links -->
     <ul class="navbar-nav ml-auto">
       <!-- Navbar Search -->
-      <li class="nav-item">
+      <!-- <li class="nav-item">
         <a class="nav-link" data-widget="navbar-search" href="#" role="button">
           <i class="fas fa-search"></i>
         </a>
@@ -71,17 +80,17 @@
             </div>
           </form>
         </div>
-      </li>
+      </li> -->
 
       <!-- Messages Dropdown Menu -->
-      <li class="nav-item dropdown">
+      <!-- <li class="nav-item dropdown">
         <a class="nav-link" data-toggle="dropdown" href="#">
           <i class="far fa-comments"></i>
           <span class="badge badge-danger navbar-badge">3</span>
         </a>
         <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
           <a href="#" class="dropdown-item">
-            <!-- Message Start -->
+            <! Message Start >
             <div class="media">
               <img src="dist/img/user1-128x128.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle">
               <div class="media-body">
@@ -93,11 +102,11 @@
                 <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
               </div>
             </div>
-            <!-- Message End -->
+            <! Message End >
           </a>
           <div class="dropdown-divider"></div>
           <a href="#" class="dropdown-item">
-            <!-- Message Start -->
+            <! Message Start >
             <div class="media">
               <img src="dist/img/user8-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
               <div class="media-body">
@@ -109,11 +118,11 @@
                 <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
               </div>
             </div>
-            <!-- Message End -->
+            <! Message End >
           </a>
           <div class="dropdown-divider"></div>
           <a href="#" class="dropdown-item">
-            <!-- Message Start -->
+            <! Message Start >
             <div class="media">
               <img src="dist/img/user3-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
               <div class="media-body">
@@ -125,14 +134,14 @@
                 <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
               </div>
             </div>
-            <!-- Message End -->
+            <! Message End >
           </a>
           <div class="dropdown-divider"></div>
           <a href="#" class="dropdown-item dropdown-footer">See All Messages</a>
         </div>
-      </li>
+      </li> -->
       <!-- Notifications Dropdown Menu -->
-      <li class="nav-item dropdown">
+      <!-- <li class="nav-item dropdown">
         <a class="nav-link" data-toggle="dropdown" href="#">
           <i class="far fa-bell"></i>
           <span class="badge badge-warning navbar-badge">15</span>
@@ -157,15 +166,16 @@
           <div class="dropdown-divider"></div>
           <a href="#" class="dropdown-item dropdown-footer">See All Notifications</a>
         </div>
-      </li>
-      <li class="nav-item">
+      </li> -->
+      <!-- <li class="nav-item">
         <a class="nav-link" data-widget="fullscreen" href="#" role="button">
           <i class="fas fa-expand-arrows-alt"></i>
         </a>
-      </li>
+      </li> -->
       <li class="nav-item">
-        <a class="nav-link" data-widget="control-sidebar" data-controlsidebar-slide="true" href="#" role="button">
-          <i class="fas fa-th-large"></i>
+        <a class="nav-link" href="../includes/logout.php"><! REMOVED THESE data-controlsidebar-slide="true"  data-widget="control-sidebar" role="button">
+          <!-- <i class="fas fa-th-large"></i> -->
+          Logout
         </a>
       </li>
     </ul>
@@ -177,7 +187,7 @@
     <!-- Brand Logo -->
     <a href="index3.html" class="brand-link">
       <img src="dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-      <span class="brand-text font-weight-light">AdminLTE 3</span>
+      <span class="brand-text font-weight-light">Admin Panel</span>
     </a>
 
     <!-- Sidebar -->
@@ -188,7 +198,7 @@
           <img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">Alexander Pierce</a>
+          <a href="#" class="d-block"><?php print("Aashish Bansal"); // ?></a>
         </div>
       </div>
 
@@ -210,14 +220,14 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item menu-open">
-            <a href="#" class="nav-link active">
+            <a href="index.php" class="nav-link active">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
-                Dashboard
-                <i class="right fas fa-angle-left"></i>
+                Section Control
+                <i class="right"></i> <!--i class="right fas fa-angle-left"></i-->
               </p>
             </a>
-            <ul class="nav nav-treeview">
+            <!-- <ul class="nav nav-treeview">
               <li class="nav-item">
                 <a href="./index.html" class="nav-link active">
                   <i class="far fa-circle nav-icon"></i>
@@ -236,9 +246,10 @@
                   <p>Dashboard v3</p>
                 </a>
               </li>
-            </ul>
+            </ul> -->
           </li>
-          <li class="nav-item">
+          <!-- CODE FROM LINE 247 TO 849 IS TO BE DELETED -->
+          <!-- <li class="nav-item">
             <a href="pages/widgets.html" class="nav-link">
               <i class="nav-icon fas fa-th"></i>
               <p>
@@ -839,7 +850,7 @@
               <i class="nav-icon far fa-circle text-info"></i>
               <p>Informational</p>
             </a>
-          </li>
+          </li> -->
         </ul>
       </nav>
       <!-- /.sidebar-menu -->
@@ -852,14 +863,14 @@
     <!-- Content Header (Page header) -->
     <div class="content-header">
       <div class="container-fluid">
-        <div class="row mb-2">
+        <div class="row mb-2"> 
           <div class="col-sm-6">
-            <h1 class="m-0">Dashboard</h1>
+            <h1 class="m-0">Show/Hide Menu</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Dashboard v1</li>
+              <!-- <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item active">Dashboard </li> -->
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
@@ -871,9 +882,10 @@
     <section class="content">
       <div class="container-fluid">
         <!-- Small boxes (Stat box) -->
-        <div class="row">
+        <!-- THE CODE FROM 882 TO 942 IN THE FOLLOWING DIV REPRESENTS NEW ORDERS, BOUNCE RATE, USER REGISTRATIONS, UNIQUE VISITORS -->
+        <!-- <div class="row">
           <div class="col-lg-3 col-6">
-            <!-- small box -->
+            <! small box>
             <div class="small-box bg-info">
               <div class="inner">
                 <h3>150</h3>
@@ -886,9 +898,9 @@
               <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
-          <!-- ./col -->
+          <! ./col >
           <div class="col-lg-3 col-6">
-            <!-- small box -->
+            <! small box >
             <div class="small-box bg-success">
               <div class="inner">
                 <h3>53<sup style="font-size: 20px">%</sup></h3>
@@ -901,9 +913,9 @@
               <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
-          <!-- ./col -->
+          <! ./col >
           <div class="col-lg-3 col-6">
-            <!-- small box -->
+            <! small box >
             <div class="small-box bg-warning">
               <div class="inner">
                 <h3>44</h3>
@@ -916,9 +928,9 @@
               <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
-          <!-- ./col -->
+          <! ./col >
           <div class="col-lg-3 col-6">
-            <!-- small box -->
+            <! small box >
             <div class="small-box bg-danger">
               <div class="inner">
                 <h3>65</h3>
@@ -931,14 +943,15 @@
               <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
-          <!-- ./col -->
-        </div>
+          <! ./col >
+        </div> -->
         <!-- /.row -->
         <!-- Main row -->
-        <div class="row">
-          <!-- Left col -->
+        <!-- THE CODE FROM 947 TO 1457 IN THE FOLLOWING DIV REPRESENTS  -->
+        <!-- <div class="row">
+          <! Left col >
           <section class="col-lg-7 connectedSortable">
-            <!-- Custom tabs (Charts with tabs)-->
+            <! Custom tabs (Charts with tabs)>
             <div class="card">
               <div class="card-header">
                 <h3 class="card-title">
@@ -955,10 +968,10 @@
                     </li>
                   </ul>
                 </div>
-              </div><!-- /.card-header -->
+              </div><! /.card-header >
               <div class="card-body">
                 <div class="tab-content p-0">
-                  <!-- Morris chart - Sales -->
+                  <! Morris chart - Sales >
                   <div class="chart tab-pane active" id="revenue-chart"
                        style="position: relative; height: 300px;">
                       <canvas id="revenue-chart-canvas" height="300" style="height: 300px;"></canvas>
@@ -967,11 +980,11 @@
                     <canvas id="sales-chart-canvas" height="300" style="height: 300px;"></canvas>
                   </div>
                 </div>
-              </div><!-- /.card-body -->
+              </div><! /.card-body >
             </div>
-            <!-- /.card -->
+            <! /.card >
 
-            <!-- DIRECT CHAT -->
+            <! DIRECT CHAT >
             <div class="card direct-chat direct-chat-primary">
               <div class="card-header">
                 <h3 class="card-title">Direct Chat</h3>
@@ -989,78 +1002,78 @@
                   </button>
                 </div>
               </div>
-              <!-- /.card-header -->
+              <! /.card-header >
               <div class="card-body">
-                <!-- Conversations are loaded here -->
+                <! Conversations are loaded here >
                 <div class="direct-chat-messages">
-                  <!-- Message. Default to the left -->
+                  <! Message. Default to the left >
                   <div class="direct-chat-msg">
                     <div class="direct-chat-infos clearfix">
                       <span class="direct-chat-name float-left">Alexander Pierce</span>
                       <span class="direct-chat-timestamp float-right">23 Jan 2:00 pm</span>
                     </div>
-                    <!-- /.direct-chat-infos -->
+                    <! /.direct-chat-infos >
                     <img class="direct-chat-img" src="dist/img/user1-128x128.jpg" alt="message user image">
-                    <!-- /.direct-chat-img -->
+                    <! /.direct-chat-img >
                     <div class="direct-chat-text">
                       Is this template really for free? That's unbelievable!
                     </div>
-                    <!-- /.direct-chat-text -->
+                    <! /.direct-chat-text >
                   </div>
-                  <!-- /.direct-chat-msg -->
+                  <! /.direct-chat-msg >
 
-                  <!-- Message to the right -->
+                  <! Message to the right >
                   <div class="direct-chat-msg right">
                     <div class="direct-chat-infos clearfix">
                       <span class="direct-chat-name float-right">Sarah Bullock</span>
                       <span class="direct-chat-timestamp float-left">23 Jan 2:05 pm</span>
                     </div>
-                    <!-- /.direct-chat-infos -->
+                    <! /.direct-chat-infos >
                     <img class="direct-chat-img" src="dist/img/user3-128x128.jpg" alt="message user image">
-                    <!-- /.direct-chat-img -->
+                    <! /.direct-chat-img >
                     <div class="direct-chat-text">
                       You better believe it!
                     </div>
-                    <!-- /.direct-chat-text -->
+                    <! /.direct-chat-text >
                   </div>
-                  <!-- /.direct-chat-msg -->
+                  <! /.direct-chat-msg >
 
-                  <!-- Message. Default to the left -->
+                  <! Message. Default to the left >
                   <div class="direct-chat-msg">
                     <div class="direct-chat-infos clearfix">
                       <span class="direct-chat-name float-left">Alexander Pierce</span>
                       <span class="direct-chat-timestamp float-right">23 Jan 5:37 pm</span>
                     </div>
-                    <!-- /.direct-chat-infos -->
+                    <! /.direct-chat-infos >
                     <img class="direct-chat-img" src="dist/img/user1-128x128.jpg" alt="message user image">
-                    <!-- /.direct-chat-img -->
+                    <! /.direct-chat-img >
                     <div class="direct-chat-text">
                       Working with AdminLTE on a great new app! Wanna join?
                     </div>
-                    <!-- /.direct-chat-text -->
+                    <! /.direct-chat-text >
                   </div>
-                  <!-- /.direct-chat-msg -->
+                  <! /.direct-chat-msg >
 
-                  <!-- Message to the right -->
+                  <! Message to the right >
                   <div class="direct-chat-msg right">
                     <div class="direct-chat-infos clearfix">
                       <span class="direct-chat-name float-right">Sarah Bullock</span>
                       <span class="direct-chat-timestamp float-left">23 Jan 6:10 pm</span>
                     </div>
-                    <!-- /.direct-chat-infos -->
+                    <! /.direct-chat-infos >
                     <img class="direct-chat-img" src="dist/img/user3-128x128.jpg" alt="message user image">
-                    <!-- /.direct-chat-img -->
+                    <! /.direct-chat-img >
                     <div class="direct-chat-text">
                       I would love to.
                     </div>
-                    <!-- /.direct-chat-text -->
+                    <! /.direct-chat-text >
                   </div>
-                  <!-- /.direct-chat-msg -->
+                  <! /.direct-chat-msg >
 
                 </div>
-                <!--/.direct-chat-messages-->
+                <!/.direct-chat-messages>
 
-                <!-- Contacts are loaded here -->
+                <! Contacts are loaded here >
                 <div class="direct-chat-contacts">
                   <ul class="contacts-list">
                     <li>
@@ -1074,10 +1087,10 @@
                           </span>
                           <span class="contacts-list-msg">How have you been? I was...</span>
                         </div>
-                        <!-- /.contacts-list-info -->
+                        <! /.contacts-list-info >
                       </a>
                     </li>
-                    <!-- End Contact Item -->
+                    <! End Contact Item >
                     <li>
                       <a href="#">
                         <img class="contacts-list-img" src="dist/img/user7-128x128.jpg" alt="User Avatar">
@@ -1089,10 +1102,10 @@
                           </span>
                           <span class="contacts-list-msg">I will be waiting for...</span>
                         </div>
-                        <!-- /.contacts-list-info -->
+                        <! /.contacts-list-info >
                       </a>
                     </li>
-                    <!-- End Contact Item -->
+                    <! End Contact Item >
                     <li>
                       <a href="#">
                         <img class="contacts-list-img" src="dist/img/user3-128x128.jpg" alt="User Avatar">
@@ -1104,10 +1117,10 @@
                           </span>
                           <span class="contacts-list-msg">I'll call you back at...</span>
                         </div>
-                        <!-- /.contacts-list-info -->
+                        <! /.contacts-list-info >
                       </a>
                     </li>
-                    <!-- End Contact Item -->
+                    <! End Contact Item >
                     <li>
                       <a href="#">
                         <img class="contacts-list-img" src="dist/img/user5-128x128.jpg" alt="User Avatar">
@@ -1119,10 +1132,10 @@
                           </span>
                           <span class="contacts-list-msg">Where is your new...</span>
                         </div>
-                        <!-- /.contacts-list-info -->
+                        <! /.contacts-list-info >
                       </a>
                     </li>
-                    <!-- End Contact Item -->
+                    <! End Contact Item >
                     <li>
                       <a href="#">
                         <img class="contacts-list-img" src="dist/img/user6-128x128.jpg" alt="User Avatar">
@@ -1134,10 +1147,10 @@
                           </span>
                           <span class="contacts-list-msg">Can I take a look at...</span>
                         </div>
-                        <!-- /.contacts-list-info -->
+                        <! /.contacts-list-info >
                       </a>
                     </li>
-                    <!-- End Contact Item -->
+                    <! End Contact Item >
                     <li>
                       <a href="#">
                         <img class="contacts-list-img" src="dist/img/user8-128x128.jpg" alt="User Avatar">
@@ -1149,16 +1162,16 @@
                           </span>
                           <span class="contacts-list-msg">Never mind I found...</span>
                         </div>
-                        <!-- /.contacts-list-info -->
+                        <! /.contacts-list-info >
                       </a>
                     </li>
-                    <!-- End Contact Item -->
+                    <! End Contact Item >
                   </ul>
-                  <!-- /.contacts-list -->
+                  <! /.contacts-list >
                 </div>
-                <!-- /.direct-chat-pane -->
+                <! /.direct-chat-pane >
               </div>
-              <!-- /.card-body -->
+              <! /.card-body >
               <div class="card-footer">
                 <form action="#" method="post">
                   <div class="input-group">
@@ -1169,11 +1182,11 @@
                   </div>
                 </form>
               </div>
-              <!-- /.card-footer-->
+              <! /.card-footer>
             </div>
-            <!--/.direct-chat -->
+            <!/.direct-chat >
 
-            <!-- TO DO List -->
+            <! TO DO List >
             <div class="card">
               <div class="card-header">
                 <h3 class="card-title">
@@ -1191,25 +1204,25 @@
                   </ul>
                 </div>
               </div>
-              <!-- /.card-header -->
+              <! /.card-header >
               <div class="card-body">
                 <ul class="todo-list" data-widget="todo-list">
                   <li>
-                    <!-- drag handle -->
+                    <! drag handle >
                     <span class="handle">
                       <i class="fas fa-ellipsis-v"></i>
                       <i class="fas fa-ellipsis-v"></i>
                     </span>
-                    <!-- checkbox -->
+                    <! checkbox >
                     <div  class="icheck-primary d-inline ml-2">
                       <input type="checkbox" value="" name="todo1" id="todoCheck1">
                       <label for="todoCheck1"></label>
                     </div>
-                    <!-- todo text -->
+                    <! todo text >
                     <span class="text">Design a nice theme</span>
-                    <!-- Emphasis label -->
+                    <! Emphasis label >
                     <small class="badge badge-danger"><i class="far fa-clock"></i> 2 mins</small>
-                    <!-- General tools such as edit or delete-->
+                    <! General tools such as edit or delete>
                     <div class="tools">
                       <i class="fas fa-edit"></i>
                       <i class="fas fa-trash-o"></i>
@@ -1297,25 +1310,25 @@
                   </li>
                 </ul>
               </div>
-              <!-- /.card-body -->
+              <! /.card-body >
               <div class="card-footer clearfix">
                 <button type="button" class="btn btn-primary float-right"><i class="fas fa-plus"></i> Add item</button>
               </div>
             </div>
-            <!-- /.card -->
+            <! /.card >
           </section>
-          <!-- /.Left col -->
-          <!-- right col (We are only adding the ID to make the widgets sortable)-->
+          <! /.Left col >
+          <! right col (We are only adding the ID to make the widgets sortable)>
           <section class="col-lg-5 connectedSortable">
 
-            <!-- Map card -->
+            <! Map card >
             <div class="card bg-gradient-primary">
               <div class="card-header border-0">
                 <h3 class="card-title">
                   <i class="fas fa-map-marker-alt mr-1"></i>
                   Visitors
                 </h3>
-                <!-- card tools -->
+                <! card tools >
                 <div class="card-tools">
                   <button type="button" class="btn btn-primary btn-sm daterange" title="Date range">
                     <i class="far fa-calendar-alt"></i>
@@ -1324,36 +1337,36 @@
                     <i class="fas fa-minus"></i>
                   </button>
                 </div>
-                <!-- /.card-tools -->
+                <! /.card-tools >
               </div>
               <div class="card-body">
                 <div id="world-map" style="height: 250px; width: 100%;"></div>
               </div>
-              <!-- /.card-body-->
+              <! /.card-body>
               <div class="card-footer bg-transparent">
                 <div class="row">
                   <div class="col-4 text-center">
                     <div id="sparkline-1"></div>
                     <div class="text-white">Visitors</div>
                   </div>
-                  <!-- ./col -->
+                  <! ./col >
                   <div class="col-4 text-center">
                     <div id="sparkline-2"></div>
                     <div class="text-white">Online</div>
                   </div>
-                  <!-- ./col -->
+                  <! ./col >
                   <div class="col-4 text-center">
                     <div id="sparkline-3"></div>
                     <div class="text-white">Sales</div>
                   </div>
-                  <!-- ./col -->
+                  <! ./col >
                 </div>
-                <!-- /.row -->
+                <! /.row >
               </div>
             </div>
-            <!-- /.card -->
+            <! /.card >
 
-            <!-- solid sales graph -->
+            <! solid sales graph >
             <div class="card bg-gradient-info">
               <div class="card-header border-0">
                 <h3 class="card-title">
@@ -1373,7 +1386,7 @@
               <div class="card-body">
                 <canvas class="chart" id="line-chart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
               </div>
-              <!-- /.card-body -->
+              <! /.card-body >
               <div class="card-footer bg-transparent">
                 <div class="row">
                   <div class="col-4 text-center">
@@ -1382,29 +1395,29 @@
 
                     <div class="text-white">Mail-Orders</div>
                   </div>
-                  <!-- ./col -->
+                  <! ./col >
                   <div class="col-4 text-center">
                     <input type="text" class="knob" data-readonly="true" value="50" data-width="60" data-height="60"
                            data-fgColor="#39CCCC">
 
                     <div class="text-white">Online</div>
                   </div>
-                  <!-- ./col -->
+                  <! ./col >
                   <div class="col-4 text-center">
                     <input type="text" class="knob" data-readonly="true" value="30" data-width="60" data-height="60"
                            data-fgColor="#39CCCC">
 
                     <div class="text-white">In-Store</div>
                   </div>
-                  <!-- ./col -->
+                  <! ./col >
                 </div>
-                <!-- /.row -->
+                <! /.row >
               </div>
-              <!-- /.card-footer -->
+              <! /.card-footer >
             </div>
-            <!-- /.card -->
+            <! /.card >
 
-            <!-- Calendar -->
+            <! Calendar >
             <div class="card bg-gradient-success">
               <div class="card-header border-0">
 
@@ -1412,9 +1425,9 @@
                   <i class="far fa-calendar-alt"></i>
                   Calendar
                 </h3>
-                <!-- tools card -->
+                <! tools card >
                 <div class="card-tools">
-                  <!-- button with a dropdown -->
+                  <! button with a dropdown >
                   <div class="btn-group">
                     <button type="button" class="btn btn-success btn-sm dropdown-toggle" data-toggle="dropdown" data-offset="-52">
                       <i class="fas fa-bars"></i>
@@ -1433,27 +1446,84 @@
                     <i class="fas fa-times"></i>
                   </button>
                 </div>
-                <!-- /. tools -->
+                <! /. tools >
               </div>
-              <!-- /.card-header -->
+              <! /.card-header >
               <div class="card-body pt-0">
-                <!--The calendar -->
+                <!The calendar >
                 <div id="calendar" style="width: 100%"></div>
               </div>
-              <!-- /.card-body -->
+              <! /.card-body >
             </div>
-            <!-- /.card -->
+            <! /.card >
           </section>
-          <!-- right col -->
-        </div>
+          <! right col >
+        </div> -->
         <!-- /.row (main row) -->
+        <div class="row">
+          <form>
+            <div class="custom-control custom-switch custom-switch-off-danger custom-switch-on-success">
+              <input type="checkbox" class="custom-control-input" id="customSwitch1" name="section_control_home">
+              <label class="custom-control-label" for="customSwitch1">Home Section</label>
+            </div>
+            <div class="custom-control custom-switch custom-switch-off-danger custom-switch-on-success">
+              <input type="checkbox" class="custom-control-input" id="customSwitch2" name="section_control_about">
+              <label class="custom-control-label" for="customSwitch2">About Section</label>
+            </div>
+            <div class="custom-control custom-switch custom-switch-off-danger custom-switch-on-success">
+              <input type="checkbox" class="custom-control-input" id="customSwitch3" name="section_control_education">
+              <label class="custom-control-label" for="customSwitch3">Education Section</label>
+            </div>
+            <div class="custom-control custom-switch custom-switch-off-danger custom-switch-on-success">
+              <input type="checkbox" class="custom-control-input" id="customSwitch4" name="section_control_experience">
+              <label class="custom-control-label" for="customSwitch4">Experience Section</label>
+            </div>
+            <div class="custom-control custom-switch custom-switch-off-danger custom-switch-on-success">
+              <input type="checkbox" class="custom-control-input" id="customSwitch5" name="section_control_projects">
+              <label class="custom-control-label" for="customSwitch5">Projects Section</label>
+            </div>
+            <div class="custom-control custom-switch custom-switch-off-danger custom-switch-on-success">
+              <input type="checkbox" class="custom-control-input" id="customSwitch6" name="section_control_skills_n_languages">
+              <label class="custom-control-label" for="customSwitch6">Skills & Languages Section</label>
+            </div>
+            <div class="custom-control custom-switch custom-switch-off-danger custom-switch-on-success">
+              <input type="checkbox" class="custom-control-input" id="customSwitch7" name="section_control_badges">
+              <label class="custom-control-label" for="customSwitch7">Badges Section</label>
+            </div>
+            <div class="custom-control custom-switch custom-switch-off-danger custom-switch-on-success">
+              <input type="checkbox" class="custom-control-input" id="customSwitch8" name="section_control_certificates">
+              <label class="custom-control-label" for="customSwitch8">Certificates Section</label>
+            </div>
+            <div class="custom-control custom-switch custom-switch-off-danger custom-switch-on-success">
+              <input type="checkbox" class="custom-control-input" id="customSwitch9" name="section_control_courses">
+              <label class="custom-control-label" for="customSwitch9">Courses Section</label>
+            </div>
+            <div class="custom-control custom-switch custom-switch-off-danger custom-switch-on-success">
+              <input type="checkbox" class="custom-control-input" id="customSwitch10" name="section_control_organizations">
+              <label class="custom-control-label" for="customSwitch10">Organizations Section</label>
+            </div>
+            <div class="custom-control custom-switch custom-switch-off-danger custom-switch-on-success">
+              <input type="checkbox" class="custom-control-input" id="customSwitch11" name="section_control_competitions">
+              <label class="custom-control-label" for="customSwitch11">Competitions Section</label>
+            </div>
+            <div class="custom-control custom-switch custom-switch-off-danger custom-switch-on-success">
+              <input type="checkbox" class="custom-control-input" id="customSwitch12" name="section_control_resume">
+              <label class="custom-control-label" for="customSwitch12">Resume Section</label>
+            </div>
+            <div class="custom-control custom-switch custom-switch-off-danger custom-switch-on-success">
+              <input type="checkbox" class="custom-control-input" id="customSwitch13" name="section_control_contact">
+              <label class="custom-control-label" for="customSwitch13">Contact Section</label>
+            </div>
+            <input type="submit" class="btn btn-sm btn-primary" name="update-section" value="Save Changes">
+          </form>
+        </div>
       </div><!-- /.container-fluid -->
     </section>
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
   <footer class="main-footer">
-    <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong>
+    <strong>Copyright &copy; 2022 <a href="https://adminlte.io"><?php print("Aashish Bansal"); //?></a>.</strong>
     All rights reserved.
     <div class="float-right d-none d-sm-inline-block">
       <b>Version</b> 3.2.0

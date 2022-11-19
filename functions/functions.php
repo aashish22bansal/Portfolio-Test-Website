@@ -54,4 +54,26 @@
 
 // // Checking the obtained Data
 // // print_r($run_UnderGraduate_Subject_Data);
+
+// function CredentialAuthentication($email, $password){
+//     $query_login = "SELECT * FROM personal_details WHERE email='$email' && user_password='$password'";
+//     $run_login = mysqli_query($connection, $query_login);
+//     $user_data_login = mysqli_fetch_array($run_login);
+//     // print_r($user_data_login);
+//     if(count($user_data_login)>0){
+//         //creating a session
+//         $_SESSION['isUserLoggedIn'] = true;
+//         $_SESSION['emailId'] = $_POST['email'];
+//         //redirecting
+//         echo "<script>window.location.href = 'index.php';</script>";
+//     }
+//     else{
+//         echo "<script>alert('Invalid Credentials!')</script>";
+//     }
+// }
+
+
+
+
+
 ?>

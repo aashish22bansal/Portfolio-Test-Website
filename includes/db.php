@@ -11,6 +11,12 @@
     $password = ""; //"AHgx=Wf0SXxCU5w~";
     $databaseName = "id19547945_myportfolio"; //"id19547945_myportfolio";
 
+    //starting a session
+    session_start();
+
+    //removing error reporting
+    error_reporting(0);
+
     // Creating a Connection
     $connection = new mysqli($servername, $username, $password, $databaseName);
     // $conn = new mysqli('localhost','root',$password,$databaseName);

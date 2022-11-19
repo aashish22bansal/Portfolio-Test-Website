@@ -66,6 +66,13 @@
                             <div class="col-md-12 heading-section ftco-animate">
                                 <h1 class="big">About</h1>
                                 <h3 class="mb-4">Profiles</h3>
+								<div>
+									<style></style>
+									<script src="https://kit.fontawesome.com/911ba10830.js" crossorigin="anonymous"></script>
+									<p>
+										
+									</p>
+								</div>
                                 <ul class="about-info mt-4 px-md-0 px-2">
                                     <?php
                                         foreach($user_data_social_media as $row){
@@ -103,7 +110,7 @@
 							</div>
 						</div>
 					</div>
-
+					<!-- <br> -->
 					<div class="col-lg-3 d-flex" >
 						<div class="img-about img d-flex align-items-stretch">
 							<div class="overlay"></div>
@@ -117,7 +124,7 @@
 									<script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
 									<a class="LI-simple-link" href='https://www.linkedin.com/in/aashish22bansal/'>AASHISH BANSAL</a>
 								</div> -->
-
+								
 							</div>
 						</div>
 					</div>

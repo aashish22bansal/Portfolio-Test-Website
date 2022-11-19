@@ -79,7 +79,8 @@
 					</div>
 					<div>
 						<h3 class="mb-4">Email Address</h3>
-						<p><a href="mailto:aashish22bansal@gmail.com">aashish22bansal@gmail.com</a></p>
+						<p><a href="mailto:analyst.aashish@gmail.com">analyst.aashish@gmail.com</a></p>
+						<!-- <p><a href="mailto:developwithaashish@gmail.com">developwithaashish@gmail.com</a></p> -->
 					</div>
 				</div>
 			</div>
@@ -90,7 +91,6 @@
 		</div>
 		</section>
 			
-
 		<?php
             require("includes/footer.php");
             require("includes/foot.php");
