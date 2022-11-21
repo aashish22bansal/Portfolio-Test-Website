@@ -1,10 +1,10 @@
 <?php
     require('includes/db.php');
     require('functions/functions.php');
-    $query_experience = "SELECT * FROM experience";
-    $run_experience = mysqli_query($connection, $query_experience);
-    $user_data_experience = mysqli_fetch_all($run_experience);
-    //print_r($user_data_experience);
+    // $query_experience = "SELECT * FROM experience";
+    // $run_experience = mysqli_query($connection, $query_experience);
+    // $user_data_experience = mysqli_fetch_all($run_experience);
+    // //print_r($user_data_experience);
     // while($row = mysqli_fetch_array($run_experience)){
     //     print($row);
     //     $experience_ID = $row['ID'];

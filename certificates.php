@@ -2,10 +2,10 @@
     require('includes/db.php');
     require('functions/functions.php');
 
-	$query_certificates = "SELECT * FROM certificates";
-	$run_certificates = mysqli_query($connection, $query_certificates);
-	$user_data_certificates = mysqli_fetch_all($run_certificates);
-	// print_r($user_data_industry_skills);
+	// $query_certificates = "SELECT * FROM certificates";
+	// $run_certificates = mysqli_query($connection, $query_certificates);
+	// $user_data_certificates = mysqli_fetch_all($run_certificates);
+	// // print_r($user_data_industry_skills);
 ?>
 <!DOCTYPE html>
 <html lang="en">

@@ -1,10 +1,10 @@
 <?php
     require('includes/db.php');
     require('functions/functions.php');
-    $query_industry_skill_categories = "SELECT * FROM industryskillcategories";
-    $run_industry_skill_categories = mysqli_query($connection, $query_industry_skill_categories);
-    $user_data_industry_skill_categories = mysqli_fetch_all($run_industry_skill_categories);
-    //print_r($user_data_project_categories);
+    // $query_industry_skill_categories = "SELECT * FROM industryskillcategories";
+    // $run_industry_skill_categories = mysqli_query($connection, $query_industry_skill_categories);
+    // $user_data_industry_skill_categories = mysqli_fetch_all($run_industry_skill_categories);
+    // //print_r($user_data_project_categories);
 ?>
 <!DOCTYPE html>
 <html lang="en">

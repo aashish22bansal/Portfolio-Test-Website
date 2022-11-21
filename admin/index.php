@@ -5,7 +5,70 @@ require('../functions/functions.php');
 if(!isset($_SESSION['isUserLoggedIn'])){
   echo "<script>window.location.href = 'login.php';</script>";
 }
-$query_admin_index_page = ""
+$query_admin_index_page_badges_learning = "SELECT * FROM badges_learning";
+$query_admin_index_page_badges_skills = "SELECT * FROM badges_skills";
+$query_admin_index_page_certificates = "SELECT * FROM certificates";
+$query_admin_index_page_courses_company_list = "SELECT * FROM courses_company_list";
+$query_admin_index_page_courses_list = "SELECT * FROM courses_list";
+$query_admin_index_page_education = "SELECT * FROM education";
+$query_admin_index_page_experience = "SELECT * FROM experience";
+$query_admin_index_page_home = "SELECT * FROM home";
+$query_admin_index_page_industryskillcategories = "SELECT * FROM industryskillcategories";
+$query_admin_index_page_industryskills = "SELECT * FROM industryskills";
+$query_admin_index_page_personal_details = "SELECT * FROM personal_details";
+$query_admin_index_page_programmingskills = "SELECT * FROM programmingskills";
+$query_admin_index_page_projects = "SELECT * FROM projects";
+$query_admin_index_page_project_categories = "SELECT * FROM project_categories";
+$query_admin_index_page_publications = "SELECT * FROM publications";
+$query_admin_index_page_section_control = "SELECT * FROM section_control";
+$query_admin_index_page_social_media = "SELECT * FROM social_media";
+$query_admin_index_page_subjects_matriculation = "SELECT * FROM subjects_matriculation";
+$query_admin_index_page_subjects_pre_university = "SELECT * FROM subjects_pre_university";
+$query_admin_index_page_subjects_undergraduate = "SELECT * FROM subjects_undergraduate";
+
+$run_query_admin_index_page_badges_learning = mysqli_query($connection, $query_admin_index_page_badges_learning);
+$run_query_admin_index_page_badges_skills = mysqli_query($connection, $query_admin_index_page_badges_skills);
+$run_query_admin_index_page_certificates = mysqli_query($connection, $query_admin_index_page_certificates);
+$run_query_admin_index_page_courses_company_list = mysqli_query($connection, $query_admin_index_page_courses_company_list);
+$run_query_admin_index_page_courses_list = mysqli_query($connection, $query_admin_index_page_courses_list);
+$run_query_admin_index_page_education = mysqli_query($connection, $query_admin_index_page_education);
+$run_query_admin_index_page_experience = mysqli_query($connection, $query_admin_index_page_experience);
+$run_query_admin_index_page_home = mysqli_query($connection, $query_admin_index_page_home);
+$run_query_admin_index_page_industryskillcategories = mysqli_query($connection, $query_admin_index_page_industryskillcategories);
+$run_query_admin_index_page_industryskills = mysqli_query($connection, $query_admin_index_page_industryskills);
+$run_query_admin_index_page_personal_details = mysqli_query($connection, $query_admin_index_page_personal_details);
+$run_query_admin_index_page_programmingskills = mysqli_query($connection, $query_admin_index_page_programmingskills);
+$run_query_admin_index_page_projects = mysqli_query($connection, $query_admin_index_page_projects);
+$run_query_admin_index_page_project_categories = mysqli_query($connection, $query_admin_index_page_project_categories);
+$run_query_admin_index_page_publications = mysqli_query($connection, $query_admin_index_page_publications);
+$run_query_admin_index_page_section_control = mysqli_query($connection, $query_admin_index_page_section_control);
+$run_query_admin_index_page_social_media = mysqli_query($connection, $query_admin_index_page_social_media);
+$run_query_admin_index_page_subjects_matriculation = mysqli_query($connection, $query_admin_index_page_subjects_matriculation);
+$run_query_admin_index_page_subjects_pre_university = mysqli_query($connection, $query_admin_index_page_subjects_pre_university);
+$run_query_admin_index_page_subjects_undergraduate = mysqli_query($connection, $query_admin_index_page_subjects_undergraduate);
+
+$user_data_admin_badges_learning = mysqli_fetch_all($run_query_admin_index_page_badges_learning);
+$user_data_admin_badges_skills = mysqli_fetch_all($run_query_admin_index_page_badges_skills);
+$user_data_admin_certificates = mysqli_fetch_all($run_query_admin_index_page_certificates);
+$user_data_admin_courses_company_list = mysqli_fetch_all($run_query_admin_index_page_courses_company_list);
+$user_data_admin_courses_list = mysqli_fetch_all($run_query_admin_index_page_courses_list);
+$user_data_admin_education = mysqli_fetch_all($run_query_admin_index_page_education);
+$user_data_admin_experience = mysqli_fetch_all($run_query_admin_index_page_experience);
+$user_data_admin_home = mysqli_fetch_all($run_query_admin_index_page_home);
+$user_data_admin_industryskillcategories = mysqli_fetch_all($run_query_admin_index_page_industryskillcategories);
+$user_data_admin_industryskills = mysqli_fetch_all($run_query_admin_index_page_industryskills);
+$user_data_admin_personal_details = mysqli_fetch_all($run_query_admin_index_page_personal_details);
+$user_data_admin_programmingskills = mysqli_fetch_all($run_query_admin_index_page_programmingskills);
+$user_data_admin_projects = mysqli_fetch_all($run_query_admin_index_page_projects);
+$user_data_admin_project_categories = mysqli_fetch_all($run_query_admin_index_page_project_categories);
+$user_data_admin_publications = mysqli_fetch_all($run_query_admin_index_page_publications);
+$user_data_admin_section_control = mysqli_fetch_all($run_query_admin_index_page_section_control);
+$user_data_admin_social_media = mysqli_fetch_all($run_query_admin_index_page_social_media);
+$user_data_admin_subjects_matriculation = mysqli_fetch_all($run_query_admin_index_page_subjects_matriculation);
+$user_data_admin_subjects_pre_university = mysqli_fetch_all($run_query_admin_index_page_subjects_pre_university);
+$user_data_admin_subjects_undergraduate = mysqli_fetch_all($run_query_admin_index_page_subjects_undergraduate);
+
+// print_r("kasfasjfkljsakldfjnlasjndflkjasnkdfns".$user_data_admin_section_control[0][1]);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -198,7 +261,7 @@ $query_admin_index_page = ""
           <img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block"><?php print("Aashish Bansal"); // ?></a>
+          <a href="index.php?Admin_Panel_Dashboard=true" class="d-block"><?php print("Aashish Bansal"); // ?></a>
         </div>
       </div>
 
@@ -219,8 +282,37 @@ $query_admin_index_page = ""
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
+               <li class="nav-item menu-open">
+            <a href="index.php?Admin_Panel_Dashboard=true" class="nav-link active">
+              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <p>
+                Dashboard
+                <i class="right"></i> <!--i class="right fas fa-angle-left"></i-->
+              </p>
+            </a>
+            <!-- <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="./index.html" class="nav-link active">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Dashboard v1</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="./index2.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Dashboard v2</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="./index3.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Dashboard v3</p>
+                </a>
+              </li>
+            </ul> -->
+          </li>
           <li class="nav-item menu-open">
-            <a href="index.php" class="nav-link active">
+            <a href="index.php?Admin_Panel_Update_Section_Control=true" class="nav-link active">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                 Section Control
@@ -247,6 +339,442 @@ $query_admin_index_page = ""
                 </a>
               </li>
             </ul> -->
+          </li>
+          <li class="nav-item menu-open">
+            <a href="#" class="nav-link active">
+              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <p>
+                Update Home Page
+                <i class="right"></i> <!--i class="right fas fa-angle-left"></i-->
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="./index.php?Admin_Panel_Update_Home_Page_Details=true" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Home Page Details</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="./index.php?Admin_Panel_Update_About_Page_Details=true" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>About Section Details</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="./index.php?Admin_Panel_Update_Personal_Details=true" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Update Personal Details</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="./index.php?Admin_Panel_Update_Social_Media_Details=true" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Update Social Media</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item menu-open">
+            <a href="#" class="nav-link active">
+              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <p>
+                Update Education Page
+                <i class="right"></i> <!--i class="right fas fa-angle-left"></i-->
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="./index.php?Admin_Panel_Add_Education_Details=true" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Add Education</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="./index.php?Admin_Panel_Update_Matriculation_Details=true" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Update Matriculation Details</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="./index.php?Admin_Panel_Update_Preuniversity_Details=true" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Update Pre-University Details</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="./index.php?Admin_Panel_Update_Undergraduate_Details=true" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Update Undergraduate Details</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item menu-open">
+            <a href="#" class="nav-link active">
+              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <p>
+                Update Experiences Page
+                <i class="right"></i> <!--i class="right fas fa-angle-left"></i-->
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="./index.php?Admin_Panel_Add_Experience_Details=true" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Add Experience</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="./index.php?Admin_Panel_Modify_Experience_Details=true" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Modify Experience Details</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="./index.php?Admin_Panel_Delete_Experience_Details=true" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Delete Experience Details</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item menu-open">
+            <a href="#" class="nav-link active">
+              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <p>
+                Update Publications Page
+                <i class="right"></i> <!--i class="right fas fa-angle-left"></i-->
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="./index.php?Admin_Panel_Add_Publication_Details=true" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Add Publication(s)</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="./index.php?Admin_Panel_Modify_Publication_Details=true" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Modify Publication(s)</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="./index.php?Admin_Panel_Delete_Publication_Details=true" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Delete Publication(s)</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item menu-open">
+            <a href="#" class="nav-link active">
+              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <p>
+                Update Projects Page
+                <i class="right"></i> <!--i class="right fas fa-angle-left"></i-->
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="#" class="nav-link active">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Update Project Category</p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="./index.php?Admin_Panel_Add_Project_Category=true" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Add Project Category</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="./index.php?Admin_Panel_Modify_Project_Category=true" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Modify Project Category</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="./index.php?Admin_Panel_Delete_Project_Category=true" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Delete Project Category</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Update Project</p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="./index.php?Admin_Panel_Add_Project_Details=true" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Add Project(s)</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="./index.php?Admin_Panel_Modify_Project_Details=true" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Modify Project(s)</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="./index.php?Admin_Panel_Delete_Project_Details=true" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Delete Project(s)</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item menu-open">
+            <a href="#" class="nav-link active">
+              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <p>
+                Update Industry Skills Page
+                <i class="right"></i> <!--i class="right fas fa-angle-left"></i-->
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="#" class="nav-link active">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Update Industry Skill Category</p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="./index.php?Admin_Panel_Add_Industry_Skill_Category=true" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Add Industry Skill Category</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="./index.php?Admin_Panel_Modify_Industry_Skill_Category=true" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Modify Industry Skill Category</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="./index.php?Admin_Panel_Delete_Industry_Skill_Category=true" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Delete Industry Skill Category</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Update Industry Skill</p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="./index.php?Admin_Panel_Add_Industry_Skill_Details=true" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Add Industry Skill</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="./index.php?Admin_Panel_Modify_Industry_Skill_Details=true" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Modify Industry Skill</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="./index.php?Admin_Panel_Delete_Industry_Skill_Details=true" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Delete Industry Skill</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item menu-open">
+            <a href="#" class="nav-link active">
+              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <p>
+                Update Badges Page
+                <i class="right"></i> <!--i class="right fas fa-angle-left"></i-->
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="#" class="nav-link active">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Update Learning Badge Details</p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="./index.php?Admin_Panel_Add_Learning_Badge=true" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Add Learning Badge</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="./index.php?Admin_Panel_Modify_Learning_Badge=true" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Modify Learning Badge</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="./index.php?Admin_Panel_Delete_Learning_Badge=true" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Delete Learning Badge</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Update Skills Badge</p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="./index.php?Admin_Panel_Add_Skills_Badge=true" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Add Skills Badge</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="./index.php?Admin_Panel_Modify_Skills_Badge=true" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Modify Skills Badge</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="./index.php?Admin_Panel_Delete_Skills_Badge=true" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Delete Skills Badge</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item menu-open">
+            <a href="#" class="nav-link active">
+              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <p>
+                Update Certificates Page
+                <i class="right"></i> <!--i class="right fas fa-angle-left"></i-->
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="./index.php?Admin_Panel_Add_Certificate=true" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Add Certificate</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="./index.php?Admin_Panel_Modify_Certificate=true" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Modify Certificate</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="./index.php?Admin_Panel_Delete_Certificate=true" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Delete Certificate</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item menu-open">
+            <a href="#" class="nav-link active">
+              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <p>
+                Update Courses Page
+                <i class="right"></i> <!--i class="right fas fa-angle-left"></i-->
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="#" class="nav-link active">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Update Course Company Details</p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="./index.php?Admin_Panel_Add_Course_Company=true" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Add Course Company</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="./index.php?Admin_Panel_Modify_Course_Company=true" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Modify Course Company</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="./index.php?Admin_Panel_Delete_Course_Company=true" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Delete Course Company</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Update Course Details</p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="./index.php?Admin_Panel_Add_Course=true" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Add Course(s)</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="./index.php?Admin_Panel_Modify_Course=true" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Modify Course(s)</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="./index.php?Admin_Panel_Delete_Course=true" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Delete Course(s)</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item menu-open">
+            <a href="index.php?Admin_Panel_Update_Resume_Page=true" class="nav-link active">
+              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <p>
+                Update Resume Page
+                <i class="right"></i> <!--i class="right fas fa-angle-left"></i-->
+              </p>
+            </a>
+          </li>
+          <li class="nav-item menu-open">
+            <a href="index.php?Admin_Panel_Update_Admin_Account_Page=true" class="nav-link active">
+              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <p>
+                Admin Account Settings
+                <i class="right"></i> <!--i class="right fas fa-angle-left"></i-->
+              </p>
+            </a>
+          </li>
+          <li class="nav-item menu-open">
+            <a href="index.php?Admin_Panel_Update_SEO_Settings=true" class="nav-link active">
+              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <p>
+                SEO Settings
+                <i class="right"></i> <!--i class="right fas fa-angle-left"></i-->
+              </p>
+            </a>
           </li>
           <!-- CODE FROM LINE 247 TO 849 IS TO BE DELETED -->
           <!-- <li class="nav-item">
@@ -865,9 +1393,10 @@ $query_admin_index_page = ""
       <div class="container-fluid">
         <div class="row mb-2"> 
           <div class="col-sm-6">
-            <h1 class="m-0">Show/Hide Menu</h1>
+            <h1 class="m-0">Manage Portfolio Website</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
+            THIS IS THE PAGE OPENED BY DEFAULT
             <ol class="breadcrumb float-sm-right">
               <!-- <li class="breadcrumb-item"><a href="#">Home</a></li>
               <li class="breadcrumb-item active">Dashboard </li> -->
@@ -1461,61 +1990,149 @@ $query_admin_index_page = ""
         </div> -->
         <!-- /.row (main row) -->
         <div class="row">
-          <form>
-            <div class="custom-control custom-switch custom-switch-off-danger custom-switch-on-success">
-              <input type="checkbox" class="custom-control-input" id="customSwitch1" name="section_control_home">
-              <label class="custom-control-label" for="customSwitch1">Home Section</label>
-            </div>
-            <div class="custom-control custom-switch custom-switch-off-danger custom-switch-on-success">
-              <input type="checkbox" class="custom-control-input" id="customSwitch2" name="section_control_about">
-              <label class="custom-control-label" for="customSwitch2">About Section</label>
-            </div>
-            <div class="custom-control custom-switch custom-switch-off-danger custom-switch-on-success">
-              <input type="checkbox" class="custom-control-input" id="customSwitch3" name="section_control_education">
-              <label class="custom-control-label" for="customSwitch3">Education Section</label>
-            </div>
-            <div class="custom-control custom-switch custom-switch-off-danger custom-switch-on-success">
-              <input type="checkbox" class="custom-control-input" id="customSwitch4" name="section_control_experience">
-              <label class="custom-control-label" for="customSwitch4">Experience Section</label>
-            </div>
-            <div class="custom-control custom-switch custom-switch-off-danger custom-switch-on-success">
-              <input type="checkbox" class="custom-control-input" id="customSwitch5" name="section_control_projects">
-              <label class="custom-control-label" for="customSwitch5">Projects Section</label>
-            </div>
-            <div class="custom-control custom-switch custom-switch-off-danger custom-switch-on-success">
-              <input type="checkbox" class="custom-control-input" id="customSwitch6" name="section_control_skills_n_languages">
-              <label class="custom-control-label" for="customSwitch6">Skills & Languages Section</label>
-            </div>
-            <div class="custom-control custom-switch custom-switch-off-danger custom-switch-on-success">
-              <input type="checkbox" class="custom-control-input" id="customSwitch7" name="section_control_badges">
-              <label class="custom-control-label" for="customSwitch7">Badges Section</label>
-            </div>
-            <div class="custom-control custom-switch custom-switch-off-danger custom-switch-on-success">
-              <input type="checkbox" class="custom-control-input" id="customSwitch8" name="section_control_certificates">
-              <label class="custom-control-label" for="customSwitch8">Certificates Section</label>
-            </div>
-            <div class="custom-control custom-switch custom-switch-off-danger custom-switch-on-success">
-              <input type="checkbox" class="custom-control-input" id="customSwitch9" name="section_control_courses">
-              <label class="custom-control-label" for="customSwitch9">Courses Section</label>
-            </div>
-            <div class="custom-control custom-switch custom-switch-off-danger custom-switch-on-success">
-              <input type="checkbox" class="custom-control-input" id="customSwitch10" name="section_control_organizations">
-              <label class="custom-control-label" for="customSwitch10">Organizations Section</label>
-            </div>
-            <div class="custom-control custom-switch custom-switch-off-danger custom-switch-on-success">
-              <input type="checkbox" class="custom-control-input" id="customSwitch11" name="section_control_competitions">
-              <label class="custom-control-label" for="customSwitch11">Competitions Section</label>
-            </div>
-            <div class="custom-control custom-switch custom-switch-off-danger custom-switch-on-success">
-              <input type="checkbox" class="custom-control-input" id="customSwitch12" name="section_control_resume">
-              <label class="custom-control-label" for="customSwitch12">Resume Section</label>
-            </div>
-            <div class="custom-control custom-switch custom-switch-off-danger custom-switch-on-success">
-              <input type="checkbox" class="custom-control-input" id="customSwitch13" name="section_control_contact">
-              <label class="custom-control-label" for="customSwitch13">Contact Section</label>
-            </div>
-            <input type="submit" class="btn btn-sm btn-primary" name="update-section" value="Save Changes">
-          </form>
+          <?php
+          if(isset($_GET['Admin_Panel_Dashboard'])){
+            echo "THIS IS THE ADMIN PANEL DASHBOARD.";
+          }
+          else if(isset($_GET['Admin_Panel_Update_Section_Control'])){
+          ?>
+            <form method="POST" action="../includes/admin.php">
+              <div class="custom-control custom-switch custom-switch-off-danger custom-switch-on-success">
+                <input type="checkbox" class="custom-control-input" id="customSwitch1" name="section_control_home"
+                <?php
+                if($user_data_admin_section_control[0][1]){
+                  echo "checked";
+                }
+                ?>
+                >
+                <label class="custom-control-label" for="customSwitch1">Home Section</label>
+              </div>
+              <div class="custom-control custom-switch custom-switch-off-danger custom-switch-on-success">
+                <input type="checkbox" class="custom-control-input" id="customSwitch2" name="section_control_about"
+                <?php
+                if($user_data_admin_section_control[0][2]){
+                  echo "checked";
+                }
+                ?>
+                >
+                <label class="custom-control-label" for="customSwitch2">About Section</label>
+              </div>
+              <div class="custom-control custom-switch custom-switch-off-danger custom-switch-on-success">
+                <input type="checkbox" class="custom-control-input" id="customSwitch3" name="section_control_education"
+                <?php
+                if($user_data_admin_section_control[0][3]){
+                  echo "checked";
+                }
+                ?>
+                >
+                <label class="custom-control-label" for="customSwitch3">Education Section</label>
+              </div>
+              <div class="custom-control custom-switch custom-switch-off-danger custom-switch-on-success">
+                <input type="checkbox" class="custom-control-input" id="customSwitch4" name="section_control_experience"
+                <?php
+                if($user_data_admin_section_control[0][4]){
+                  echo "checked";
+                }
+                ?>
+                >
+                <label class="custom-control-label" for="customSwitch4">Experience Section</label>
+              </div>
+              <div class="custom-control custom-switch custom-switch-off-danger custom-switch-on-success">
+                <input type="checkbox" class="custom-control-input" id="customSwitch5" name="section_control_projects"
+                <?php
+                if($user_data_admin_section_control[0][5]){
+                  echo "checked";
+                }
+                ?>
+                >
+                <label class="custom-control-label" for="customSwitch5">Projects Section</label>
+              </div>
+              <div class="custom-control custom-switch custom-switch-off-danger custom-switch-on-success">
+                <input type="checkbox" class="custom-control-input" id="customSwitch6" name="section_control_skills_n_languages"
+                <?php
+                if($user_data_admin_section_control[0][6]){
+                  echo "checked";
+                }
+                ?>
+                >
+                <label class="custom-control-label" for="customSwitch6">Skills & Languages Section</label>
+              </div>
+              <div class="custom-control custom-switch custom-switch-off-danger custom-switch-on-success">
+                <input type="checkbox" class="custom-control-input" id="customSwitch7" name="section_control_badges"
+                <?php
+                if($user_data_admin_section_control[0][7]){
+                  echo "checked";
+                }
+                ?>
+                >
+                <label class="custom-control-label" for="customSwitch7">Badges Section</label>
+              </div>
+              <div class="custom-control custom-switch custom-switch-off-danger custom-switch-on-success">
+                <input type="checkbox" class="custom-control-input" id="customSwitch8" name="section_control_certificates"
+                <?php
+                if($user_data_admin_section_control[0][8]){
+                  echo "checked";
+                }
+                ?>
+                >
+                <label class="custom-control-label" for="customSwitch8">Certificates Section</label>
+              </div>
+              <div class="custom-control custom-switch custom-switch-off-danger custom-switch-on-success">
+                <input type="checkbox" class="custom-control-input" id="customSwitch9" name="section_control_courses"
+                <?php
+                if($user_data_admin_section_control[0][9]){
+                  echo "checked";
+                }
+                ?>
+                >
+                <label class="custom-control-label" for="customSwitch9">Courses Section</label>
+              </div>
+              <div class="custom-control custom-switch custom-switch-off-danger custom-switch-on-success">
+                <input type="checkbox" class="custom-control-input" id="customSwitch10" name="section_control_organizations"
+                <?php
+                if($user_data_admin_section_control[0][10]){
+                  echo "checked";
+                }
+                ?>
+                >
+                <label class="custom-control-label" for="customSwitch10">Organizations Section</label>
+              </div>
+              <div class="custom-control custom-switch custom-switch-off-danger custom-switch-on-success">
+                <input type="checkbox" class="custom-control-input" id="customSwitch11" name="section_control_competitions"
+                <?php
+                if($user_data_admin_section_control[0][11]){
+                  echo "checked";
+                }
+                ?>
+                >
+                <label class="custom-control-label" for="customSwitch11">Competitions Section</label>
+              </div>
+              <div class="custom-control custom-switch custom-switch-off-danger custom-switch-on-success">
+                <input type="checkbox" class="custom-control-input" id="customSwitch12" name="section_control_resume"
+                <?php
+                if($user_data_admin_section_control[0][12]){
+                  echo "checked";
+                }
+                ?>
+                >
+                <label class="custom-control-label" for="customSwitch12">Resume Section</label>
+              </div>
+              <div class="custom-control custom-switch custom-switch-off-danger custom-switch-on-success">
+                <input type="checkbox" class="custom-control-input" id="customSwitch13" name="section_control_contact"
+                <?php
+                if($user_data_admin_section_control[0][13]){
+                  echo "checked";
+                }
+                ?>
+                >
+                <label class="custom-control-label" for="customSwitch13">Contact Section</label>
+              </div>
+              <input type="submit" class="btn btn-sm btn-primary" name="update-section" value="Save Changes">
+            </form>
+          <?php
+          }
+          // else if(){}
+          ?>
         </div>
       </div><!-- /.container-fluid -->
     </section>
@@ -1523,10 +2140,10 @@ $query_admin_index_page = ""
   </div>
   <!-- /.content-wrapper -->
   <footer class="main-footer">
-    <strong>Copyright &copy; 2022 <a href="https://adminlte.io"><?php print("Aashish Bansal"); //?></a>.</strong>
+    <strong>Copyright &copy; 2022 <a href="index.php?Admin_Panel_Dashboard=true"><?php print("Aashish Bansal"); //?></a>.</strong>
     All rights reserved.
     <div class="float-right d-none d-sm-inline-block">
-      <b>Version</b> 3.2.0
+      <b>Version</b> 4.2.0
     </div>
   </footer>
 

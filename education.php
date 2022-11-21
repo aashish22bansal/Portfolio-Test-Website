@@ -6,22 +6,22 @@
 	*/
 	include("functions/functions.php");
 	// Creating a Query
-	$query_list_of_EducationCategory = "SELECT DISTINCT EducationCategory FROM Education";
-    $query_UnderGraduate_Subject_Data = "SELECT * FROM Subjects_Undergraduate";
-    $query_PreUniversity_Subject_Data = "SELECT * FROM Subjects_Pre_University";
-    $query_Matriculation_Subject_Data = "SELECT * FROM Subjects_Matriculation";
+	// $query_list_of_EducationCategory = "SELECT DISTINCT EducationCategory FROM Education";
+    // $query_UnderGraduate_Subject_Data = "SELECT * FROM Subjects_Undergraduate";
+    // $query_PreUniversity_Subject_Data = "SELECT * FROM Subjects_Pre_University";
+    // $query_Matriculation_Subject_Data = "SELECT * FROM Subjects_Matriculation";
 
-	// Executing a Query
-	$run_list_of_EducationCategory  = mysqli_query($connection,$query_list_of_EducationCategory);
-    $run_UnderGraduate_Subject_Data = mysqli_query($connection,$query_UnderGraduate_Subject_Data);
-    $run_PreUniversity_Subject_Data = mysqli_query($connection,$query_PreUniversity_Subject_Data);
-    $run_Matriculation_Subject_Data = mysqli_query($connection,$query_Matriculation_Subject_Data);
+	// // Executing a Query
+	// $run_list_of_EducationCategory  = mysqli_query($connection,$query_list_of_EducationCategory);
+    // $run_UnderGraduate_Subject_Data = mysqli_query($connection,$query_UnderGraduate_Subject_Data);
+    // $run_PreUniversity_Subject_Data = mysqli_query($connection,$query_PreUniversity_Subject_Data);
+    // $run_Matriculation_Subject_Data = mysqli_query($connection,$query_Matriculation_Subject_Data);
 	
-	// Fetching the Data
-	$user_data_list_of_EducationCategory  = mysqli_fetch_array($run_UnderGraduate_Subject_Data);
-    $user_data_list_of_PreUniversity = mysqli_fetch_array($run_PreUniversity_Subject_Data);
-    $user_data_list_of_Matriculation = mysqli_fetch_array($run_Matriculation_Subject_Data);
-    // print_r(mysqli_fetch_array($run_UnderGraduate_Subject_Data));
+	// // Fetching the Data
+	// $user_data_list_of_EducationCategory  = mysqli_fetch_array($run_UnderGraduate_Subject_Data);
+    // $user_data_list_of_PreUniversity = mysqli_fetch_array($run_PreUniversity_Subject_Data);
+    // $user_data_list_of_Matriculation = mysqli_fetch_array($run_Matriculation_Subject_Data);
+    // // print_r(mysqli_fetch_array($run_UnderGraduate_Subject_Data));
 	// if ($result = $db -> query($query_list_of_EducationCategory)) {
     //     while ($obj = $result -> fetch_object()) {
     //         printf("%s \n", $obj->EducationCategory);

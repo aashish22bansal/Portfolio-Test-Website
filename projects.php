@@ -1,15 +1,15 @@
 <?php
     require('includes/db.php');
     require('functions/functions.php');
-    $query_project_categories = "SELECT * FROM project_categories";
-    $run_project_categories = mysqli_query($connection, $query_project_categories);
-    $user_data_project_categories = mysqli_fetch_all($run_project_categories);
-    //print_r($user_data_project_categories);
+    // $query_project_categories = "SELECT * FROM project_categories";
+    // $run_project_categories = mysqli_query($connection, $query_project_categories);
+    // $user_data_project_categories = mysqli_fetch_all($run_project_categories);
+    // //print_r($user_data_project_categories);
 
-	$query_projects = "SELECT * FROM projects";
-	$run_projects = mysqli_query($connection, $query_projects);
-	$user_data_projects = mysqli_fetch_all($run_projects);
-	//print_r($user_data_projects);
+	// $query_projects = "SELECT * FROM projects";
+	// $run_projects = mysqli_query($connection, $query_projects);
+	// $user_data_projects = mysqli_fetch_all($run_projects);
+	// //print_r($user_data_projects);
 ?>
 <!DOCTYPE html>
 <html lang="en">

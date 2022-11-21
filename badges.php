@@ -2,10 +2,10 @@
     require('includes/db.php');
     require('functions/functions.php');
 
-	$query_industry_skills = "SELECT * FROM badges_skills";
-	$run_industry_skills = mysqli_query($connection, $query_industry_skills);
-	$user_data_industry_skills = mysqli_fetch_all($run_industry_skills);
-	// print_r($user_data_industry_skills);
+	// $query_industry_skills = "SELECT * FROM badges_skills";
+	// $run_industry_skills = mysqli_query($connection, $query_industry_skills);
+	// $user_data_industry_skills = mysqli_fetch_all($run_industry_skills);
+	// // print_r($user_data_industry_skills);
 ?>
 <!DOCTYPE html>
 <html lang="en">

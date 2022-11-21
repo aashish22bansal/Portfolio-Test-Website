@@ -2,13 +2,13 @@
     require('includes/db.php');
     require('functions/functions.php');
 
-    $query_courses_company_list = "SELECT * FROM courses_company_list";
-    $run_courses_company_list = mysqli_query($connection, $query_courses_company_list);
-    $user_data_courses_company_list = mysqli_fetch_all($run_courses_company_list);
+    // $query_courses_company_list = "SELECT * FROM courses_company_list";
+    // $run_courses_company_list = mysqli_query($connection, $query_courses_company_list);
+    // $user_data_courses_company_list = mysqli_fetch_all($run_courses_company_list);
 
-    $query_courses = "SELECT * FROM courses_list";
-    $run_courses = mysqli_query($connection, $query_courses);
-    $user_data_courses = mysqli_fetch_all($run_courses);
+    // $query_courses = "SELECT * FROM courses_list";
+    // $run_courses = mysqli_query($connection, $query_courses);
+    // $user_data_courses = mysqli_fetch_all($run_courses);
 ?>
 <!DOCTYPE html>
 <html lang="en">
