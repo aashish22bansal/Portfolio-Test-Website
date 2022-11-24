@@ -68,7 +68,7 @@ $user_data_admin_subjects_matriculation = mysqli_fetch_all($run_query_admin_inde
 $user_data_admin_subjects_pre_university = mysqli_fetch_all($run_query_admin_index_page_subjects_pre_university);
 $user_data_admin_subjects_undergraduate = mysqli_fetch_all($run_query_admin_index_page_subjects_undergraduate);
 
-// print_r("kasfasjfkljsakldfjnlasjndflkjasnkdfns".$user_data_admin_section_control[0][1]);
+// print_r("kasfasjfkljsakldfjnlasjndflkjasnkdfns".$user_data_admin_personal_details[0][1]);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -2139,83 +2139,88 @@ $user_data_admin_subjects_undergraduate = mysqli_fetch_all($run_query_admin_inde
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              <form>
+              <form method="POST" action="">
                 <div class="card-body">
                   <div class="form-group">
                     <label for="exampleInputEmail1">Name</label>
-                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter Your Name">
+                    <input type="text" class="form-control" id="Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Name" value="<?php print($user_data_admin_personal_details[0][2]);?>" placeholder="Enter Your Name">
                   </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">Email Address</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                    <input type="email" class="form-control" id="Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Email" value="<?php print($user_data_admin_personal_details[0][0]);?>" placeholder="Enter Email Address">
                   </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">Phone Number</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                    <input type="text" class="form-control" id="Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Mobile" value="<?php print($user_data_admin_personal_details[0][3]);?>" placeholder="Enter Mobile Number">
                   </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">Description about self</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                    <input type="textbox" class="form-control" id="Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Description" value="<?php print($user_data_admin_personal_details[0][14]);?>" placeholder="Enter Description">
                   </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">Day of Birth</label>
-                    <input type="number" class="form-control" id="exampleInputEmail1" placeholder="Enter Your Day of Birth">
+                    <input type="number" class="form-control" id="Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Day_of_Birth" value="<?php print($user_data_admin_personal_details[0][6]);?>" placeholder="Enter Your Day of Birth">
                   </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">Month of Birth</label>
-                    <input type="number" class="form-control" id="exampleInputEmail1" placeholder="Enter Your Month of Birth">
+                    <input type="text" class="form-control" id="Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Month_of_Birth" value="<?php print($user_data_admin_personal_details[0][5]);?>" placeholder="Enter Your Month of Birth">
                   </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">Year of Birth</label>
-                    <input type="number" class="form-control" id="exampleInputEmail1" placeholder="Enter Your Year of Birth">
+                    <input type="number" class="form-control" id="Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Year_of_Birth" value="<?php print($user_data_admin_personal_details[0][4]);?>" placeholder="Enter Your Year of Birth">
                   </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">Address (in Full)</label>
-                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter Your Address">
+                    <input type="text" class="form-control" id="Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_" value="<?php print($user_data_admin_personal_details[0][13]);?>" placeholder="Enter Your Address">
                   </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">Country of Residence</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                    <input type="text" class="form-control" id="Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_" value="<?php print($user_data_admin_personal_details[0][7]);?>" placeholder="Enter Country of Residence">
                   </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">State of Residence</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                    <input type="text" class="form-control" id="Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_" value="<?php print($user_data_admin_personal_details[0][8]);?>" placeholder="Enter State of Residence">
                   </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">Distrit of Residence</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                    <input type="text" class="form-control" id="Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_" value="<?php print($user_data_admin_personal_details[0][9]);?>" placeholder="Enter Distrit of Residence">
                   </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">City</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                    <input type="text" class="form-control" id="Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_" value="<?php print($user_data_admin_personal_details[0][10]);?>" placeholder="Enter City">
                   </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">Street Address</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                    <input type="text" class="form-control" id="Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_" value="<?php print($user_data_admin_personal_details[0][11]);?>" placeholder="Enter Street Address">
                   </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">ZIP Code</label>
-                    <input type="number" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                    <input type="number" class="form-control" id="Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_" value="<?php print($user_data_admin_personal_details[0][12]);?>" placeholder="Enter ZIP Code">
                   </div>
-                  <div class="form-group">
-                    <label for="exampleInputEmail1">Show Icons</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                  <div class="form-group custom-control custom-switch custom-switch-off-danger custom-switch-on-success">
+                    <!-- <label for="exampleInputEmail1">Show Icons</label><br> -->
+                    <!-- <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email"> -->
+                    <label class="custom-control-label" for="customSwitch1">Show Icons</label>
+                    <input type="checkbox" class="custom-control-input" id="customSwitch13" name="showIconsPersonalDetails"
+                      <?php
+                      print_r($user_data_admin_personal_details[0]);
+                      if($user_data_admin_personal_details[0][15]=="on"){
+                        echo "checked";
+                      }
+                      ?>
+                    />
                   </div>
                   <div class="form-group">
                     <label for="exampleInputFile">Profile Image</label>
                     <div class="input-group">
                       <div class="custom-file">
-                        <input type="file" class="custom-file-input" id="exampleInputFile">
+                        <input type="file" class="custom-file-input" id="Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_">
                         <label class="custom-file-label" for="exampleInputFile">Choose file</label>
                       </div>
                       <div class="input-group-append">
                         <span class="input-group-text">Upload</span>
                       </div>
                     </div>
-                  </div>
-                  <div class="form-check">
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
                   </div>
                 </div>
                 <!-- /.card-body -->
@@ -2230,7 +2235,7 @@ $user_data_admin_subjects_undergraduate = mysqli_fetch_all($run_query_admin_inde
           ?>
             <div class="card card-primary col-lg-12">
               <div class="card-header">
-                <h3 class="card-title">Update Home Page Details</h3>
+                <h3 class="card-title">Update About Page Details</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
@@ -2274,25 +2279,86 @@ $user_data_admin_subjects_undergraduate = mysqli_fetch_all($run_query_admin_inde
           ?>
             <div class="card card-primary col-lg-12">
               <div class="card-header">
-                <h3 class="card-title">Update Home Page Details</h3>
+                <h3 class="card-title">Update Personal Details Details</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              <form>
+              <form method="POST" action="">
                 <div class="card-body">
                   <div class="form-group">
-                    <label for="exampleInputEmail1">Email address</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                    <label for="exampleInputEmail1">Name</label>
+                    <input type="text" class="form-control" id="Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Name" value="<?php print($user_data_admin_personal_details[0][2]);?>" placeholder="Enter Your Name">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputPassword1">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    <label for="exampleInputEmail1">Email Address</label>
+                    <input type="email" class="form-control" id="Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Email" value="<?php print($user_data_admin_personal_details[0][0]);?>" placeholder="Enter Email Address">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputFile">File input</label>
+                    <label for="exampleInputEmail1">Phone Number</label>
+                    <input type="text" class="form-control" id="Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Mobile" value="<?php print($user_data_admin_personal_details[0][3]);?>" placeholder="Enter Mobile Number">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Description about self</label>
+                    <input type="textbox" class="form-control" id="Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Description" value="<?php print($user_data_admin_personal_details[0][14]);?>" placeholder="Enter Description">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Day of Birth</label>
+                    <input type="number" class="form-control" id="Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Day_of_Birth" value="<?php print($user_data_admin_personal_details[0][6]);?>" placeholder="Enter Your Day of Birth">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Month of Birth</label>
+                    <input type="text" class="form-control" id="Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Month_of_Birth" value="<?php print($user_data_admin_personal_details[0][5]);?>" placeholder="Enter Your Month of Birth">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Year of Birth</label>
+                    <input type="number" class="form-control" id="Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Year_of_Birth" value="<?php print($user_data_admin_personal_details[0][4]);?>" placeholder="Enter Your Year of Birth">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Address (in Full)</label>
+                    <input type="text" class="form-control" id="Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_" value="<?php print($user_data_admin_personal_details[0][13]);?>" placeholder="Enter Your Address">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Country of Residence</label>
+                    <input type="text" class="form-control" id="Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_" value="<?php print($user_data_admin_personal_details[0][7]);?>" placeholder="Enter Country of Residence">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">State of Residence</label>
+                    <input type="text" class="form-control" id="Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_" value="<?php print($user_data_admin_personal_details[0][8]);?>" placeholder="Enter State of Residence">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Distrit of Residence</label>
+                    <input type="text" class="form-control" id="Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_" value="<?php print($user_data_admin_personal_details[0][9]);?>" placeholder="Enter Distrit of Residence">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">City</label>
+                    <input type="text" class="form-control" id="Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_" value="<?php print($user_data_admin_personal_details[0][10]);?>" placeholder="Enter City">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Street Address</label>
+                    <input type="text" class="form-control" id="Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_" value="<?php print($user_data_admin_personal_details[0][11]);?>" placeholder="Enter Street Address">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">ZIP Code</label>
+                    <input type="number" class="form-control" id="Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_" value="<?php print($user_data_admin_personal_details[0][12]);?>" placeholder="Enter ZIP Code">
+                  </div>
+                  <div class="form-group custom-control custom-switch custom-switch-off-danger custom-switch-on-success">
+                    <!-- <label for="exampleInputEmail1">Show Icons</label><br> -->
+                    <!-- <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email"> -->
+                    <label class="custom-control-label" for="customSwitch1">Show Icons</label>
+                    <input type="checkbox" class="custom-control-input" id="customSwitch13" name="showIconsPersonalDetails"
+                      <?php
+                      print_r($user_data_admin_personal_details[0]);
+                      if($user_data_admin_personal_details[0][15]=="on"){
+                        echo "checked";
+                      }
+                      ?>
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputFile">Profile Image</label>
                     <div class="input-group">
                       <div class="custom-file">
-                        <input type="file" class="custom-file-input" id="exampleInputFile">
+                        <input type="file" class="custom-file-input" id="Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_">
                         <label class="custom-file-label" for="exampleInputFile">Choose file</label>
                       </div>
                       <div class="input-group-append">
@@ -2300,13 +2366,8 @@ $user_data_admin_subjects_undergraduate = mysqli_fetch_all($run_query_admin_inde
                       </div>
                     </div>
                   </div>
-                  <div class="form-check">
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                  </div>
                 </div>
                 <!-- /.card-body -->
-
                 <div class="card-footer">
                   <button type="submit" class="btn btn-primary">Submit</button>
                 </div>
@@ -2318,39 +2379,74 @@ $user_data_admin_subjects_undergraduate = mysqli_fetch_all($run_query_admin_inde
           ?>
             <div class="card card-primary col-lg-12">
               <div class="card-header">
-                <h3 class="card-title">Update Home Page Details</h3>
+                <h3 class="card-title">Update Social Media Details</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              <form>
+              <form method="POST" action="">
                 <div class="card-body">
                   <div class="form-group">
-                    <label for="exampleInputEmail1">Email address</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                    <label for="exampleInputEmail1">LinkedIn</label>
+                    <input type="text" class="form-control" id="Admin_Panel_Update_Social_Media_Details_Form_LinkedIn" value="<?php print($user_data_admin_social_media[0][1]);?>" placeholder="Enter Your Name">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputPassword1">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    <label for="exampleInputEmail1">Facebook</label>
+                    <input type="text" class="form-control" id="Admin_Panel_Update_Home_Page_Details_Form_Facebookl" value="<?php print($user_data_admin_social_media[0][2]);?>" placeholder="Enter Link">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputFile">File input</label>
-                    <div class="input-group">
-                      <div class="custom-file">
-                        <input type="file" class="custom-file-input" id="exampleInputFile">
-                        <label class="custom-file-label" for="exampleInputFile">Choose file</label>
-                      </div>
-                      <div class="input-group-append">
-                        <span class="input-group-text">Upload</span>
-                      </div>
-                    </div>
+                    <label for="exampleInputEmail1">Instagram</label>
+                    <input type="text" class="form-control" id="Admin_Panel_Update_Home_Page_Details_Form_Instagram" value="<?php print($user_data_admin_social_media[0][3]);?>" placeholder="Enter Link">
                   </div>
-                  <div class="form-check">
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">YouTube</label>
+                    <input type="text" class="form-control" id="Admin_Panel_Update_Home_Page_Details_Form_YouTube" value="<?php print($user_data_admin_social_media[0][4]);?>" placeholder="Enter Link">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">GitHub</label>
+                    <input type="text" class="form-control" id="Admin_Panel_Update_Home_Page_Details_Form_GitHub" value="<?php print($user_data_admin_social_media[0][5]);?>" placeholder="Enter Link">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">HackerRank</label>
+                    <input type="text" class="form-control" id="Admin_Panel_Update_Home_Page_Details_Form_HackerRank" value="<?php print($user_data_admin_social_media[0][6]);?>" placeholder="Enter Link">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">CodeChef</label>
+                    <input type="text" class="form-control" id="Admin_Panel_Update_Home_Page_Details_Form_CodeChef" value="<?php print($user_data_admin_social_media[0][7]);?>" placeholder="Enter Link">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">CodeForces</label>
+                    <input type="text" class="form-control" id="Admin_Panel_Update_Home_Page_Details_Form_CodeForces" value="<?php print($user_data_admin_social_media[0][8]);?>" placeholder="Enter Link">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">LeetCode</label>
+                    <input type="text" class="form-control" id="Admin_Panel_Update_Home_Page_Details_Form_LeetCode" value="<?php print($user_data_admin_social_media[0][9]);?>" placeholder="Enter Link">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Resume</label>
+                    <input type="text" class="form-control" id="Admin_Panel_Update_Home_Page_Details_Form_Resume" value="<?php print($user_data_admin_social_media[0][0]);?>" placeholder="Enter Link">
+                    <br>
+                    <style>
+                      .pdfobject-container { height: 500px;}
+                      .pdfobject { border: 1px solid #666; }
+                    </style>
+                    <script src="pdfobject.js"></script>
+                    <div id="DISPLAY_CURRENT_RESUME"></div>
+                    <?php
+                      // print("skfajsbdfkasnfkjansdfk");
+                      // $file = $user_data_admin_social_media[0][0];
+                      $filename = $user_data_admin_social_media[0][0];
+                      // header('Content-type: application/pdf');
+                      // header('Content-Disposition: inline; filename="'.$filename.'"');
+                      // header('Content-Transfer-Encoding: binary');
+                      // header('Accept-Ranges: bytes');
+                      // echo "<script>PDFObject.embed('$filename', '#DISPLAY_CURRENT_RESUME');</script>";
+                      // @readfile($file);
+                      echo "<iframe src='$filename' width='100%' style='height:100%'></iframe>";
+                    ?>
+                    <embed src="<?php print($user_data_admin_social_media[0][0]);?>" width="500" height="375" type="application/pdf">
+                    <!-- <script>PDFObject.embed("<?php print($user_data_admin_social_media[0][0]);?>", "#DISPLAY_CURRENT_RESUME");</script> -->
                   </div>
                 </div>
-                <!-- /.card-body -->
-
                 <div class="card-footer">
                   <button type="submit" class="btn btn-primary">Submit</button>
                 </div>

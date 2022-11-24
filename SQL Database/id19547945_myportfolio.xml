@@ -1,0 +1,1624 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+- phpMyAdmin XML Dump
+- version 5.2.0
+- https://www.phpmyadmin.net
+-
+- Host: 127.0.0.1
+- Generation Time: Nov 24, 2022 at 04:35 PM
+- Server version: 10.4.25-MariaDB
+- PHP Version: 8.1.10
+-->
+
+<pma_xml_export version="1.0" xmlns:pma="https://www.phpmyadmin.net/some_doc_url/">
+    <!--
+    - Structure schemas
+    -->
+    <pma:structure_schemas>
+        <pma:database name="id19547945_myportfolio" collation="utf8mb4_general_ci" charset="utf8mb4">
+            <pma:table name="badges_learning">
+                CREATE TABLE `badges_learning` (
+                  `ID` int(11) NOT NULL AUTO_INCREMENT,
+                  `LearningBadgeID` text DEFAULT NULL,
+                  `LearningBadgeTitle` text NOT NULL,
+                  `LearningBadgeDescription` longtext DEFAULT NULL,
+                  PRIMARY KEY (`ID`)
+                ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+            </pma:table>
+            <pma:table name="badges_skills">
+                CREATE TABLE `badges_skills` (
+                  `ID` int(11) NOT NULL AUTO_INCREMENT,
+                  `BadgeTitle` text NOT NULL,
+                  `BadgeCompletionMonth` text DEFAULT NULL,
+                  `BadgeCompletionYear` int(11) DEFAULT NULL,
+                  `BadgeIssuingCompanyName` text DEFAULT NULL,
+                  `BadgeIssuingCompanyLink` longtext NOT NULL,
+                  `BadgeAuthorizationCompanyName` text DEFAULT NULL,
+                  `BadgeAuthorizationCompanyLink` longtext NOT NULL,
+                  `BadgeDescription` longtext DEFAULT NULL,
+                  `BadgeLink` longtext DEFAULT NULL,
+                  `BadgeScript` longtext NOT NULL,
+                  PRIMARY KEY (`ID`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4;
+            </pma:table>
+            <pma:table name="certificates">
+                CREATE TABLE `certificates` (
+                  `CertificateTitle` varchar(255) NOT NULL,
+                  `CertificateIssueDate` int(11) DEFAULT NULL,
+                  `CertificateIssueMonth` varchar(255) DEFAULT NULL,
+                  `CertificateIssueYear` int(11) DEFAULT NULL,
+                  `CertificateIssueCompany` varchar(255) DEFAULT NULL,
+                  `CertificateImageName` varchar(255) DEFAULT NULL,
+                  `CertificateRemarks` varchar(255) DEFAULT NULL,
+                  `CertificateDescription` longtext DEFAULT NULL,
+                  PRIMARY KEY (`CertificateTitle`)
+                ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+            </pma:table>
+            <pma:table name="courses_company_list">
+                CREATE TABLE `courses_company_list` (
+                  `ID` int(11) NOT NULL AUTO_INCREMENT,
+                  `CompanyName` text NOT NULL,
+                  `CompanyImagePath` text NOT NULL,
+                  `CompanyLink` text NOT NULL,
+                  PRIMARY KEY (`ID`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4;
+            </pma:table>
+            <pma:table name="courses_list">
+                CREATE TABLE `courses_list` (
+                  `CourseCertificateID` varchar(255) NOT NULL,
+                  `CourseCompletionMonth` varchar(10) DEFAULT NULL,
+                  `CourseCompletionYear` int(11) DEFAULT NULL,
+                  `CourseTitle` varchar(255) DEFAULT NULL,
+                  `CourseCompanyProvider` varchar(255) DEFAULT NULL,
+                  `CertificateLink` longtext DEFAULT NULL,
+                  `CertificateCompanyImageName` varchar(255) DEFAULT NULL,
+                  PRIMARY KEY (`CourseCertificateID`)
+                ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+            </pma:table>
+            <pma:table name="education">
+                CREATE TABLE `education` (
+                  `NameOfCollege` varchar(255) DEFAULT NULL,
+                  `City` varchar(255) DEFAULT NULL,
+                  `Program` varchar(255) DEFAULT NULL,
+                  `Department` varchar(255) DEFAULT NULL,
+                  `StartYear` int(11) DEFAULT NULL,
+                  `EndYear` int(11) DEFAULT NULL,
+                  `Score` varchar(30) DEFAULT NULL,
+                  `EducationCategory` varchar(50) DEFAULT NULL
+                ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+            </pma:table>
+            <pma:table name="experience">
+                CREATE TABLE `experience` (
+                  `ID` int(11) NOT NULL AUTO_INCREMENT,
+                  `StartMonth` varchar(10) DEFAULT NULL,
+                  `StartYear` int(11) DEFAULT NULL,
+                  `EndMonth` varchar(10) DEFAULT NULL,
+                  `EndYear` int(11) DEFAULT NULL,
+                  `Title` varchar(255) DEFAULT NULL,
+                  `EmploymentType` varchar(255) DEFAULT NULL,
+                  `CompanyName` varchar(255) DEFAULT NULL,
+                  `CompanyLink` longtext DEFAULT NULL,
+                  `Location` varchar(255) DEFAULT NULL,
+                  `DescriptionOfJob` longtext DEFAULT NULL,
+                  `NoOfCertificateImages` int(11) DEFAULT NULL,
+                  `CertificateImageNames` longtext DEFAULT NULL,
+                  `CertificateImageLinks` longtext DEFAULT NULL,
+                  `CompanyImageName` varchar(255) DEFAULT NULL,
+                  `CertificateImageFileNames` text NOT NULL,
+                  `ShowThisExperience` varchar(11) NOT NULL DEFAULT &#039;On&#039;,
+                  PRIMARY KEY (`ID`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4;
+            </pma:table>
+            <pma:table name="home">
+                CREATE TABLE `home` (
+                  `ID` int(11) NOT NULL AUTO_INCREMENT,
+                  `Title` varchar(50) DEFAULT NULL,
+                  `DoB` date DEFAULT NULL,
+                  `Address` varchar(1000) DEFAULT NULL,
+                  `ZIP_Code` int(11) DEFAULT NULL,
+                  `Email` varchar(100) DEFAULT NULL,
+                  `Phone` varchar(10) DEFAULT NULL,
+                  `Subtitle` varchar(2000) DEFAULT NULL,
+                  `ShowIcones` int(11) DEFAULT NULL,
+                  `Link_Resume` varchar(1000) DEFAULT NULL,
+                  `Link_LinkedIn` varchar(1000) DEFAULT NULL,
+                  `Link_Facebook` varchar(1000) DEFAULT NULL,
+                  `Link_Instagram` varchar(1000) DEFAULT NULL,
+                  `Link_YouTube` varchar(1000) DEFAULT NULL,
+                  `Link_GitHub` varchar(1000) DEFAULT NULL,
+                  `Link_HackerRank` varchar(1000) DEFAULT NULL,
+                  `Link_CodeChef` varchar(1000) DEFAULT NULL,
+                  `Link_CodeForces` varchar(1000) DEFAULT NULL,
+                  `Link_LeetCode` varchar(1000) DEFAULT NULL,
+                  PRIMARY KEY (`ID`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4;
+            </pma:table>
+            <pma:table name="industryskillcategories">
+                CREATE TABLE `industryskillcategories` (
+                  `ID` int(11) NOT NULL,
+                  `SkillCategoryName` text NOT NULL,
+                  `SkillCategoryIDName` text NOT NULL,
+                  `SkillCategoryImageName` text NOT NULL
+                ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+            </pma:table>
+            <pma:table name="industryskills">
+                CREATE TABLE `industryskills` (
+                  `IndustrySkillName` varchar(255) NOT NULL,
+                  `IndustrySkillImageName` varchar(255) DEFAULT NULL,
+                  `IndustrySkillCategory` varchar(255) DEFAULT NULL,
+                  `IndustrySkillProficiency` int(11) DEFAULT NULL,
+                  PRIMARY KEY (`IndustrySkillName`)
+                ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+            </pma:table>
+            <pma:table name="personal_details">
+                CREATE TABLE `personal_details` (
+                  `email` text NOT NULL,
+                  `user_password` text NOT NULL,
+                  `Name` varchar(50) NOT NULL,
+                  `contact_mobile` text NOT NULL,
+                  `BirthYear` int(11) NOT NULL,
+                  `BirthMonth` varchar(15) NOT NULL,
+                  `BirthDate` int(11) NOT NULL,
+                  `address_country` varchar(25) NOT NULL,
+                  `address_state` varchar(25) NOT NULL,
+                  `address_district` varchar(25) NOT NULL,
+                  `address_city` varchar(25) NOT NULL,
+                  `address_street` text NOT NULL,
+                  `address_pincode` int(11) NOT NULL,
+                  `FullAddress` text NOT NULL,
+                  `Description` text DEFAULT NULL,
+                  `show_icons` varchar(11) NOT NULL DEFAULT &#039;On&#039;,
+                  PRIMARY KEY (`email`(255)),
+                  UNIQUE KEY `password` (`user_password`(255)),
+                  UNIQUE KEY `contact_mobile` (`contact_mobile`) USING HASH
+                ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+            </pma:table>
+            <pma:table name="programmingskills">
+                CREATE TABLE `programmingskills` (
+                  `ProgrammingLanguageName` varchar(255) NOT NULL,
+                  `ProgrammingLanguageImageName` varchar(255) DEFAULT NULL,
+                  `ProgrammingLanguageCategory` varchar(255) DEFAULT NULL,
+                  `ProgrammingLanguageProficiency` int(11) DEFAULT NULL,
+                  PRIMARY KEY (`ProgrammingLanguageName`)
+                ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+            </pma:table>
+            <pma:table name="projects">
+                CREATE TABLE `projects` (
+                  `ID` int(11) NOT NULL AUTO_INCREMENT,
+                  `ProjectCode` text NOT NULL,
+                  `CompletionMonth` varchar(10) DEFAULT NULL,
+                  `CompletionYear` int(11) DEFAULT NULL,
+                  `TitleOfProject` text DEFAULT NULL,
+                  `Company` text DEFAULT NULL,
+                  `Subject` text NOT NULL,
+                  `ProjectCategory` varchar(255) DEFAULT NULL,
+                  `ProjectType` varchar(255) DEFAULT NULL,
+                  `ProjectDescription` longtext DEFAULT NULL,
+                  `ProjectCodeLocation` text NOT NULL,
+                  `ProjectCodeLink` longtext DEFAULT NULL,
+                  `ProjectDocumentLocation` text NOT NULL,
+                  `ProjectDocumentLink` longtext DEFAULT NULL,
+                  PRIMARY KEY (`ID`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8mb4;
+            </pma:table>
+            <pma:table name="project_categories">
+                CREATE TABLE `project_categories` (
+                  `ID` int(11) NOT NULL AUTO_INCREMENT,
+                  `ProjectCategoryName` text NOT NULL,
+                  `ProjectCategoryIDName` text NOT NULL,
+                  `ProjectCategoryImageName` text NOT NULL,
+                  PRIMARY KEY (`ID`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4;
+            </pma:table>
+            <pma:table name="publications">
+                CREATE TABLE `publications` (
+                  `ID` int(11) NOT NULL AUTO_INCREMENT,
+                  `PaperTitle` text NOT NULL,
+                  `PublicationType` text NOT NULL,
+                  `PublicationLink` text NOT NULL,
+                  `PublicationDescription` text NOT NULL,
+                  PRIMARY KEY (`ID`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4;
+            </pma:table>
+            <pma:table name="section_control">
+                CREATE TABLE `section_control` (
+                  `ID` int(11) NOT NULL,
+                  `Home` varchar(11) DEFAULT NULL,
+                  `About` varchar(11) DEFAULT NULL,
+                  `Education` varchar(11) DEFAULT NULL,
+                  `Experience` varchar(11) DEFAULT NULL,
+                  `Projects` varchar(11) DEFAULT NULL,
+                  `Skills_n_Languages` varchar(11) DEFAULT NULL,
+                  `Badges` varchar(11) DEFAULT NULL,
+                  `Certificates` varchar(11) DEFAULT NULL,
+                  `Courses` varchar(11) DEFAULT NULL,
+                  `Organizations` varchar(11) DEFAULT NULL,
+                  `Competitions` varchar(11) DEFAULT NULL,
+                  `Resume_Link` varchar(11) DEFAULT NULL,
+                  `Contact` varchar(11) DEFAULT NULL,
+                  PRIMARY KEY (`ID`)
+                ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+            </pma:table>
+            <pma:table name="social_media">
+                CREATE TABLE `social_media` (
+                  `Link_Resume` varchar(1000) DEFAULT NULL,
+                  `Link_LinkedIn` varchar(1000) DEFAULT NULL,
+                  `Link_Facebook` varchar(1000) DEFAULT NULL,
+                  `Link_Instagram` varchar(1000) DEFAULT NULL,
+                  `Link_YouTube` varchar(1000) DEFAULT NULL,
+                  `Link_GitHub` varchar(1000) DEFAULT NULL,
+                  `Link_HackerRank` varchar(1000) DEFAULT NULL,
+                  `Link_CodeChef` varchar(1000) DEFAULT NULL,
+                  `Link_CodeForces` varchar(1000) DEFAULT NULL,
+                  `Link_LeetCode` varchar(1000) DEFAULT NULL
+                ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+            </pma:table>
+            <pma:table name="subjects_matriculation">
+                CREATE TABLE `subjects_matriculation` (
+                  `SubjectCode` varchar(3) NOT NULL,
+                  `SubjectName` varchar(50) DEFAULT NULL,
+                  PRIMARY KEY (`SubjectCode`)
+                ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+            </pma:table>
+            <pma:table name="subjects_pre_university">
+                CREATE TABLE `subjects_pre_university` (
+                  `SubjectCode` varchar(3) NOT NULL,
+                  `SubjectName` varchar(50) DEFAULT NULL,
+                  PRIMARY KEY (`SubjectCode`)
+                ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+            </pma:table>
+            <pma:table name="subjects_undergraduate">
+                CREATE TABLE `subjects_undergraduate` (
+                  `CourseCode` varchar(7) NOT NULL,
+                  `CourseTitle` varchar(255) DEFAULT NULL,
+                  `CourseType` varchar(5) DEFAULT NULL,
+                  `Semester` int(11) DEFAULT NULL,
+                  `Credits` int(11) DEFAULT NULL,
+                  `CourseDistribution` varchar(10) DEFAULT NULL,
+                  PRIMARY KEY (`CourseCode`)
+                ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+            </pma:table>
+        </pma:database>
+    </pma:structure_schemas>
+
+    <!--
+    - Database: 'id19547945_myportfolio'
+    -->
+    <database name="id19547945_myportfolio">
+        <!-- Table badges_learning -->
+        <!-- Table badges_skills -->
+        <table name="badges_skills">
+            <column name="ID">1</column>
+            <column name="BadgeTitle">Machine Learning with Python - Level 1</column>
+            <column name="BadgeCompletionMonth">August</column>
+            <column name="BadgeCompletionYear">2022</column>
+            <column name="BadgeIssuingCompanyName">IBM Cognitive Class</column>
+            <column name="BadgeIssuingCompanyLink">https://www.credly.com/organizations/ibm/badges</column>
+            <column name="BadgeAuthorizationCompanyName">IBM</column>
+            <column name="BadgeAuthorizationCompanyLink">https://www.credly.com/organizations/ibm/badges</column>
+            <column name="BadgeDescription">The badge earner demonstrates an understanding of Supervised vs. Unsupervised Learning, applications of different types of machine learning models, and how to build and evaluate machine learning models.</column>
+            <column name="BadgeLink">https://www.credly.com/badges/9c2625f6-9534-4542-8041-ef8d55ae5c76/public_url</column>
+            <column name="BadgeScript">&lt;div data-iframe-width=&#039;250&#039; data-iframe-height=&#039;270&#039; data-share-badge-id=&#039;9c2625f6-9534-4542-8041-ef8d55ae5c76&#039; data-share-badge-host=&#039;https://www.credly.com&#039;&gt;&lt;/div&gt;&lt;script type=&#039;text/javascript&#039; async src=&#039;//cdn.credly.com/assets/utilities/embed.js&#039;&gt;&lt;/script&gt;</column>
+        </table>
+        <table name="badges_skills">
+            <column name="ID">2</column>
+            <column name="BadgeTitle">Deep Learning Essentials</column>
+            <column name="BadgeCompletionMonth">August</column>
+            <column name="BadgeCompletionYear">2022</column>
+            <column name="BadgeIssuingCompanyName">IBM Cognitive Class</column>
+            <column name="BadgeIssuingCompanyLink">https://www.credly.com/organizations/ibm/badges</column>
+            <column name="BadgeAuthorizationCompanyName">IBM</column>
+            <column name="BadgeAuthorizationCompanyLink">https://www.credly.com/organizations/ibm/badges</column>
+            <column name="BadgeDescription">This badge earner has acquired core knowledge of how the Deep Learning class of machine learning algorithms can be harnessed for more powerful and insightful data processing and pattern creation used in decision-making processes. This includes how convolutional neural networks are used to enhance the effectiveness of image recognition and classification.</column>
+            <column name="BadgeLink">https://www.credly.com/badges/0670d6de-3618-4b8b-8376-297d52cfef4d/embedded</column>
+            <column name="BadgeScript">&lt;div data-iframe-width=&#039;250&#039; data-iframe-height=&#039;250&#039; data-share-badge-id=&#039;0670d6de-3618-4b8b-8376-297d52cfef4d&#039; data-share-badge-host=&#039;https://www.credly.com&#039;&gt;&lt;/div&gt;&lt;script type=&#039;text/javascript&#039; async src=&#039;//cdn.credly.com/assets/utilities/embed.js&#039;&gt;&lt;/script&gt;</column>
+        </table>
+        <table name="badges_skills">
+            <column name="ID">3</column>
+            <column name="BadgeTitle">MTA: Introduction to Programming Using Python - Certified 2022</column>
+            <column name="BadgeCompletionMonth">Feburary</column>
+            <column name="BadgeCompletionYear">2022</column>
+            <column name="BadgeIssuingCompanyName">Microsoft</column>
+            <column name="BadgeIssuingCompanyLink">https://www.credly.com/badges/766b3916-88f2-4dfb-8afb-863918f0c29c/public_url</column>
+            <column name="BadgeAuthorizationCompanyName">Microsoft</column>
+            <column name="BadgeAuthorizationCompanyLink">https://docs.microsoft.com/en-us/learn/certifications/exams/98-381</column>
+            <column name="BadgeDescription">Earners of the MTA: Introduction to Programming Using Python certification have demonstrated the skills and knowledge to recognize and write syntactically correct Python code, recognize data types supported by Python, and the ability to recognize and write Python code that will logically solve a given problem.</column>
+            <column name="BadgeLink">https://www.credly.com/badges/766b3916-88f2-4dfb-8afb-863918f0c29c/embedded</column>
+            <column name="BadgeScript">&lt;div data-iframe-width=&#039;250&#039; data-iframe-height=&#039;270&#039; data-share-badge-id=&#039;766b3916-88f2-4dfb-8afb-863918f0c29c&#039; data-share-badge-host=&#039;https://www.credly.com&#039;&gt;&lt;/div&gt;</column>
+        </table>
+        <table name="badges_skills">
+            <column name="ID">4</column>
+            <column name="BadgeTitle">AWS Academy Graduate - AWS Academy Cloud Foundations</column>
+            <column name="BadgeCompletionMonth">July</column>
+            <column name="BadgeCompletionYear">2021</column>
+            <column name="BadgeIssuingCompanyName">Amazon Web Services Training and Certification</column>
+            <column name="BadgeIssuingCompanyLink">https://www.credly.com/organizations/amazon-web-services/badges</column>
+            <column name="BadgeAuthorizationCompanyName">AWS Academy</column>
+            <column name="BadgeAuthorizationCompanyLink">https://www.credly.com/organizations/amazon-web-services/badges</column>
+            <column name="BadgeDescription">This is a learners badge and the earners of this badge have taken the AWS Academy Cloud Foundations course offered by the AWS Academy and issued by Amazon Web Services Training and Certification.</column>
+            <column name="BadgeLink">https://www.credly.com/badges/577946f1-7627-4147-a9da-221e2d35597e/embedded</column>
+            <column name="BadgeScript">&lt;div data-iframe-width=&#039;250&#039; data-iframe-height=&#039;270&#039; data-share-badge-id=&#039;577946f1-7627-4147-a9da-221e2d35597e&#039; data-share-badge-host=&#039;https://www.credly.com&#039;&gt;&lt;/div&gt;</column>
+        </table>
+        <table name="badges_skills">
+            <column name="ID">5</column>
+            <column name="BadgeTitle">Machine Learning with Python</column>
+            <column name="BadgeCompletionMonth">March</column>
+            <column name="BadgeCompletionYear">2021</column>
+            <column name="BadgeIssuingCompanyName">Coursera Inc.</column>
+            <column name="BadgeIssuingCompanyLink">https://www.credly.com/organizations/coursera/badges</column>
+            <column name="BadgeAuthorizationCompanyName">IBM</column>
+            <column name="BadgeAuthorizationCompanyLink">https://www.credly.com/organizations/ibm/badges</column>
+            <column name="BadgeDescription">The badge earner has demonstrated a good understanding and application of machine learning (ML) including when to use different ML techniques such as regression, classification, clustering and recommender systems. The individual has acquired the skills to use different machine learning libraries in Python, mainly Scikit-learn and Scipy, to generate and apply different types of ML algorithms such as decision trees, logistic regression, k-means, KNN, DBSCCAN, SVM and hierarchical clustering.</column>
+            <column name="BadgeLink">https://www.credly.com/badges/2fc9a971-86bb-4fd0-8e67-66c70c4c767f/embedded</column>
+            <column name="BadgeScript">&lt;div data-iframe-width=&#039;250&#039; data-iframe-height=&#039;250&#039; data-share-badge-id=&#039;2fc9a971-86bb-4fd0-8e67-66c70c4c767f&#039; data-share-badge-host=&#039;https://www.credly.com&#039;&gt;&lt;/div&gt;</column>
+        </table>
+        <table name="badges_skills">
+            <column name="ID">6</column>
+            <column name="BadgeTitle">Data Science Orientation</column>
+            <column name="BadgeCompletionMonth">May</column>
+            <column name="BadgeCompletionYear">2021</column>
+            <column name="BadgeIssuingCompanyName">Coursera Inc.</column>
+            <column name="BadgeIssuingCompanyLink">https://www.credly.com/organizations/coursera/badges</column>
+            <column name="BadgeAuthorizationCompanyName">IBM</column>
+            <column name="BadgeAuthorizationCompanyLink">https://www.credly.com/organizations/ibm/badges</column>
+            <column name="BadgeDescription">This badge earner has a good understanding of why data science, artificial intelligence (AI) and machine learning are revolutionizing the way people do business and research around the world. They have general knowledge on what data science is today.</column>
+            <column name="BadgeLink">https://www.credly.com/badges/0f5f8c8b-3f71-4ade-bced-547dd8e9307f/embedded</column>
+            <column name="BadgeScript">&lt;div data-iframe-width=&#039;250&#039; data-iframe-height=&#039;250&#039; data-share-badge-id=&#039;0f5f8c8b-3f71-4ade-bced-547dd8e9307f&#039; data-share-badge-host=&#039;https://www.credly.com&#039;&gt;&lt;/div&gt;</column>
+        </table>
+        <table name="badges_skills">
+            <column name="ID">7</column>
+            <column name="BadgeTitle">Chatbot Building Essentials</column>
+            <column name="BadgeCompletionMonth">June</column>
+            <column name="BadgeCompletionYear">2021</column>
+            <column name="BadgeIssuingCompanyName">Coursera Inc.</column>
+            <column name="BadgeIssuingCompanyLink">https://www.credly.com/organizations/coursera/badges</column>
+            <column name="BadgeAuthorizationCompanyName">IBM</column>
+            <column name="BadgeAuthorizationCompanyLink">https://www.credly.com/organizations/ibm/badges</column>
+            <column name="BadgeDescription">The badge earner has demonstrated the ability to design, build, analyze, and improve chatbots. The individual has also proven their end-to-end skills by deploying chatbots on a WordPress site.</column>
+            <column name="BadgeLink">https://www.credly.com/badges/ffecf16a-69ea-47b1-ae4a-541f0e64fd88/embedded</column>
+            <column name="BadgeScript">&lt;div data-iframe-width=&#039;250&#039; data-iframe-height=&#039;250&#039; data-share-badge-id=&#039;ffecf16a-69ea-47b1-ae4a-541f0e64fd88&#039; data-share-badge-host=&#039;https://www.credly.com&#039;&gt;&lt;/div&gt;</column>
+        </table>
+        <!-- Table certificates -->
+        <!-- Table courses_company_list -->
+        <table name="courses_company_list">
+            <column name="ID">1</column>
+            <column name="CompanyName">Great Learning Private Limited</column>
+            <column name="CompanyImagePath">images/GL.jpg</column>
+            <column name="CompanyLink">https://www.mygreatlearning.com/about-us</column>
+        </table>
+        <table name="courses_company_list">
+            <column name="ID">2</column>
+            <column name="CompanyName">Udemy Inc.</column>
+            <column name="CompanyImagePath">images/udemy.png</column>
+            <column name="CompanyLink">https://www.udemy.com/</column>
+        </table>
+        <table name="courses_company_list">
+            <column name="ID">3</column>
+            <column name="CompanyName">Coursera Inc.</column>
+            <column name="CompanyImagePath">images/Coursera.jpeg</column>
+            <column name="CompanyLink">https://www.coursera.org/</column>
+        </table>
+        <table name="courses_company_list">
+            <column name="ID">4</column>
+            <column name="CompanyName">NVIDIA Deep Learning Institute</column>
+            <column name="CompanyImagePath">images/NVIDIA.png</column>
+            <column name="CompanyLink">https://www.nvidia.com/en-us/training/</column>
+        </table>
+        <table name="courses_company_list">
+            <column name="ID">5</column>
+            <column name="CompanyName">Outscal Technologies Private Limited</column>
+            <column name="CompanyImagePath">images/outscal.png</column>
+            <column name="CompanyLink">https://www.outscal.com/</column>
+        </table>
+        <!-- Table courses_list -->
+        <table name="courses_list">
+            <column name="CourseCertificateID">548Z2ATM84Z4</column>
+            <column name="CourseCompletionMonth">Jun</column>
+            <column name="CourseCompletionYear">2022</column>
+            <column name="CourseTitle">Specialization - AI Foundations for Everyone</column>
+            <column name="CourseCompanyProvider">Coursera Inc.</column>
+            <column name="CertificateLink">https://www.coursera.org/account/accomplishments/specialization/certificate/548Z2ATM84Z4</column>
+            <column name="CertificateCompanyImageName">Certificates/Courses/Coursera/Specialization - AI Foundations for Everyone - 548Z2ATM84Z4_page-0001.jpg</column>
+        </table>
+        <table name="courses_list">
+            <column name="CourseCertificateID">BYLZBVAU</column>
+            <column name="CourseCompletionMonth">Jun</column>
+            <column name="CourseCompletionYear">2022</column>
+            <column name="CourseTitle">Python Fundamentals for Beginners</column>
+            <column name="CourseCompanyProvider">Great Learning Private Limited</column>
+            <column name="CertificateLink">https://olympus1.mygreatlearning.com/course_certificate/BYLZBVAU</column>
+            <column name="CertificateCompanyImageName">Certificates/Courses/Great Learnng/Python Fundamentals for Beginners.jpg</column>
+        </table>
+        <table name="courses_list">
+            <column name="CourseCertificateID">CVGXJSHI</column>
+            <column name="CourseCompletionMonth">Nov</column>
+            <column name="CourseCompletionYear">2020</column>
+            <column name="CourseTitle">Introduction to R</column>
+            <column name="CourseCompanyProvider">Great Learning Private Limited</column>
+            <column name="CertificateLink">https://olympus1.mygreatlearning.com/course_certificate/CVGXJSHI</column>
+            <column name="CertificateCompanyImageName">Certificates/Courses/Great Learnng/Introduction to R.jpg</column>
+        </table>
+        <table name="courses_list">
+            <column name="CourseCertificateID">RE-ENTER VALUE 1</column>
+            <column name="CourseCompletionMonth">Nov</column>
+            <column name="CourseCompletionYear">2020</column>
+            <column name="CourseTitle">Getting Started with AI on Jetson Nano</column>
+            <column name="CourseCompanyProvider">NVIDIA Deep Learning Institute</column>
+            <column name="CertificateLink">https://www.nvidia.com/en-us/training/</column>
+            <column name="CertificateCompanyImageName">images/NVIDIA.png</column>
+        </table>
+        <table name="courses_list">
+            <column name="CourseCertificateID">RE-ENTER VALUE 2</column>
+            <column name="CourseCompletionMonth">Apr</column>
+            <column name="CourseCompletionYear">2020</column>
+            <column name="CourseTitle">Introduction to C++ Project</column>
+            <column name="CourseCompanyProvider">Outscal Technologies Private Limited</column>
+            <column name="CertificateLink">https://www.outscal.com/</column>
+            <column name="CertificateCompanyImageName">images/outscal.png</column>
+        </table>
+        <table name="courses_list">
+            <column name="CourseCertificateID">UC-683a46bf-3401-46a0-9afd-7d00850643df</column>
+            <column name="CourseCompletionMonth">May</column>
+            <column name="CourseCompletionYear">2020</column>
+            <column name="CourseTitle">Programming with Python: HandsOn Introduction for Beginners</column>
+            <column name="CourseCompanyProvider">Udemy Inc.</column>
+            <column name="CertificateLink">https://ude.my/UC-683a46bf-3401-46a0-9afd-7d00850643df</column>
+            <column name="CertificateCompanyImageName">Certificates/Courses/Udemy/Programming with Python - HandsOn Introduction for Beginners.jpg</column>
+        </table>
+        <table name="courses_list">
+            <column name="CourseCertificateID">XPMLJPWX</column>
+            <column name="CourseCompletionMonth">Jun</column>
+            <column name="CourseCompletionYear">2022</column>
+            <column name="CourseTitle">Python for Machine Learning</column>
+            <column name="CourseCompanyProvider">Great Learning Private Limited</column>
+            <column name="CertificateLink">https://olympus1.mygreatlearning.com/course_certificate/XPMLJPWX</column>
+            <column name="CertificateCompanyImageName">Certificates/Courses/Great Learnng/Python for Machine Learning.jpg</column>
+        </table>
+        <!-- Table education -->
+        <table name="education">
+            <column name="NameOfCollege">Vellore Institute of Technology</column>
+            <column name="City">Vellore</column>
+            <column name="Program">Bachelor of Technology</column>
+            <column name="Department">Information Technology</column>
+            <column name="StartYear">2019</column>
+            <column name="EndYear">2023</column>
+            <column name="Score">CGPA: 8.58</column>
+            <column name="EducationCategory">Bachelor&#039;s Degree</column>
+        </table>
+        <table name="education">
+            <column name="NameOfCollege">GEAR Innovative International School</column>
+            <column name="City">Bangalore</column>
+            <column name="Program">Science</column>
+            <column name="Department">Science</column>
+            <column name="StartYear">2017</column>
+            <column name="EndYear">2019</column>
+            <column name="Score">Percentage: 86.6%</column>
+            <column name="EducationCategory">Pre-University</column>
+        </table>
+        <table name="education">
+            <column name="NameOfCollege">GEAR Innovative International School</column>
+            <column name="City">Bangalore</column>
+            <column name="Program"></column>
+            <column name="Department"></column>
+            <column name="StartYear">2016</column>
+            <column name="EndYear">2017</column>
+            <column name="Score">CGPA: 9.4</column>
+            <column name="EducationCategory">Matriculation</column>
+        </table>
+        <!-- Table experience -->
+        <table name="experience">
+            <column name="ID">1</column>
+            <column name="StartMonth">May</column>
+            <column name="StartYear">2022</column>
+            <column name="EndMonth">Sep</column>
+            <column name="EndYear">2022</column>
+            <column name="Title">Jr. Developer (Project Lead - ML Division)</column>
+            <column name="EmploymentType">Internship</column>
+            <column name="CompanyName">River Bend Data Solutions</column>
+            <column name="CompanyLink">https://www.linkedin.com/in/river-bend-data-solutions-3454281b8/?originalSubdomain=in</column>
+            <column name="Location">Remote/Online</column>
+            <column name="DescriptionOfJob">Development of Application to Help Medical Diagnosis.</column>
+            <column name="NoOfCertificateImages">1</column>
+            <column name="CertificateImageNames">Internship Certificate</column>
+            <column name="CertificateImageLinks">https://drive.google.com/file/d/1PwdoZc38779VDW_g-_X7GLsdEDDqZIgi/view?usp=share_link</column>
+            <column name="CompanyImageName">RBDS.jpg</column>
+            <column name="CertificateImageFileNames">RBDS/Aashish - RBDS internship certificate _page-0001.jpg</column>
+            <column name="ShowThisExperience">On</column>
+        </table>
+        <table name="experience">
+            <column name="ID">2</column>
+            <column name="StartMonth">Jan</column>
+            <column name="StartYear">2022</column>
+            <column name="EndMonth">Feb</column>
+            <column name="EndYear">2022</column>
+            <column name="Title">ML Engineer</column>
+            <column name="EmploymentType">Training &amp; Internship - Data Science</column>
+            <column name="CompanyName">NEO 5.0</column>
+            <column name="CompanyLink">https://neoeducation.in/</column>
+            <column name="Location">Remote/Online</column>
+            <column name="DescriptionOfJob">This was a five week Training &amp; Internship program offered after clearing the Round 1 of NEO5. The project worked on at the end of this Internship is YouTube Adview Prediction.</column>
+            <column name="NoOfCertificateImages">4</column>
+            <column name="CertificateImageNames">Participation Certificate,Round 1 Clearance Certificate,Certificate of Training,Certificate of Internship</column>
+            <column name="CertificateImageLinks">https://drive.google.com/file/d/1JEHBHyv9Y2t6csntfyqLgCayfWbqsDdx/view,https://drive.google.com/file/d/1yWDfJYCbwXuxV5pyvjAquVUZtKlIpX0K/view,https://drive.google.com/file/d/1oUYo5C0e2RGCfb9qhfYwx5wZcTUcdyPz/view,https://drive.google.com/file/d/1mxonIQjN5qvQiwz0CoqLm37HoRnEYkwA/view</column>
+            <column name="CompanyImageName">neo.png</column>
+            <column name="CertificateImageFileNames">NEO5/NEO5 - Participation Certificate.jpg,NEO5/NEO5 - Round 1 Clearance Certificate.jpg,NEO5/Certificate of Training/NEO5 - Certificate of Training.jpg,NEO5/Certificate of Internship/NEO5 - Certificate of Internship.jpg</column>
+            <column name="ShowThisExperience">On</column>
+        </table>
+        <table name="experience">
+            <column name="ID">3</column>
+            <column name="StartMonth">Oct</column>
+            <column name="StartYear">2021</column>
+            <column name="EndMonth">Feb</column>
+            <column name="EndYear">2022</column>
+            <column name="Title">ML Engineer</column>
+            <column name="EmploymentType">Training &amp; Internship - Data Science</column>
+            <column name="CompanyName">Verzeo</column>
+            <column name="CompanyLink">https://learn.verzeo.in/</column>
+            <column name="Location">Remote/Online</column>
+            <column name="DescriptionOfJob">This was a five week Training &amp; Internship program offered after clearing the Round 1 of NEO5. The project worked on at the end of this Internship is YouTube Adview Prediction. </column>
+            <column name="NoOfCertificateImages">3</column>
+            <column name="CertificateImageNames">Course Completion Certificate,Internship Completion Certificate,Outstanding Certificate</column>
+            <column name="CertificateImageLinks">https://drive.google.com/file/d/1oHalK769MFV7EwNVA6pO-bRL6zA-X1yU/view,https://drive.google.com/file/d/1KMLQFEyVzTX1_8GGCxsXDwAIsrPHY5eK/view,https://drive.google.com/file/d/1g7HfsiuVi9nzR8-cQAFKmnp2NTi9-Aea/view</column>
+            <column name="CompanyImageName">verzeo.png</column>
+            <column name="CertificateImageFileNames">Verzeo DS/Course Completion Certificate/Verzeo DS - Course Completion Certificate - 848621739.jpg,Verzeo DS/Internship Completion Certificate/Verzeo DS - Internship Completion Certificate - 873087021.jpg,Verzeo DS/Outstanding Certificate/Verzeo DS - Outstanding Certificate - 1457460912.jpg</column>
+            <column name="ShowThisExperience">On</column>
+        </table>
+        <table name="experience">
+            <column name="ID">4</column>
+            <column name="StartMonth">Sep</column>
+            <column name="StartYear">2021</column>
+            <column name="EndMonth">Nov</column>
+            <column name="EndYear">2021</column>
+            <column name="Title">ML Engineer</column>
+            <column name="EmploymentType">Training &amp; Internship - Data Science</column>
+            <column name="CompanyName">1stop.ai</column>
+            <column name="CompanyLink">https://www.1stop.ai/</column>
+            <column name="Location">Remote/Online</column>
+            <column name="DescriptionOfJob"></column>
+            <column name="NoOfCertificateImages">3</column>
+            <column name="CertificateImageNames">Certificate of Participation,Internship Certificate,Project Completion Certificate</column>
+            <column name="CertificateImageLinks">https://drive.google.com/file/d/1dsmAzyFnFaB9dvim8Oo-M2GzC_NjWO3k/view,https://drive.google.com/file/d/1lemuQhlQRNs2A5FFYZXztMEN5SQTgC62/view,https://drive.google.com/file/d/1w80T8wjJWOaQvr-Y1gLYqXVcPHb-q-Wz/view</column>
+            <column name="CompanyImageName">1stop.jpg</column>
+            <column name="CertificateImageFileNames">1stop.a1/1stop - Certificate of Participation.jpg,1stop.a1/1stop - Internship Certificate.jpg,1stop.a1/1stop - Project Completion Certificate.jpg</column>
+            <column name="ShowThisExperience">On</column>
+        </table>
+        <table name="experience">
+            <column name="ID">5</column>
+            <column name="StartMonth">Sep</column>
+            <column name="StartYear">2021</column>
+            <column name="EndMonth">Oct</column>
+            <column name="EndYear">2021</column>
+            <column name="Title">ML Engineer</column>
+            <column name="EmploymentType">Training &amp; Internship - Data Science</column>
+            <column name="CompanyName">YHills</column>
+            <column name="CompanyLink">https://yhills.thinkific.com/</column>
+            <column name="Location">Remote/Online</column>
+            <column name="DescriptionOfJob"></column>
+            <column name="NoOfCertificateImages">2</column>
+            <column name="CertificateImageNames">Course Completion Certificate,Internship Completion Certificate</column>
+            <column name="CertificateImageLinks">https://drive.google.com/file/d/1V6x1FZUbTy1-0-riM3fyrsIcKe8xZD_q/view,https://drive.google.com/file/d/1rOTrE_MF6i6ie2fNum5l70R9eHPf1kLs/view</column>
+            <column name="CompanyImageName">yhills_logo.jpg</column>
+            <column name="CertificateImageFileNames">YHills/YHills - Course Completion Certificate.jpg,YHills/YHills - Internship Completion Certificate.jpg</column>
+            <column name="ShowThisExperience">On</column>
+        </table>
+        <table name="experience">
+            <column name="ID">6</column>
+            <column name="StartMonth">Mar</column>
+            <column name="StartYear">2020</column>
+            <column name="EndMonth">Jul</column>
+            <column name="EndYear">2020</column>
+            <column name="Title">Deep Learning Engineer</column>
+            <column name="EmploymentType">Training &amp; Internship - Applied Machine Learning &amp; Data Science</column>
+            <column name="CompanyName">Indian Institute of Technology, Kanpur</column>
+            <column name="CompanyLink">http://iitk.ac.in/new/data/iitk/</column>
+            <column name="Location">Remote/Online</column>
+            <column name="DescriptionOfJob">This Internship covered the following areas: Python Foundations, Data Wrangling, Storytelling with Data, Foundations of Machine Learning, Deep Learning, Statistics for Data Science, Natural Language Processing, Miscellaneous Applications, Quizzes and assignments after each module, Capstone Project (Twitter-Sentiment Analysis) </column>
+            <column name="NoOfCertificateImages">2</column>
+            <column name="CertificateImageNames">Training &amp; Internship Completion Certificate,Project Certificate</column>
+            <column name="CertificateImageLinks">https://drive.google.com/file/d/1GCMRYOR93DyWBguRaPqALgHSWt3b77c8/view,https://drive.google.com/file/d/1_5YA13uUlWTQJ55385J9yI__79XhZ9FF/view</column>
+            <column name="CompanyImageName">iitk.jpg</column>
+            <column name="CertificateImageFileNames">IITK Applied Machine Learning and Data Science/IIT Kanpur - Training &amp; Internship Completion Certificate - Aashish Bansal_page-0001.jpg,IITK Applied Machine Learning and Data Science/IIT Kanpur - PROJECT CERTIFICATE Aashish Bansal_page-0001.jpg</column>
+            <column name="ShowThisExperience">On</column>
+        </table>
+        <table name="experience">
+            <column name="ID">7</column>
+            <column name="StartMonth">Dec</column>
+            <column name="StartYear">2019</column>
+            <column name="EndMonth">Jan</column>
+            <column name="EndYear">2020</column>
+            <column name="Title">ML Engineer</column>
+            <column name="EmploymentType">Training &amp; Internship - Artificial Intelligence</column>
+            <column name="CompanyName">Verzeo</column>
+            <column name="CompanyLink">https://learn.verzeo.in/</column>
+            <column name="Location">Remote/Online</column>
+            <column name="DescriptionOfJob"></column>
+            <column name="NoOfCertificateImages">2</column>
+            <column name="CertificateImageNames">Course Completion Certificate,Internship certificate</column>
+            <column name="CertificateImageLinks">https://drive.google.com/file/d/1xQXNHhRxoDS5QCRS5MSmk0XrqiAvw3gy/view,https://drive.google.com/file/d/1zzI9wDlg22RWqZPqy6hfBDQLfMD7RWmw/view</column>
+            <column name="CompanyImageName">verzeo.png</column>
+            <column name="CertificateImageFileNames">Verzeo AI/Verzeo AI - Course Completion Certificate.jpg,Verzeo AI/Verzeo AI - internship certificate.jpg</column>
+            <column name="ShowThisExperience">On</column>
+        </table>
+        <!-- Table home -->
+        <table name="home">
+            <column name="ID">1</column>
+            <column name="Title">Aashish Bansal</column>
+            <column name="DoB">2000-08-22</column>
+            <column name="Address">Malout, Punjab, India</column>
+            <column name="ZIP_Code">152107</column>
+            <column name="Email">developwithaashish@gmail.com</column>
+            <column name="Phone">7829140001</column>
+            <column name="Subtitle">I am a Hardworking, Sincere, and Analytical Professional. My Passion is to learn, code, and do sports. As a natural-born go-getter, my passion has continuously driven me to expand my knowledge, experience, and relationships. With a strong background and diverse skill set, I&#039;m confident in the creative ideas and successful solutions I bring to the table. I am very interested in Coding and Learning. I&#039;ve always tried to take up challenges and perform my best to improve my skills and efficiency to the highest level possible. I look forward to working with enthusiasm to have a chance to prove myself.</column>
+            <column name="ShowIcones">1</column>
+            <column name="Link_Resume">https://drive.google.com/file/d/17RgJwHL4MLDQU41nWMK9GmYeGdRbDkAq/view</column>
+            <column name="Link_LinkedIn">https://linkedin.com/in/aashish22bansal</column>
+            <column name="Link_Facebook">https://facebook.com/aashish22bansal</column>
+            <column name="Link_Instagram">https://instagram.com/aashish2208bansal</column>
+            <column name="Link_YouTube">https://www.youtube.com/channel/UCA8NfnVLMgMz0Q7iqIz4-UQ</column>
+            <column name="Link_GitHub">https://github.com/aashish22bansal</column>
+            <column name="Link_HackerRank">https://www.hackerrank.com/aashish22bansal?hr_r=1</column>
+            <column name="Link_CodeChef">https://www.codechef.com/users/aashish_bansal</column>
+            <column name="Link_CodeForces">https://codeforces.com/profile/aashish22bansal</column>
+            <column name="Link_LeetCode">https://leetcode.com/aashish22bansal/</column>
+        </table>
+        <!-- Table industryskillcategories -->
+        <table name="industryskillcategories">
+            <column name="ID">1</column>
+            <column name="SkillCategoryName">Industry Knowledge</column>
+            <column name="SkillCategoryIDName">Industry_Knowledge</column>
+            <column name="SkillCategoryImageName">Industry_Knowledge</column>
+        </table>
+        <table name="industryskillcategories">
+            <column name="ID">2</column>
+            <column name="SkillCategoryName">Tools &amp; Technologies</column>
+            <column name="SkillCategoryIDName">Tools_Technologies</column>
+            <column name="SkillCategoryImageName">Tools_Technologies</column>
+        </table>
+        <table name="industryskillcategories">
+            <column name="ID">3</column>
+            <column name="SkillCategoryName">Interpersonal Skills</column>
+            <column name="SkillCategoryIDName">Interpersonal_Skills</column>
+            <column name="SkillCategoryImageName">Interpersonal_Skills</column>
+        </table>
+        <table name="industryskillcategories">
+            <column name="ID">4</column>
+            <column name="SkillCategoryName">Other Skills</column>
+            <column name="SkillCategoryIDName">Other_Skills</column>
+            <column name="SkillCategoryImageName">Other_Skills</column>
+        </table>
+        <table name="industryskillcategories">
+            <column name="ID">5</column>
+            <column name="SkillCategoryName">Languages</column>
+            <column name="SkillCategoryIDName">Languages</column>
+            <column name="SkillCategoryImageName">Languages</column>
+        </table>
+        <table name="industryskillcategories">
+            <column name="ID">6</column>
+            <column name="SkillCategoryName">Frameworks &amp; Libraries</column>
+            <column name="SkillCategoryIDName">Frameworks_Libraries</column>
+            <column name="SkillCategoryImageName">Frameworks_Libraries</column>
+        </table>
+        <table name="industryskillcategories">
+            <column name="ID">7</column>
+            <column name="SkillCategoryName">Databases and Cloud Hosting</column>
+            <column name="SkillCategoryIDName">Databases_and_Cloud_Hosting</column>
+            <column name="SkillCategoryImageName">Databases_and_Cloud_Hosting</column>
+        </table>
+        <table name="industryskillcategories">
+            <column name="ID">8</column>
+            <column name="SkillCategoryName">Software and Tools</column>
+            <column name="SkillCategoryIDName">Software_and_Tools</column>
+            <column name="SkillCategoryImageName">Software_and_Tools</column>
+        </table>
+        <!-- Table industryskills -->
+        <!-- Table personal_details -->
+        <table name="personal_details">
+            <column name="email">analyst.aashish@gmail.com</column>
+            <column name="user_password">123Aashish456</column>
+            <column name="Name">Aashish Bansal</column>
+            <column name="contact_mobile">+91-7829140001</column>
+            <column name="BirthYear">2000</column>
+            <column name="BirthMonth">August</column>
+            <column name="BirthDate">22</column>
+            <column name="address_country">India</column>
+            <column name="address_state">Punjab</column>
+            <column name="address_district">Muktsar</column>
+            <column name="address_city">Malout</column>
+            <column name="address_street">Surja Ram Market</column>
+            <column name="address_pincode">152107</column>
+            <column name="FullAddress">Malout, Punjab, India</column>
+            <column name="Description">I am a Hardworking, Sincere, and Analytical Professional. My Passion is to learn, code, and do sports. As a natural-born go-getter, my passion has continuously driven me to expand my knowledge, experience, and relationships. With a strong background and diverse skill set, I&#039;m confident in the creative ideas and successful solutions I bring to the table. I am very interested in Coding and Learning. I&#039;ve always tried to take up challenges and perform my best to improve my skills and efficiency to the highest level possible. I look forward to working with enthusiasm to have a chance to prove myself.</column>
+            <column name="show_icons">on</column>
+        </table>
+        <!-- Table programmingskills -->
+        <!-- Table projects -->
+        <table name="projects">
+            <column name="ID">1</column>
+            <column name="ProjectCode">DS01</column>
+            <column name="CompletionMonth">Nov</column>
+            <column name="CompletionYear">2021</column>
+            <column name="TitleOfProject">Prediction of Marks using Data Science</column>
+            <column name="Company">1stop.ai</column>
+            <column name="Subject">Data Science</column>
+            <column name="ProjectCategory">Data Science</column>
+            <column name="ProjectType">Training Project</column>
+            <column name="ProjectDescription"></column>
+            <column name="ProjectCodeLocation">GitHub Repository</column>
+            <column name="ProjectCodeLink">https://github.com/aashish22bansal/Prediction-of-Marks-using-Data-Science</column>
+            <column name="ProjectDocumentLocation">Google Drive</column>
+            <column name="ProjectDocumentLink"></column>
+        </table>
+        <table name="projects">
+            <column name="ID">2</column>
+            <column name="ProjectCode">DS02</column>
+            <column name="CompletionMonth">Nov</column>
+            <column name="CompletionYear">2021</column>
+            <column name="TitleOfProject">Fake News Detection</column>
+            <column name="Company">1stop.ai</column>
+            <column name="Subject">Data Science</column>
+            <column name="ProjectCategory">Data Science</column>
+            <column name="ProjectType">Training Project</column>
+            <column name="ProjectDescription"></column>
+            <column name="ProjectCodeLocation">GitHub Repository</column>
+            <column name="ProjectCodeLink">https://github.com/aashish22bansal/Fake-News-Detection</column>
+            <column name="ProjectDocumentLocation">Google Drive</column>
+            <column name="ProjectDocumentLink"></column>
+        </table>
+        <table name="projects">
+            <column name="ID">3</column>
+            <column name="ProjectCode">DS03</column>
+            <column name="CompletionMonth">Nov</column>
+            <column name="CompletionYear">2021</column>
+            <column name="TitleOfProject">Detection of Parkinson&#039;s Disease</column>
+            <column name="Company">1stop.ai</column>
+            <column name="Subject">Data Science</column>
+            <column name="ProjectCategory">Data Science</column>
+            <column name="ProjectType">Training Project</column>
+            <column name="ProjectDescription"></column>
+            <column name="ProjectCodeLocation">GitHub Repository</column>
+            <column name="ProjectCodeLink">https://github.com/aashish22bansal/Detection-of-Parkinson-s-Disease</column>
+            <column name="ProjectDocumentLocation">Google Drive</column>
+            <column name="ProjectDocumentLink"></column>
+        </table>
+        <table name="projects">
+            <column name="ID">4</column>
+            <column name="ProjectCode">DS04</column>
+            <column name="CompletionMonth">Nov</column>
+            <column name="CompletionYear">2021</column>
+            <column name="TitleOfProject">Best Ads Predictor</column>
+            <column name="Company">1stop.ai</column>
+            <column name="Subject">Data Science</column>
+            <column name="ProjectCategory">Data Science</column>
+            <column name="ProjectType">Internship Project</column>
+            <column name="ProjectDescription"></column>
+            <column name="ProjectCodeLocation">GitHub Repository</column>
+            <column name="ProjectCodeLink">https://github.com/aashish22bansal/Best-Ads-Predictor</column>
+            <column name="ProjectDocumentLocation">Google Drive</column>
+            <column name="ProjectDocumentLink"></column>
+        </table>
+        <table name="projects">
+            <column name="ID">5</column>
+            <column name="ProjectCode">DS05</column>
+            <column name="CompletionMonth">Nov</column>
+            <column name="CompletionYear">2021</column>
+            <column name="TitleOfProject">Basic ChatBot</column>
+            <column name="Company">1stop.ai</column>
+            <column name="Subject">Data Science</column>
+            <column name="ProjectCategory">Data Science</column>
+            <column name="ProjectType">Internship Project</column>
+            <column name="ProjectDescription"></column>
+            <column name="ProjectCodeLocation">GitHub Repository</column>
+            <column name="ProjectCodeLink">https://github.com/aashish22bansal/Basic-ChatBot</column>
+            <column name="ProjectDocumentLocation">Google Drive</column>
+            <column name="ProjectDocumentLink"></column>
+        </table>
+        <table name="projects">
+            <column name="ID">6</column>
+            <column name="ProjectCode">DS06</column>
+            <column name="CompletionMonth">Oct</column>
+            <column name="CompletionYear">2021</column>
+            <column name="TitleOfProject">House Price Prediction</column>
+            <column name="Company">YHills</column>
+            <column name="Subject">Data Science</column>
+            <column name="ProjectCategory">Data Science</column>
+            <column name="ProjectType">Internship Project</column>
+            <column name="ProjectDescription"></column>
+            <column name="ProjectCodeLocation">GitHub Repository</column>
+            <column name="ProjectCodeLink">https://github.com/aashish22bansal/House-Price-Prediction</column>
+            <column name="ProjectDocumentLocation">Google Drive</column>
+            <column name="ProjectDocumentLink"></column>
+        </table>
+        <table name="projects">
+            <column name="ID">7</column>
+            <column name="ProjectCode">DS07</column>
+            <column name="CompletionMonth">Oct</column>
+            <column name="CompletionYear">2021</column>
+            <column name="TitleOfProject">Personal Bank Loan Modeling</column>
+            <column name="Company">YHills</column>
+            <column name="Subject">Data Science</column>
+            <column name="ProjectCategory">Data Science</column>
+            <column name="ProjectType">Internship Project</column>
+            <column name="ProjectDescription"></column>
+            <column name="ProjectCodeLocation">GitHub Repository</column>
+            <column name="ProjectCodeLink">https://github.com/aashish22bansal/Personal-Bank-Loan-Modelling</column>
+            <column name="ProjectDocumentLocation">Google Drive</column>
+            <column name="ProjectDocumentLink"></column>
+        </table>
+        <table name="projects">
+            <column name="ID">8</column>
+            <column name="ProjectCode">ML01</column>
+            <column name="CompletionMonth">Nov</column>
+            <column name="CompletionYear">2021</column>
+            <column name="TitleOfProject">Intrusion Detection System using Machine Learning</column>
+            <column name="Company">VIT</column>
+            <column name="Subject">Information Security Analysis and Audit</column>
+            <column name="ProjectCategory">Machine Learning</column>
+            <column name="ProjectType">College Project</column>
+            <column name="ProjectDescription"></column>
+            <column name="ProjectCodeLocation">GitHub Repository</column>
+            <column name="ProjectCodeLink">https://github.com/aashish22bansal/CSE3501-ISAA-Project-Network-Intrusion-Detection-Using-Machine-Learning</column>
+            <column name="ProjectDocumentLocation">Google Drive</column>
+            <column name="ProjectDocumentLink"></column>
+        </table>
+        <table name="projects">
+            <column name="ID">9</column>
+            <column name="ProjectCode">ML02</column>
+            <column name="CompletionMonth">Nov</column>
+            <column name="CompletionYear">2021</column>
+            <column name="TitleOfProject">Credit Card Fraud Detection System using Machine Learning</column>
+            <column name="Company">VIT</column>
+            <column name="Subject">Big Data Analytics</column>
+            <column name="ProjectCategory">Machine Learning</column>
+            <column name="ProjectType">College Project</column>
+            <column name="ProjectDescription"></column>
+            <column name="ProjectCodeLocation">GitHub Repository</column>
+            <column name="ProjectCodeLink">https://github.com/aashish22bansal/ITE2013-Big-Data-Analytics-Credit-Card-Fraud-Detection</column>
+            <column name="ProjectDocumentLocation">Google Drive</column>
+            <column name="ProjectDocumentLink"></column>
+        </table>
+        <table name="projects">
+            <column name="ID">10</column>
+            <column name="ProjectCode">ML03</column>
+            <column name="CompletionMonth">Feb</column>
+            <column name="CompletionYear">2022</column>
+            <column name="TitleOfProject">YouTube Adview Prediction</column>
+            <column name="Company">NEO5.0</column>
+            <column name="Subject">Machine Learning</column>
+            <column name="ProjectCategory">Machine Learning</column>
+            <column name="ProjectType">Internship Project</column>
+            <column name="ProjectDescription"></column>
+            <column name="ProjectCodeLocation">GitHub Repository</column>
+            <column name="ProjectCodeLink">https://github.com/aashish22bansal/YouTube-Adview-Prediction</column>
+            <column name="ProjectDocumentLocation">Google Drive</column>
+            <column name="ProjectDocumentLink"></column>
+        </table>
+        <table name="projects">
+            <column name="ID">11</column>
+            <column name="ProjectCode">DL01</column>
+            <column name="CompletionMonth">Jul</column>
+            <column name="CompletionYear">2020</column>
+            <column name="TitleOfProject">Twitter Sentiment Analysis</column>
+            <column name="Company">IIT Kanpur</column>
+            <column name="Subject">Deep Learning</column>
+            <column name="ProjectCategory">Deep Learning</column>
+            <column name="ProjectType">Internship Project</column>
+            <column name="ProjectDescription"></column>
+            <column name="ProjectCodeLocation">GitHub Repository</column>
+            <column name="ProjectCodeLink">https://github.com/aashish22bansal/Twitter-Sentiment-Analysis-Using-Bi-LSTM</column>
+            <column name="ProjectDocumentLocation">Google Drive</column>
+            <column name="ProjectDocumentLink"></column>
+        </table>
+        <table name="projects">
+            <column name="ID">12</column>
+            <column name="ProjectCode">DL02</column>
+            <column name="CompletionMonth">Apr</column>
+            <column name="CompletionYear">2020</column>
+            <column name="TitleOfProject">Skin Cancer Detection using Transfer Learning and Ensemble Modeling</column>
+            <column name="Company">VIT</column>
+            <column name="Subject">Soft Computing</column>
+            <column name="ProjectCategory">Deep Learning</column>
+            <column name="ProjectType">College Project</column>
+            <column name="ProjectDescription"></column>
+            <column name="ProjectCodeLocation">GitHub Repository</column>
+            <column name="ProjectCodeLink">https://github.com/aashish22bansal/ITE1015-Soft-Computing-Project-Skin-Cancer-Detection</column>
+            <column name="ProjectDocumentLocation">Springer</column>
+            <column name="ProjectDocumentLink"></column>
+        </table>
+        <table name="projects">
+            <column name="ID">13</column>
+            <column name="ProjectCode">APP01</column>
+            <column name="CompletionMonth">Nov</column>
+            <column name="CompletionYear">2021</column>
+            <column name="TitleOfProject">Scientific Calculator</column>
+            <column name="Company">VIT</column>
+            <column name="Subject">Mobile Application Development</column>
+            <column name="ProjectCategory">Android</column>
+            <column name="ProjectType">Learning Project</column>
+            <column name="ProjectDescription"></column>
+            <column name="ProjectCodeLocation">GitHub Repository</column>
+            <column name="ProjectCodeLink">https://github.com/aashish22bansal/Android-Projects/tree/main/ScientificCalculator</column>
+            <column name="ProjectDocumentLocation">Google Drive</column>
+            <column name="ProjectDocumentLink"></column>
+        </table>
+        <table name="projects">
+            <column name="ID">14</column>
+            <column name="ProjectCode">APP02</column>
+            <column name="CompletionMonth">Nov</column>
+            <column name="CompletionYear">2021</column>
+            <column name="TitleOfProject">Court Score Counter (for Basketball)</column>
+            <column name="Company">N/A</column>
+            <column name="Subject">Mobile Application Development</column>
+            <column name="ProjectCategory">Android</column>
+            <column name="ProjectType">Learning Project</column>
+            <column name="ProjectDescription"></column>
+            <column name="ProjectCodeLocation">GitHub Repository</column>
+            <column name="ProjectCodeLink">https://github.com/aashish22bansal/Android-Projects/tree/main/CourtCounter</column>
+            <column name="ProjectDocumentLocation">Google Drive</column>
+            <column name="ProjectDocumentLink"></column>
+        </table>
+        <table name="projects">
+            <column name="ID">15</column>
+            <column name="ProjectCode">APP03</column>
+            <column name="CompletionMonth">Nov</column>
+            <column name="CompletionYear">2021</column>
+            <column name="TitleOfProject">Currency Converter</column>
+            <column name="Company">VIT</column>
+            <column name="Subject">Mobile Application Development</column>
+            <column name="ProjectCategory">Android</column>
+            <column name="ProjectType">College Project</column>
+            <column name="ProjectDescription"></column>
+            <column name="ProjectCodeLocation">GitHub Repository</column>
+            <column name="ProjectCodeLink">https://github.com/aashish22bansal/Android-Projects/tree/main/CurrencyConverter</column>
+            <column name="ProjectDocumentLocation">Google Drive</column>
+            <column name="ProjectDocumentLink"></column>
+        </table>
+        <table name="projects">
+            <column name="ID">16</column>
+            <column name="ProjectCode">BC01</column>
+            <column name="CompletionMonth">Feb</column>
+            <column name="CompletionYear">2020</column>
+            <column name="TitleOfProject">Decentralised Voting App</column>
+            <column name="Company">VIT</column>
+            <column name="Subject">Blockchain and Cryptocurrency Technologies</column>
+            <column name="ProjectCategory">Blockchain</column>
+            <column name="ProjectType">College Project</column>
+            <column name="ProjectDescription"></column>
+            <column name="ProjectCodeLocation">GitHub Repository</column>
+            <column name="ProjectCodeLink"></column>
+            <column name="ProjectDocumentLocation">Google Drive</column>
+            <column name="ProjectDocumentLink"></column>
+        </table>
+        <table name="projects">
+            <column name="ID">17</column>
+            <column name="ProjectCode">WD01</column>
+            <column name="CompletionMonth">Nov</column>
+            <column name="CompletionYear">2020</column>
+            <column name="TitleOfProject">COVID-19 Tracker with Chat Application</column>
+            <column name="Company">VIT</column>
+            <column name="Subject">Web Technologies</column>
+            <column name="ProjectCategory">Web Development</column>
+            <column name="ProjectType">College Project</column>
+            <column name="ProjectDescription"></column>
+            <column name="ProjectCodeLocation">GitHub Repository</column>
+            <column name="ProjectCodeLink">https://github.com/aashish22bansal/ITE1002-Web-Technologies-COVID-19-Live-Stats-Responsive-Website-Project</column>
+            <column name="ProjectDocumentLocation">Google Drive</column>
+            <column name="ProjectDocumentLink"></column>
+        </table>
+        <table name="projects">
+            <column name="ID">18</column>
+            <column name="ProjectCode">WD02</column>
+            <column name="CompletionMonth">Nov</column>
+            <column name="CompletionYear">2020</column>
+            <column name="TitleOfProject">E-Commerce Website</column>
+            <column name="Company">VIT</column>
+            <column name="Subject">Open Source Programming</column>
+            <column name="ProjectCategory">Web Development</column>
+            <column name="ProjectType">College Project</column>
+            <column name="ProjectDescription"></column>
+            <column name="ProjectCodeLocation">GitHub Repository</column>
+            <column name="ProjectCodeLink">https://github.com/aashish22bansal/ITE1008-Open-Source-Programming-E-Commerce-Website-Project</column>
+            <column name="ProjectDocumentLocation">Google Drive</column>
+            <column name="ProjectDocumentLink"></column>
+        </table>
+        <table name="projects">
+            <column name="ID">19</column>
+            <column name="ProjectCode">WD03</column>
+            <column name="CompletionMonth">Nov</column>
+            <column name="CompletionYear">2020</column>
+            <column name="TitleOfProject">Apple Store Management System</column>
+            <column name="Company">VIT</column>
+            <column name="Subject">Database Management System</column>
+            <column name="ProjectCategory">Web Development</column>
+            <column name="ProjectType">College Project</column>
+            <column name="ProjectDescription"></column>
+            <column name="ProjectCodeLocation">GitHub Repository</column>
+            <column name="ProjectCodeLink">https://github.com/aashish22bansal/ITE1003-DBMS-Project-Apple-Store-Management-System</column>
+            <column name="ProjectDocumentLocation">Google Drive</column>
+            <column name="ProjectDocumentLink"></column>
+        </table>
+        <table name="projects">
+            <column name="ID">20</column>
+            <column name="ProjectCode">SD01</column>
+            <column name="CompletionMonth">Feb</column>
+            <column name="CompletionYear">2018</column>
+            <column name="TitleOfProject">Hotel Management System</column>
+            <column name="Company">GIIS</column>
+            <column name="Subject">Computer Science with C++</column>
+            <column name="ProjectCategory">Software Development</column>
+            <column name="ProjectType">School Project</column>
+            <column name="ProjectDescription"></column>
+            <column name="ProjectCodeLocation">GitHub Repository</column>
+            <column name="ProjectCodeLink"></column>
+            <column name="ProjectDocumentLocation">Google Drive</column>
+            <column name="ProjectDocumentLink"></column>
+        </table>
+        <table name="projects">
+            <column name="ID">21</column>
+            <column name="ProjectCode">SD02</column>
+            <column name="CompletionMonth">Feb</column>
+            <column name="CompletionYear">2019</column>
+            <column name="TitleOfProject">Tic Tac Toe (Multiplayer &amp; Single Player against Artificial Intelligence System)</column>
+            <column name="Company">GIIS</column>
+            <column name="Subject">Computer Science with C++</column>
+            <column name="ProjectCategory">Software Development</column>
+            <column name="ProjectType">School Project</column>
+            <column name="ProjectDescription"></column>
+            <column name="ProjectCodeLocation">GitHub Repository</column>
+            <column name="ProjectCodeLink"></column>
+            <column name="ProjectDocumentLocation">Google Drive</column>
+            <column name="ProjectDocumentLink"></column>
+        </table>
+        <!-- Table project_categories -->
+        <table name="project_categories">
+            <column name="ID">1</column>
+            <column name="ProjectCategoryName">Data Science</column>
+            <column name="ProjectCategoryIDName">Data_Science</column>
+            <column name="ProjectCategoryImageName">data-science-icon.png</column>
+        </table>
+        <table name="project_categories">
+            <column name="ID">2</column>
+            <column name="ProjectCategoryName">Machine Learning</column>
+            <column name="ProjectCategoryIDName">Machine_Learning</column>
+            <column name="ProjectCategoryImageName">machine-learning-logo.png</column>
+        </table>
+        <table name="project_categories">
+            <column name="ID">3</column>
+            <column name="ProjectCategoryName">Deep Learning</column>
+            <column name="ProjectCategoryIDName">Deep_Learning</column>
+            <column name="ProjectCategoryImageName">deep learning.jpg</column>
+        </table>
+        <table name="project_categories">
+            <column name="ID">4</column>
+            <column name="ProjectCategoryName">Android</column>
+            <column name="ProjectCategoryIDName">Android</column>
+            <column name="ProjectCategoryImageName">Android-Logo.png</column>
+        </table>
+        <table name="project_categories">
+            <column name="ID">5</column>
+            <column name="ProjectCategoryName">Blockchain</column>
+            <column name="ProjectCategoryIDName">Blockchain</column>
+            <column name="ProjectCategoryImageName">blockchain.jpg</column>
+        </table>
+        <table name="project_categories">
+            <column name="ID">6</column>
+            <column name="ProjectCategoryName">Web Development</column>
+            <column name="ProjectCategoryIDName">Web_Development</column>
+            <column name="ProjectCategoryImageName">web-development-logo.png</column>
+        </table>
+        <table name="project_categories">
+            <column name="ID">7</column>
+            <column name="ProjectCategoryName">Software Development</column>
+            <column name="ProjectCategoryIDName">Software_Development</column>
+            <column name="ProjectCategoryImageName">coding-programming.jpg</column>
+        </table>
+        <!-- Table publications -->
+        <table name="publications">
+            <column name="ID">1</column>
+            <column name="PaperTitle">Skin Cancer Detection using Transfer Learning and Ensemble Modelling</column>
+            <column name="PublicationType">Research Paper</column>
+            <column name="PublicationLink">https://link.springer.com/chapter/10.1007/978-3-030-96302-6_50</column>
+            <column name="PublicationDescription">Skin Cancer Detection</column>
+        </table>
+        <!-- Table section_control -->
+        <table name="section_control">
+            <column name="ID">1</column>
+            <column name="Home">on</column>
+            <column name="About">on</column>
+            <column name="Education">on</column>
+            <column name="Experience">on</column>
+            <column name="Projects">on</column>
+            <column name="Skills_n_Languages">on</column>
+            <column name="Badges">on</column>
+            <column name="Certificates">on</column>
+            <column name="Courses">on</column>
+            <column name="Organizations">on</column>
+            <column name="Competitions">on</column>
+            <column name="Resume_Link">on</column>
+            <column name="Contact">on</column>
+        </table>
+        <!-- Table social_media -->
+        <table name="social_media">
+            <column name="Link_Resume">https://drive.google.com/file/d/17RgJwHL4MLDQU41nWMK9GmYeGdRbDkAq/view</column>
+            <column name="Link_LinkedIn">https://linkedin.com/in/aashish22bansal</column>
+            <column name="Link_Facebook">https://facebook.com/aashish22bansal</column>
+            <column name="Link_Instagram">https://instagram.com/aashish2208bansal</column>
+            <column name="Link_YouTube">https://www.youtube.com/channel/UCA8NfnVLMgMz0Q7iqIz4-UQ</column>
+            <column name="Link_GitHub">https://github.com/aashish22bansal</column>
+            <column name="Link_HackerRank">https://www.hackerrank.com/aashish22bansal?hr_r=1</column>
+            <column name="Link_CodeChef">https://www.codechef.com/users/aashish_bansal</column>
+            <column name="Link_CodeForces">https://codeforces.com/profile/aashish22bansal</column>
+            <column name="Link_LeetCode">https://leetcode.com/aashish22bansal/</column>
+        </table>
+        <!-- Table subjects_matriculation -->
+        <table name="subjects_matriculation">
+            <column name="SubjectCode">041</column>
+            <column name="SubjectName">Mathematics</column>
+        </table>
+        <table name="subjects_matriculation">
+            <column name="SubjectCode">085</column>
+            <column name="SubjectName">Hindi Course-B</column>
+        </table>
+        <table name="subjects_matriculation">
+            <column name="SubjectCode">086</column>
+            <column name="SubjectName">Science</column>
+        </table>
+        <table name="subjects_matriculation">
+            <column name="SubjectCode">087</column>
+            <column name="SubjectName">Social Studies</column>
+        </table>
+        <table name="subjects_matriculation">
+            <column name="SubjectCode">101</column>
+            <column name="SubjectName">English Communication</column>
+        </table>
+        <!-- Table subjects_pre_university -->
+        <table name="subjects_pre_university">
+            <column name="SubjectCode">041</column>
+            <column name="SubjectName">Mathematics</column>
+        </table>
+        <table name="subjects_pre_university">
+            <column name="SubjectCode">042</column>
+            <column name="SubjectName">Physics</column>
+        </table>
+        <table name="subjects_pre_university">
+            <column name="SubjectCode">043</column>
+            <column name="SubjectName">Chemistry</column>
+        </table>
+        <table name="subjects_pre_university">
+            <column name="SubjectCode">083</column>
+            <column name="SubjectName">Computer Science</column>
+        </table>
+        <table name="subjects_pre_university">
+            <column name="SubjectCode">301</column>
+            <column name="SubjectName">English Core</column>
+        </table>
+        <table name="subjects_pre_university">
+            <column name="SubjectCode">500</column>
+            <column name="SubjectName">Work Experience</column>
+        </table>
+        <table name="subjects_pre_university">
+            <column name="SubjectCode">502</column>
+            <column name="SubjectName">Physical and Health Education</column>
+        </table>
+        <table name="subjects_pre_university">
+            <column name="SubjectCode">503</column>
+            <column name="SubjectName">General Studies</column>
+        </table>
+        <!-- Table subjects_undergraduate -->
+        <table name="subjects_undergraduate">
+            <column name="CourseCode">CHY1002</column>
+            <column name="CourseTitle">Environmental Sciences</column>
+            <column name="CourseType">TH</column>
+            <column name="Semester">1</column>
+            <column name="Credits">3</column>
+            <column name="CourseDistribution">Non-Credit</column>
+        </table>
+        <table name="subjects_undergraduate">
+            <column name="CourseCode">CHY1701</column>
+            <column name="CourseTitle">Engineering Chemistry</column>
+            <column name="CourseType">ETL</column>
+            <column name="Semester">1</column>
+            <column name="Credits">4</column>
+            <column name="CourseDistribution">UC</column>
+        </table>
+        <table name="subjects_undergraduate">
+            <column name="CourseCode">CSE1001</column>
+            <column name="CourseTitle">Problem Solving and Programming</column>
+            <column name="CourseType">LO</column>
+            <column name="Semester">1</column>
+            <column name="Credits">3</column>
+            <column name="CourseDistribution">UC</column>
+        </table>
+        <table name="subjects_undergraduate">
+            <column name="CourseCode">CSE1002</column>
+            <column name="CourseTitle">Problem Solving and Object Oriented Programming</column>
+            <column name="CourseType">LO</column>
+            <column name="Semester">5</column>
+            <column name="Credits">3</column>
+            <column name="CourseDistribution">UC</column>
+        </table>
+        <table name="subjects_undergraduate">
+            <column name="CourseCode">CSE1006</column>
+            <column name="CourseTitle">Blockchain and Cryptocurrency Technologies</column>
+            <column name="CourseType">TH</column>
+            <column name="Semester">2</column>
+            <column name="Credits">3</column>
+            <column name="CourseDistribution">UE</column>
+        </table>
+        <table name="subjects_undergraduate">
+            <column name="CourseCode">CSE1007</column>
+            <column name="CourseTitle">Java Programming</column>
+            <column name="CourseType">ETL</column>
+            <column name="Semester">5</column>
+            <column name="Credits">4</column>
+            <column name="CourseDistribution">PC</column>
+        </table>
+        <table name="subjects_undergraduate">
+            <column name="CourseCode">CSE3501</column>
+            <column name="CourseTitle">Information Security Analysis and Audit</column>
+            <column name="CourseType">ETLP</column>
+            <column name="Semester">5</column>
+            <column name="Credits">4</column>
+            <column name="CourseDistribution">PE</column>
+        </table>
+        <table name="subjects_undergraduate">
+            <column name="CourseCode">CSE3502</column>
+            <column name="CourseTitle">Information Security Management</column>
+            <column name="CourseType">ETLP</column>
+            <column name="Semester">6</column>
+            <column name="Credits">4</column>
+            <column name="CourseDistribution">PE</column>
+        </table>
+        <table name="subjects_undergraduate">
+            <column name="CourseCode">EEE1001</column>
+            <column name="CourseTitle">Basic Electrical and Electronics Engineering</column>
+            <column name="CourseType">ETL</column>
+            <column name="Semester">1</column>
+            <column name="Credits">4</column>
+            <column name="CourseDistribution">PC</column>
+        </table>
+        <table name="subjects_undergraduate">
+            <column name="CourseCode">ENG1901</column>
+            <column name="CourseTitle">Technical English - I</column>
+            <column name="CourseType">LO</column>
+            <column name="Semester">2</column>
+            <column name="Credits">2</column>
+            <column name="CourseDistribution">UC</column>
+        </table>
+        <table name="subjects_undergraduate">
+            <column name="CourseCode">ENG2000</column>
+            <column name="CourseTitle">Foundation English - II</column>
+            <column name="CourseType">LO</column>
+            <column name="Semester">1</column>
+            <column name="Credits">2</column>
+            <column name="CourseDistribution">NC</column>
+        </table>
+        <table name="subjects_undergraduate">
+            <column name="CourseCode">EXC1004</column>
+            <column name="CourseTitle">Building Entrepreneurship Competencies and Skills</column>
+            <column name="CourseType">ECA</column>
+            <column name="Semester">3</column>
+            <column name="Credits">2</column>
+            <column name="CourseDistribution">NC</column>
+        </table>
+        <table name="subjects_undergraduate">
+            <column name="CourseCode">FRE1001</column>
+            <column name="CourseTitle">Francais Quotidien</column>
+            <column name="CourseType">TH</column>
+            <column name="Semester">6</column>
+            <column name="Credits">2</column>
+            <column name="CourseDistribution">UC</column>
+        </table>
+        <table name="subjects_undergraduate">
+            <column name="CourseCode">HUM1021</column>
+            <column name="CourseTitle">Ethics and Values</column>
+            <column name="CourseType">TH</column>
+            <column name="Semester">1</column>
+            <column name="Credits">2</column>
+            <column name="CourseDistribution">UC</column>
+        </table>
+        <table name="subjects_undergraduate">
+            <column name="CourseCode">ITE1001</column>
+            <column name="CourseTitle">Digital Logic and Microprocessor</column>
+            <column name="CourseType">ETL</column>
+            <column name="Semester">3</column>
+            <column name="Credits">4</column>
+            <column name="CourseDistribution">PC</column>
+        </table>
+        <table name="subjects_undergraduate">
+            <column name="CourseCode">ITE1002</column>
+            <column name="CourseTitle">Web Technologies</column>
+            <column name="CourseType">ETL</column>
+            <column name="Semester">2</column>
+            <column name="Credits">3</column>
+            <column name="CourseDistribution">PC</column>
+        </table>
+        <table name="subjects_undergraduate">
+            <column name="CourseCode">ITE1003</column>
+            <column name="CourseTitle">Database Management Systems</column>
+            <column name="CourseType">ETLP</column>
+            <column name="Semester">3</column>
+            <column name="Credits">4</column>
+            <column name="CourseDistribution">PC</column>
+        </table>
+        <table name="subjects_undergraduate">
+            <column name="CourseCode">ITE1004</column>
+            <column name="CourseTitle">Data Structures and Algorithms</column>
+            <column name="CourseType">ETL</column>
+            <column name="Semester">2</column>
+            <column name="Credits">4</column>
+            <column name="CourseDistribution">PC</column>
+        </table>
+        <table name="subjects_undergraduate">
+            <column name="CourseCode">ITE1005</column>
+            <column name="CourseTitle">Software Engineering - Principles and Practices</column>
+            <column name="CourseType">TH</column>
+            <column name="Semester">3</column>
+            <column name="Credits">3</column>
+            <column name="CourseDistribution">PC</column>
+        </table>
+        <table name="subjects_undergraduate">
+            <column name="CourseCode">ITE1006</column>
+            <column name="CourseTitle">Theory of Computation</column>
+            <column name="CourseType">TH</column>
+            <column name="Semester">4</column>
+            <column name="Credits">3</column>
+            <column name="CourseDistribution">PC</column>
+        </table>
+        <table name="subjects_undergraduate">
+            <column name="CourseCode">ITE1008</column>
+            <column name="CourseTitle">Open Source Programming</column>
+            <column name="CourseType">ETP</column>
+            <column name="Semester">3</column>
+            <column name="Credits">4</column>
+            <column name="CourseDistribution">PE</column>
+        </table>
+        <table name="subjects_undergraduate">
+            <column name="CourseCode">ITE1014</column>
+            <column name="CourseTitle">Human Computer Interaction</column>
+            <column name="CourseType">ETP</column>
+            <column name="Semester">3</column>
+            <column name="Credits">4</column>
+            <column name="CourseDistribution">PE</column>
+        </table>
+        <table name="subjects_undergraduate">
+            <column name="CourseCode">ITE1015</column>
+            <column name="CourseTitle">Soft Computing</column>
+            <column name="CourseType">ETP</column>
+            <column name="Semester">4</column>
+            <column name="Credits">4</column>
+            <column name="CourseDistribution">PE</column>
+        </table>
+        <table name="subjects_undergraduate">
+            <column name="CourseCode">ITE1016</column>
+            <column name="CourseTitle">Mobile Application Development</column>
+            <column name="CourseType">ETP</column>
+            <column name="Semester">5</column>
+            <column name="Credits">4</column>
+            <column name="CourseDistribution">PE</column>
+        </table>
+        <table name="subjects_undergraduate">
+            <column name="CourseCode">ITE1901</column>
+            <column name="CourseTitle">Technical Answers for Real World Problems (TARP)</column>
+            <column name="CourseType">ETP</column>
+            <column name="Semester">6</column>
+            <column name="Credits">4</column>
+            <column name="CourseDistribution">UC</column>
+        </table>
+        <table name="subjects_undergraduate">
+            <column name="CourseCode">ITE1902</column>
+            <column name="CourseTitle">Industrial Internship</column>
+            <column name="CourseType">PJT</column>
+            <column name="Semester">5</column>
+            <column name="Credits">1</column>
+            <column name="CourseDistribution">UC</column>
+        </table>
+        <table name="subjects_undergraduate">
+            <column name="CourseCode">ITE2001</column>
+            <column name="CourseTitle">Computer Architecture and Organization</column>
+            <column name="CourseType">TH</column>
+            <column name="Semester">4</column>
+            <column name="Credits">3</column>
+            <column name="CourseDistribution">PC</column>
+        </table>
+        <table name="subjects_undergraduate">
+            <column name="CourseCode">ITE2002</column>
+            <column name="CourseTitle">Operating Systems</column>
+            <column name="CourseType">ETL</column>
+            <column name="Semester">4</column>
+            <column name="Credits">4</column>
+            <column name="CourseDistribution">PC</column>
+        </table>
+        <table name="subjects_undergraduate">
+            <column name="CourseCode">ITE2004</column>
+            <column name="CourseTitle">Software Testing</column>
+            <column name="CourseType">ETP</column>
+            <column name="Semester">6</column>
+            <column name="Credits">4</column>
+            <column name="CourseDistribution">PE</column>
+        </table>
+        <table name="subjects_undergraduate">
+            <column name="CourseCode">ITE2006</column>
+            <column name="CourseTitle">Data Mining Techniques</column>
+            <column name="CourseType">ETP</column>
+            <column name="Semester">6</column>
+            <column name="Credits">4</column>
+            <column name="CourseDistribution">PE</column>
+        </table>
+        <table name="subjects_undergraduate">
+            <column name="CourseCode">ITE2013</column>
+            <column name="CourseTitle">Big Data Analytics</column>
+            <column name="CourseType">ETP</column>
+            <column name="Semester">5</column>
+            <column name="Credits">4</column>
+            <column name="CourseDistribution">PE</column>
+        </table>
+        <table name="subjects_undergraduate">
+            <column name="CourseCode">ITE2015</column>
+            <column name="CourseTitle">Information System Audit</column>
+            <column name="CourseType">TH</column>
+            <column name="Semester">6</column>
+            <column name="Credits">2</column>
+            <column name="CourseDistribution">PE</column>
+        </table>
+        <table name="subjects_undergraduate">
+            <column name="CourseCode">ITE3001</column>
+            <column name="CourseTitle">Data Communication and Computer Networks</column>
+            <column name="CourseType">ETL</column>
+            <column name="Semester">5</column>
+            <column name="Credits">4</column>
+            <column name="CourseDistribution">PC</column>
+        </table>
+        <table name="subjects_undergraduate">
+            <column name="CourseCode">ITE4001</column>
+            <column name="CourseTitle">Network and Information Security</column>
+            <column name="CourseType">ETP</column>
+            <column name="Semester">6</column>
+            <column name="Credits">4</column>
+            <column name="CourseDistribution">PC</column>
+        </table>
+        <table name="subjects_undergraduate">
+            <column name="CourseCode">ITE4098</column>
+            <column name="CourseTitle">Comprehensive Examination</column>
+            <column name="CourseType">P</column>
+            <column name="Semester">6</column>
+            <column name="Credits">2</column>
+            <column name="CourseDistribution">UE</column>
+        </table>
+        <table name="subjects_undergraduate">
+            <column name="CourseCode">MAT1011</column>
+            <column name="CourseTitle">Calculus for Engineers</column>
+            <column name="CourseType">ETL</column>
+            <column name="Semester">1</column>
+            <column name="Credits">4</column>
+            <column name="CourseDistribution">UC</column>
+        </table>
+        <table name="subjects_undergraduate">
+            <column name="CourseCode">MAT1014</column>
+            <column name="CourseTitle">Discrete Mathematics and Graph Theory</column>
+            <column name="CourseType">TH</column>
+            <column name="Semester">2</column>
+            <column name="Credits">4</column>
+            <column name="CourseDistribution">PC</column>
+        </table>
+        <table name="subjects_undergraduate">
+            <column name="CourseCode">MAT2001</column>
+            <column name="CourseTitle">Statistics for Engineers</column>
+            <column name="CourseType">ETL</column>
+            <column name="Semester">2</column>
+            <column name="Credits">4</column>
+            <column name="CourseDistribution">UC</column>
+        </table>
+        <table name="subjects_undergraduate">
+            <column name="CourseCode">MAT2002</column>
+            <column name="CourseTitle">Applications of Differential and Difference Equations</column>
+            <column name="CourseType">ETL</column>
+            <column name="Semester">2</column>
+            <column name="Credits">4</column>
+            <column name="CourseDistribution">PC</column>
+        </table>
+        <table name="subjects_undergraduate">
+            <column name="CourseCode">MAT3004</column>
+            <column name="CourseTitle">Applied Linear Algebra</column>
+            <column name="CourseType">TH</column>
+            <column name="Semester">4</column>
+            <column name="Credits">4</column>
+            <column name="CourseDistribution">PC</column>
+        </table>
+        <table name="subjects_undergraduate">
+            <column name="CourseCode">MGT1022</column>
+            <column name="CourseTitle">Lean Start-up Management</column>
+            <column name="CourseType">ETP</column>
+            <column name="Semester">6</column>
+            <column name="Credits">2</column>
+            <column name="CourseDistribution">UC</column>
+        </table>
+        <table name="subjects_undergraduate">
+            <column name="CourseCode">ONL1012</column>
+            <column name="CourseTitle">Data Warehousing and Data Mining</column>
+            <column name="CourseType">OC</column>
+            <column name="Semester">2</column>
+            <column name="Credits">3</column>
+            <column name="CourseDistribution">UE</column>
+        </table>
+        <table name="subjects_undergraduate">
+            <column name="CourseCode">ONL1021</column>
+            <column name="CourseTitle">Essentials of Machine Learning</column>
+            <column name="CourseType">OC</column>
+            <column name="Semester">2</column>
+            <column name="Credits">4</column>
+            <column name="CourseDistribution">UE</column>
+        </table>
+        <table name="subjects_undergraduate">
+            <column name="CourseCode">ONL1023</column>
+            <column name="CourseTitle">Statistical Data Analytics for Business Research</column>
+            <column name="CourseType">OC</column>
+            <column name="Semester">2</column>
+            <column name="Credits">4</column>
+            <column name="CourseDistribution">UE</column>
+        </table>
+        <table name="subjects_undergraduate">
+            <column name="CourseCode">PHY1701</column>
+            <column name="CourseTitle">Engineering Physics</column>
+            <column name="CourseType">ETL</column>
+            <column name="Semester">4</column>
+            <column name="Credits">4</column>
+            <column name="CourseDistribution">UC</column>
+        </table>
+        <table name="subjects_undergraduate">
+            <column name="CourseCode">PHY1901</column>
+            <column name="CourseTitle">Introduction to Innovative Projects</column>
+            <column name="CourseType">TH</column>
+            <column name="Semester">4</column>
+            <column name="Credits">1</column>
+            <column name="CourseDistribution">UC</column>
+        </table>
+        <table name="subjects_undergraduate">
+            <column name="CourseCode">STS1201</column>
+            <column name="CourseTitle">Introduction to Problem Solving</column>
+            <column name="CourseType">SS</column>
+            <column name="Semester">1</column>
+            <column name="Credits">1</column>
+            <column name="CourseDistribution">UC</column>
+        </table>
+        <table name="subjects_undergraduate">
+            <column name="CourseCode">STS1202</column>
+            <column name="CourseTitle">Introduction to Quantitative, Logical and Verbal Ability</column>
+            <column name="CourseType">SS</column>
+            <column name="Semester">2</column>
+            <column name="Credits">1</column>
+            <column name="CourseDistribution">UC</column>
+        </table>
+        <table name="subjects_undergraduate">
+            <column name="CourseCode">STS2201</column>
+            <column name="CourseTitle">Numerical Ability and Cognitive Intelligence</column>
+            <column name="CourseType">SS</column>
+            <column name="Semester">3</column>
+            <column name="Credits">1</column>
+            <column name="CourseDistribution">UC</column>
+        </table>
+        <table name="subjects_undergraduate">
+            <column name="CourseCode">STS2202</column>
+            <column name="CourseTitle">Advanced Aptitude and Reasoning Skills</column>
+            <column name="CourseType">SS</column>
+            <column name="Semester">4</column>
+            <column name="Credits">1</column>
+            <column name="CourseDistribution">UC</column>
+        </table>
+        <table name="subjects_undergraduate">
+            <column name="CourseCode">STS3201</column>
+            <column name="CourseTitle">Programming Skills for Employment</column>
+            <column name="CourseType">SS</column>
+            <column name="Semester">5</column>
+            <column name="Credits">1</column>
+            <column name="CourseDistribution">UC</column>
+        </table>
+        <table name="subjects_undergraduate">
+            <column name="CourseCode">STS3204</column>
+            <column name="CourseTitle">JAVA Programming and Software Engineering Fundamentals</column>
+            <column name="CourseType">SS</column>
+            <column name="Semester">6</column>
+            <column name="Credits">1</column>
+            <column name="CourseDistribution">UC</column>
+        </table>
+    </database>
+</pma_xml_export>

@@ -16,3 +16,28 @@
 	<script src="js/scrollax.min.js"></script>
 	
 	<script src="js/main.js"></script>
+
+
+	<script type="module">
+			// Import the functions you need from the SDKs you need
+			import { initializeApp } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-app.js";
+			import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-analytics.js";
+			// TODO: Add SDKs for Firebase products that you want to use
+			// https://firebase.google.com/docs/web/setup#available-libraries
+
+			// Your web app's Firebase configuration
+			// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+			const firebaseConfig = {
+				apiKey: "AIzaSyAWq3hznY5AsHqDr9eDdr0HB_Qtudb9_Fc",
+				authDomain: "portfolio-website-cdad8.firebaseapp.com",
+				projectId: "portfolio-website-cdad8",
+				storageBucket: "portfolio-website-cdad8.appspot.com",
+				messagingSenderId: "87792125247",
+				appId: "1:87792125247:web:6906fc0954381c91cc7f8a",
+				measurementId: "G-C9ET131GML"
+			};
+
+			// Initialize Firebase
+			const app = initializeApp(firebaseConfig);
+			const analytics = getAnalytics(app);
+		</script>
