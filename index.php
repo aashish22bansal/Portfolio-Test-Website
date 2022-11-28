@@ -128,13 +128,21 @@
 							</div>
 						</div>
 					</div>
+					<?php
+					$allowed_hosts = array('localhost');
+					if (isset($_SERVER['HTTP_HOST']) || in_array($_SERVER['HTTP_HOST'], $allowed_hosts)) {
+						// header($_SERVER['SERVER_PROTOCOL'].' 400 Bad Request');
+						// exit;
+						print("hkugkugukgyugukygyukgkhujbyhjvyhjvj");
+					}
+					?>
 					<div class="col-lg-3 pl-md-5 py-5">
 						<div class="card" style="width: 23rem;">
 							<img class="card-img-top" src="images/301395867_3173014973028972_4641983149066889399_n.jpg" alt="Card image cap">
 							<div class="card-body">
-								<h5 class="card-title">Contact me</h5>
+								<h5 class="card-title">Contact Me</h5>
 								<p class="card-text"><?php print($user_data_home['Subtitle']); ?></p>
-								<a href="contact.html" class="btn btn-primary">Contact me</a>
+								<a href="contact.php" class="btn btn-primary">Contact me</a>
 							</div>
 						</div>
 					</div>

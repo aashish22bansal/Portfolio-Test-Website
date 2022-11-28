@@ -2139,93 +2139,96 @@ $user_data_admin_subjects_undergraduate = mysqli_fetch_all($run_query_admin_inde
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              <form method="POST" action="">
+              <form method="POST" action="../includes/admin.php">
                 <div class="card-body">
                   <div class="form-group">
                     <label for="exampleInputEmail1">Name</label>
-                    <input type="text" class="form-control" id="Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Name" value="<?php print($user_data_admin_personal_details[0][2]);?>" placeholder="Enter Your Name">
+                    <input type="text" class="form-control" id="Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Name" name="Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Name" value="<?php print($user_data_admin_personal_details[0][2]);?>" placeholder="Enter Your Name">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Previous Email Address</label>
+                    <input type="email" class="form-control" id="Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Previous_Email" name="Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Previous_Email" placeholder="Enter New Email Address">
                   </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">Email Address</label>
-                    <input type="email" class="form-control" id="Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Email" value="<?php print($user_data_admin_personal_details[0][0]);?>" placeholder="Enter Email Address">
+                    <input type="email" class="form-control" id="Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Email" name="Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Email" value="<?php print($user_data_admin_personal_details[0][0]);?>" placeholder="Enter Email Address">
                   </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">Phone Number</label>
-                    <input type="text" class="form-control" id="Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Mobile" value="<?php print($user_data_admin_personal_details[0][3]);?>" placeholder="Enter Mobile Number">
+                    <input type="text" class="form-control" id="Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Mobile" name="Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Mobile" value="<?php print($user_data_admin_personal_details[0][3]);?>" placeholder="Enter Mobile Number">
                   </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">Description about self</label>
-                    <input type="textbox" class="form-control" id="Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Description" value="<?php print($user_data_admin_personal_details[0][14]);?>" placeholder="Enter Description">
+                    <input type="textbox" class="form-control" id="Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Description" name="Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Description" value="<?php print($user_data_admin_personal_details[0][14]);?>" placeholder="Enter Description">
                   </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">Day of Birth</label>
-                    <input type="number" class="form-control" id="Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Day_of_Birth" value="<?php print($user_data_admin_personal_details[0][6]);?>" placeholder="Enter Your Day of Birth">
+                    <input type="number" class="form-control" id="Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Day_of_Birth" name="Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Day_of_Birth" value="<?php print($user_data_admin_personal_details[0][6]);?>" placeholder="Enter Your Day of Birth">
                   </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">Month of Birth</label>
-                    <input type="text" class="form-control" id="Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Month_of_Birth" value="<?php print($user_data_admin_personal_details[0][5]);?>" placeholder="Enter Your Month of Birth">
+                    <input type="text" class="form-control" id="Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Month_of_Birth" name="Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Month_of_Birth" value="<?php print($user_data_admin_personal_details[0][5]);?>" placeholder="Enter Your Month of Birth">
                   </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">Year of Birth</label>
-                    <input type="number" class="form-control" id="Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Year_of_Birth" value="<?php print($user_data_admin_personal_details[0][4]);?>" placeholder="Enter Your Year of Birth">
+                    <input type="number" class="form-control" id="Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Year_of_Birth" name="Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Year_of_Birth" value="<?php print($user_data_admin_personal_details[0][4]);?>" placeholder="Enter Your Year of Birth">
                   </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">Address (in Full)</label>
-                    <input type="text" class="form-control" id="Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_" value="<?php print($user_data_admin_personal_details[0][13]);?>" placeholder="Enter Your Address">
+                    <input type="text" class="form-control" id="Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Address_in_Full" name="Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Address_in_Full" value="<?php print($user_data_admin_personal_details[0][13]);?>" placeholder="Enter Your Address">
                   </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">Country of Residence</label>
-                    <input type="text" class="form-control" id="Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_" value="<?php print($user_data_admin_personal_details[0][7]);?>" placeholder="Enter Country of Residence">
+                    <input type="text" class="form-control" id="Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Country_of_Residence" name="Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Country_of_Residence" value="<?php print($user_data_admin_personal_details[0][7]);?>" placeholder="Enter Country of Residence">
                   </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">State of Residence</label>
-                    <input type="text" class="form-control" id="Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_" value="<?php print($user_data_admin_personal_details[0][8]);?>" placeholder="Enter State of Residence">
+                    <input type="text" class="form-control" id="Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_State_of_Residence" name="Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_State_of_Residence" value="<?php print($user_data_admin_personal_details[0][8]);?>" placeholder="Enter State of Residence">
                   </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">Distrit of Residence</label>
-                    <input type="text" class="form-control" id="Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_" value="<?php print($user_data_admin_personal_details[0][9]);?>" placeholder="Enter Distrit of Residence">
+                    <input type="text" class="form-control" id="Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_District_of_Residence" name="Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_District_of_Residence" value="<?php print($user_data_admin_personal_details[0][9]);?>" placeholder="Enter Distrit of Residence">
                   </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">City</label>
-                    <input type="text" class="form-control" id="Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_" value="<?php print($user_data_admin_personal_details[0][10]);?>" placeholder="Enter City">
+                    <input type="text" class="form-control" id="Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_City" name="Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_City" value="<?php print($user_data_admin_personal_details[0][10]);?>" placeholder="Enter City">
                   </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">Street Address</label>
-                    <input type="text" class="form-control" id="Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_" value="<?php print($user_data_admin_personal_details[0][11]);?>" placeholder="Enter Street Address">
+                    <input type="text" class="form-control" id="Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Street_Address" name="Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Street_Address" value="<?php print($user_data_admin_personal_details[0][11]);?>" placeholder="Enter Street Address">
                   </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">ZIP Code</label>
-                    <input type="number" class="form-control" id="Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_" value="<?php print($user_data_admin_personal_details[0][12]);?>" placeholder="Enter ZIP Code">
+                    <input type="number" class="form-control" id="Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_ZIP_Code" name="Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_ZIP_Code" value="<?php print($user_data_admin_personal_details[0][12]);?>" placeholder="Enter ZIP Code">
                   </div>
-                  <div class="form-group custom-control custom-switch custom-switch-off-danger custom-switch-on-success">
-                    <!-- <label for="exampleInputEmail1">Show Icons</label><br> -->
-                    <!-- <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email"> -->
+                  <!--div class="form-group">
+                    <label for="exampleInputEmail1">Show Icons</label><br>
+                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
                     <label class="custom-control-label" for="customSwitch1">Show Icons</label>
-                    <input type="checkbox" class="custom-control-input" id="customSwitch13" name="showIconsPersonalDetails"
-                      <?php
-                      print_r($user_data_admin_personal_details[0]);
-                      if($user_data_admin_personal_details[0][15]=="on"){
-                        echo "checked";
-                      }
-                      ?>
-                    />
-                  </div>
-                  <div class="form-group">
+                    <input type="checkbox" class="custom-control-input" id="customSwitch13" name="showIconsPersonalDetails">
+                  </div-->
+                  <!-- <div class="form-group">
                     <label for="exampleInputFile">Profile Image</label>
                     <div class="input-group">
                       <div class="custom-file">
-                        <input type="file" class="custom-file-input" id="Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_">
+                        <input type="file" class="custom-file-input" id="Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Profile_Image" name="Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Profile_Image" >
                         <label class="custom-file-label" for="exampleInputFile">Choose file</label>
                       </div>
                       <div class="input-group-append">
                         <span class="input-group-text">Upload</span>
                       </div>
                     </div>
-                  </div>
+                  </div> -->
+                  <div class="form-group">
+                    <div class="custom-control custom-switch custom-switch-off-danger cuwtom-switch-on-success">
+                      <input id="Toggle_Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Show_Icons" name="Toggle_Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Show_Icons" class="custom-control-input" type="checkbox">
+                      <label class="custom-control-label" for="customSwitch13">Show Icons</label>
+                    </div>
+                  </div>  
                 </div>
                 <!-- /.card-body -->
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Submit</button>
+                  <button type="submit" class="btn btn-primary" value="Save Changes" id="Submit_Admin_Panel_Update_Home_Page_Details" name="Submit_Admin_Panel_Update_Home_Page_Details">Submit</button>
                 </div>
               </form>
             </div>
@@ -2269,7 +2272,7 @@ $user_data_admin_subjects_undergraduate = mysqli_fetch_all($run_query_admin_inde
                 <!-- /.card-body -->
 
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Submit</button>
+                  <button type="submit" class="btn btn-primary" name="Submit_Admin_Panel_Update_About_Page_Details">Submit</button>
                 </div>
               </form>
             </div>
@@ -2369,7 +2372,7 @@ $user_data_admin_subjects_undergraduate = mysqli_fetch_all($run_query_admin_inde
                 </div>
                 <!-- /.card-body -->
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Submit</button>
+                  <button type="submit" class="btn btn-primary" name="Submit_Admin_Panel_Update_Personal_Details">Submit</button>
                 </div>
               </form>
             </div>
@@ -2448,7 +2451,7 @@ $user_data_admin_subjects_undergraduate = mysqli_fetch_all($run_query_admin_inde
                   </div>
                 </div>
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Submit</button>
+                  <button type="submit" class="btn btn-primary" name="Submit_Admin_Panel_Update_Social_Media_Details">Submit</button>
                 </div>
               </form>
             </div>
@@ -2458,7 +2461,7 @@ $user_data_admin_subjects_undergraduate = mysqli_fetch_all($run_query_admin_inde
           ?>
             <div class="card card-primary col-lg-12">
               <div class="card-header">
-                <h3 class="card-title">Update Home Page Details</h3>
+                <h3 class="card-title">Add Education Details</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
@@ -2492,7 +2495,7 @@ $user_data_admin_subjects_undergraduate = mysqli_fetch_all($run_query_admin_inde
                 <!-- /.card-body -->
 
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Submit</button>
+                  <button type="submit" class="btn btn-primary" name="Submit_Admin_Panel_Add_Education_Details">Submit</button>
                 </div>
               </form>
             </div>
@@ -2502,7 +2505,7 @@ $user_data_admin_subjects_undergraduate = mysqli_fetch_all($run_query_admin_inde
           ?>
             <div class="card card-primary col-lg-12">
               <div class="card-header">
-                <h3 class="card-title">Update Home Page Details</h3>
+                <h3 class="card-title">Update Matriculation Details</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
@@ -2536,7 +2539,7 @@ $user_data_admin_subjects_undergraduate = mysqli_fetch_all($run_query_admin_inde
                 <!-- /.card-body -->
 
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Submit</button>
+                  <button type="submit" class="btn btn-primary" name="Submit_Admin_Panel_Update_Matriculation_Details">Submit</button>
                 </div>
               </form>
             </div>
@@ -2546,7 +2549,7 @@ $user_data_admin_subjects_undergraduate = mysqli_fetch_all($run_query_admin_inde
           ?>
             <div class="card card-primary col-lg-12">
               <div class="card-header">
-                <h3 class="card-title">Update Home Page Details</h3>
+                <h3 class="card-title">Update Pre-University Details</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
@@ -2580,7 +2583,7 @@ $user_data_admin_subjects_undergraduate = mysqli_fetch_all($run_query_admin_inde
                 <!-- /.card-body -->
 
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Submit</button>
+                  <button type="submit" class="btn btn-primary" name="Submit_Admin_Panel_Update_Preuniversity_Details">Submit</button>
                 </div>
               </form>
             </div>
@@ -2590,7 +2593,7 @@ $user_data_admin_subjects_undergraduate = mysqli_fetch_all($run_query_admin_inde
           ?>
             <div class="card card-primary col-lg-12">
               <div class="card-header">
-                <h3 class="card-title">Update Home Page Details</h3>
+                <h3 class="card-title">Update Undergraduate Details</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
@@ -2624,7 +2627,7 @@ $user_data_admin_subjects_undergraduate = mysqli_fetch_all($run_query_admin_inde
                 <!-- /.card-body -->
 
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Submit</button>
+                  <button type="submit" class="btn btn-primary" name="Submit_Admin_Panel_Update_Undergraduate_Details">Submit</button>
                 </div>
               </form>
             </div>
@@ -2634,7 +2637,7 @@ $user_data_admin_subjects_undergraduate = mysqli_fetch_all($run_query_admin_inde
           ?>
             <div class="card card-primary col-lg-12">
               <div class="card-header">
-                <h3 class="card-title">Update Home Page Details</h3>
+                <h3 class="card-title">Add Experience</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
@@ -2668,7 +2671,7 @@ $user_data_admin_subjects_undergraduate = mysqli_fetch_all($run_query_admin_inde
                 <!-- /.card-body -->
 
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Submit</button>
+                  <button type="submit" class="btn btn-primary" name="Submit_Admin_Panel_Add_Experience_Details">Submit</button>
                 </div>
               </form>
             </div>
@@ -2678,7 +2681,7 @@ $user_data_admin_subjects_undergraduate = mysqli_fetch_all($run_query_admin_inde
           ?>
             <div class="card card-primary col-lg-12">
               <div class="card-header">
-                <h3 class="card-title">Update Home Page Details</h3>
+                <h3 class="card-title">Modify Experience</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
@@ -2712,7 +2715,7 @@ $user_data_admin_subjects_undergraduate = mysqli_fetch_all($run_query_admin_inde
                 <!-- /.card-body -->
 
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Submit</button>
+                  <button type="submit" class="btn btn-primary" name="Submit_Admin_Panel_Modify_Experience_Details">Submit</button>
                 </div>
               </form>
             </div>
@@ -2722,7 +2725,7 @@ $user_data_admin_subjects_undergraduate = mysqli_fetch_all($run_query_admin_inde
           ?>
             <div class="card card-primary col-lg-12">
               <div class="card-header">
-                <h3 class="card-title">Update Home Page Details</h3>
+                <h3 class="card-title">Delete Experience</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
@@ -2756,7 +2759,7 @@ $user_data_admin_subjects_undergraduate = mysqli_fetch_all($run_query_admin_inde
                 <!-- /.card-body -->
 
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Submit</button>
+                  <button type="submit" class="btn btn-primary" name="Submit_Admin_Panel_Delete_Experience_Details">Submit</button>
                 </div>
               </form>
             </div>
@@ -2766,7 +2769,7 @@ $user_data_admin_subjects_undergraduate = mysqli_fetch_all($run_query_admin_inde
           ?>
             <div class="card card-primary col-lg-12">
               <div class="card-header">
-                <h3 class="card-title">Update Home Page Details</h3>
+                <h3 class="card-title">Add Publication</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
@@ -2800,7 +2803,7 @@ $user_data_admin_subjects_undergraduate = mysqli_fetch_all($run_query_admin_inde
                 <!-- /.card-body -->
 
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Submit</button>
+                  <button type="submit" class="btn btn-primary" name="Submit_Admin_Panel_Add_Publication_Details">Submit</button>
                 </div>
               </form>
             </div>
@@ -2810,7 +2813,7 @@ $user_data_admin_subjects_undergraduate = mysqli_fetch_all($run_query_admin_inde
           ?>
             <div class="card card-primary col-lg-12">
               <div class="card-header">
-                <h3 class="card-title">Update Home Page Details</h3>
+                <h3 class="card-title">Modify Publication</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
@@ -2844,7 +2847,7 @@ $user_data_admin_subjects_undergraduate = mysqli_fetch_all($run_query_admin_inde
                 <!-- /.card-body -->
 
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Submit</button>
+                  <button type="submit" class="btn btn-primary" name="Submit_Admin_Panel_Modify_Publication_Details">Submit</button>
                 </div>
               </form>
             </div>
@@ -2854,7 +2857,7 @@ $user_data_admin_subjects_undergraduate = mysqli_fetch_all($run_query_admin_inde
           ?>
             <div class="card card-primary col-lg-12">
               <div class="card-header">
-                <h3 class="card-title">Update Home Page Details</h3>
+                <h3 class="card-title">Delete Publication</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
@@ -2888,7 +2891,7 @@ $user_data_admin_subjects_undergraduate = mysqli_fetch_all($run_query_admin_inde
                 <!-- /.card-body -->
 
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Submit</button>
+                  <button type="submit" class="btn btn-primary" name="Submit_Admin_Panel_Delete_Publication_Details">Submit</button>
                 </div>
               </form>
             </div>
@@ -2898,7 +2901,7 @@ $user_data_admin_subjects_undergraduate = mysqli_fetch_all($run_query_admin_inde
           ?>
             <div class="card card-primary col-lg-12">
               <div class="card-header">
-                <h3 class="card-title">Update Home Page Details</h3>
+                <h3 class="card-title">Add Project Category</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
@@ -2932,7 +2935,7 @@ $user_data_admin_subjects_undergraduate = mysqli_fetch_all($run_query_admin_inde
                 <!-- /.card-body -->
 
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Submit</button>
+                  <button type="submit" class="btn btn-primary" name="Submit_Admin_Panel_Add_Project_Category">Submit</button>
                 </div>
               </form>
             </div>
@@ -2942,7 +2945,7 @@ $user_data_admin_subjects_undergraduate = mysqli_fetch_all($run_query_admin_inde
           ?>
             <div class="card card-primary col-lg-12">
               <div class="card-header">
-                <h3 class="card-title">Update Home Page Details</h3>
+                <h3 class="card-title">Modify Project Category</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
@@ -2976,7 +2979,7 @@ $user_data_admin_subjects_undergraduate = mysqli_fetch_all($run_query_admin_inde
                 <!-- /.card-body -->
 
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Submit</button>
+                  <button type="submit" class="btn btn-primary" name="Submit_Admin_Panel_Modify_Project_Category">Submit</button>
                 </div>
               </form>
             </div>
@@ -2986,7 +2989,7 @@ $user_data_admin_subjects_undergraduate = mysqli_fetch_all($run_query_admin_inde
           ?>
             <div class="card card-primary col-lg-12">
               <div class="card-header">
-                <h3 class="card-title">Update Home Page Details</h3>
+                <h3 class="card-title">Delete Project Category</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
@@ -3020,7 +3023,7 @@ $user_data_admin_subjects_undergraduate = mysqli_fetch_all($run_query_admin_inde
                 <!-- /.card-body -->
 
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Submit</button>
+                  <button type="submit" class="btn btn-primary" name="Submit_Admin_Panel_Delete_Project_Category">Submit</button>
                 </div>
               </form>
             </div>
@@ -3030,7 +3033,7 @@ $user_data_admin_subjects_undergraduate = mysqli_fetch_all($run_query_admin_inde
           ?>
             <div class="card card-primary col-lg-12">
               <div class="card-header">
-                <h3 class="card-title">Update Home Page Details</h3>
+                <h3 class="card-title">Add Project(s)</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
@@ -3064,7 +3067,7 @@ $user_data_admin_subjects_undergraduate = mysqli_fetch_all($run_query_admin_inde
                 <!-- /.card-body -->
 
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Submit</button>
+                  <button type="submit" class="btn btn-primary" name="Submit_Admin_Panel_Add_Project_Details">Submit</button>
                 </div>
               </form>
             </div>
@@ -3074,7 +3077,7 @@ $user_data_admin_subjects_undergraduate = mysqli_fetch_all($run_query_admin_inde
           ?>
             <div class="card card-primary col-lg-12">
               <div class="card-header">
-                <h3 class="card-title">Update Home Page Details</h3>
+                <h3 class="card-title">Modify Project(s)</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
@@ -3108,7 +3111,7 @@ $user_data_admin_subjects_undergraduate = mysqli_fetch_all($run_query_admin_inde
                 <!-- /.card-body -->
 
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Submit</button>
+                  <button type="submit" class="btn btn-primary" name="Submit_Admin_Panel_Modify_Project_Details">Submit</button>
                 </div>
               </form>
             </div>
@@ -3118,7 +3121,7 @@ $user_data_admin_subjects_undergraduate = mysqli_fetch_all($run_query_admin_inde
           ?>
             <div class="card card-primary col-lg-12">
               <div class="card-header">
-                <h3 class="card-title">Update Home Page Details</h3>
+                <h3 class="card-title">Delete Project(s)</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
@@ -3152,7 +3155,7 @@ $user_data_admin_subjects_undergraduate = mysqli_fetch_all($run_query_admin_inde
                 <!-- /.card-body -->
 
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Submit</button>
+                  <button type="submit" class="btn btn-primary" name="Submit_Admin_Panel_Delete_Project_Details">Submit</button>
                 </div>
               </form>
             </div>
@@ -3162,7 +3165,7 @@ $user_data_admin_subjects_undergraduate = mysqli_fetch_all($run_query_admin_inde
           ?>
             <div class="card card-primary col-lg-12">
               <div class="card-header">
-                <h3 class="card-title">Update Home Page Details</h3>
+                <h3 class="card-title">Add Industry Skill Category</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
@@ -3196,7 +3199,7 @@ $user_data_admin_subjects_undergraduate = mysqli_fetch_all($run_query_admin_inde
                 <!-- /.card-body -->
 
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Submit</button>
+                  <button type="submit" class="btn btn-primary" name="Submit_Admin_Panel_Add_Industry_Skill_Category">Submit</button>
                 </div>
               </form>
             </div>
@@ -3206,7 +3209,7 @@ $user_data_admin_subjects_undergraduate = mysqli_fetch_all($run_query_admin_inde
           ?>
             <div class="card card-primary col-lg-12">
               <div class="card-header">
-                <h3 class="card-title">Update Home Page Details</h3>
+                <h3 class="card-title">Modify Industry Skill Category</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
@@ -3240,7 +3243,7 @@ $user_data_admin_subjects_undergraduate = mysqli_fetch_all($run_query_admin_inde
                 <!-- /.card-body -->
 
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Submit</button>
+                  <button type="submit" class="btn btn-primary" name="Submit_Admin_Panel_Modify_Industry_Skill_Category">Submit</button>
                 </div>
               </form>
             </div>
@@ -3250,7 +3253,7 @@ $user_data_admin_subjects_undergraduate = mysqli_fetch_all($run_query_admin_inde
           ?>
             <div class="card card-primary col-lg-12">
               <div class="card-header">
-                <h3 class="card-title">Update Home Page Details</h3>
+                <h3 class="card-title">Delete Industry Skill Category</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
@@ -3284,7 +3287,7 @@ $user_data_admin_subjects_undergraduate = mysqli_fetch_all($run_query_admin_inde
                 <!-- /.card-body -->
 
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Submit</button>
+                  <button type="submit" class="btn btn-primary" name="Submit_Admin_Panel_Delete_Industry_Skill_Category">Submit</button>
                 </div>
               </form>
             </div>
@@ -3294,7 +3297,7 @@ $user_data_admin_subjects_undergraduate = mysqli_fetch_all($run_query_admin_inde
           ?>
             <div class="card card-primary col-lg-12">
               <div class="card-header">
-                <h3 class="card-title">Update Home Page Details</h3>
+                <h3 class="card-title">Add Industry Skill</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
@@ -3328,7 +3331,7 @@ $user_data_admin_subjects_undergraduate = mysqli_fetch_all($run_query_admin_inde
                 <!-- /.card-body -->
 
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Submit</button>
+                  <button type="submit" class="btn btn-primary" name="Submit_Admin_Panel_Add_Industry_Skill_Details">Submit</button>
                 </div>
               </form>
             </div>
@@ -3338,7 +3341,7 @@ $user_data_admin_subjects_undergraduate = mysqli_fetch_all($run_query_admin_inde
           ?>
             <div class="card card-primary col-lg-12">
               <div class="card-header">
-                <h3 class="card-title">Update Home Page Details</h3>
+                <h3 class="card-title">Modify Industry Skill</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
@@ -3372,7 +3375,7 @@ $user_data_admin_subjects_undergraduate = mysqli_fetch_all($run_query_admin_inde
                 <!-- /.card-body -->
 
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Submit</button>
+                  <button type="submit" class="btn btn-primary" name="Submit_Admin_Panel_Modify_Industry_Skill_Details">Submit</button>
                 </div>
               </form>
             </div>
@@ -3382,7 +3385,7 @@ $user_data_admin_subjects_undergraduate = mysqli_fetch_all($run_query_admin_inde
           ?>
             <div class="card card-primary col-lg-12">
               <div class="card-header">
-                <h3 class="card-title">Update Home Page Details</h3>
+                <h3 class="card-title">Delete Industry Skill</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
@@ -3416,7 +3419,7 @@ $user_data_admin_subjects_undergraduate = mysqli_fetch_all($run_query_admin_inde
                 <!-- /.card-body -->
 
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Submit</button>
+                  <button type="submit" class="btn btn-primary" name="Submit_Admin_Panel_Delete_Industry_Skill_Details">Submit</button>
                 </div>
               </form>
             </div>
@@ -3426,7 +3429,7 @@ $user_data_admin_subjects_undergraduate = mysqli_fetch_all($run_query_admin_inde
           ?>
             <div class="card card-primary col-lg-12">
               <div class="card-header">
-                <h3 class="card-title">Update Home Page Details</h3>
+                <h3 class="card-title">Add Learning Badge(s)</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
@@ -3460,7 +3463,7 @@ $user_data_admin_subjects_undergraduate = mysqli_fetch_all($run_query_admin_inde
                 <!-- /.card-body -->
 
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Submit</button>
+                  <button type="submit" class="btn btn-primary" name="Submit_Admin_Panel_Add_Learning_Badge">Submit</button>
                 </div>
               </form>
             </div>
@@ -3470,7 +3473,7 @@ $user_data_admin_subjects_undergraduate = mysqli_fetch_all($run_query_admin_inde
           ?>
             <div class="card card-primary col-lg-12">
               <div class="card-header">
-                <h3 class="card-title">Update Home Page Details</h3>
+                <h3 class="card-title">Update Learning Badge Detail(s)</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
@@ -3504,7 +3507,7 @@ $user_data_admin_subjects_undergraduate = mysqli_fetch_all($run_query_admin_inde
                 <!-- /.card-body -->
 
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Submit</button>
+                  <button type="submit" class="btn btn-primary" name="Submit_Admin_Panel_Modify_Learning_Badge">Submit</button>
                 </div>
               </form>
             </div>
@@ -3514,7 +3517,7 @@ $user_data_admin_subjects_undergraduate = mysqli_fetch_all($run_query_admin_inde
           ?>
             <div class="card card-primary col-lg-12">
               <div class="card-header">
-                <h3 class="card-title">Update Home Page Details</h3>
+                <h3 class="card-title">Delete Learning Badge</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
@@ -3548,7 +3551,7 @@ $user_data_admin_subjects_undergraduate = mysqli_fetch_all($run_query_admin_inde
                 <!-- /.card-body -->
 
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Submit</button>
+                  <button type="submit" class="btn btn-primary" name="Submit_Admin_Panel_Delete_Learning_Badge">Submit</button>
                 </div>
               </form>
             </div>
@@ -3558,7 +3561,7 @@ $user_data_admin_subjects_undergraduate = mysqli_fetch_all($run_query_admin_inde
           ?>
             <div class="card card-primary col-lg-12">
               <div class="card-header">
-                <h3 class="card-title">Update Home Page Details</h3>
+                <h3 class="card-title">Add Skill Badge(s)</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
@@ -3592,7 +3595,7 @@ $user_data_admin_subjects_undergraduate = mysqli_fetch_all($run_query_admin_inde
                 <!-- /.card-body -->
 
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Submit</button>
+                  <button type="submit" class="btn btn-primary" name="Submit_Admin_Panel_Add_Skills_Badge">Submit</button>
                 </div>
               </form>
             </div>
@@ -3602,7 +3605,7 @@ $user_data_admin_subjects_undergraduate = mysqli_fetch_all($run_query_admin_inde
           ?>
             <div class="card card-primary col-lg-12">
               <div class="card-header">
-                <h3 class="card-title">Update Home Page Details</h3>
+                <h3 class="card-title">Update Skill Badge Details</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
@@ -3636,7 +3639,7 @@ $user_data_admin_subjects_undergraduate = mysqli_fetch_all($run_query_admin_inde
                 <!-- /.card-body -->
 
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Submit</button>
+                  <button type="submit" class="btn btn-primary" name="Submit_Admin_Panel_Modify_Skills_Badge">Submit</button>
                 </div>
               </form>
             </div>
@@ -3646,7 +3649,7 @@ $user_data_admin_subjects_undergraduate = mysqli_fetch_all($run_query_admin_inde
           ?>
             <div class="card card-primary col-lg-12">
               <div class="card-header">
-                <h3 class="card-title">Update Home Page Details</h3>
+                <h3 class="card-title">Delete Skill Badge Details</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
@@ -3680,7 +3683,7 @@ $user_data_admin_subjects_undergraduate = mysqli_fetch_all($run_query_admin_inde
                 <!-- /.card-body -->
 
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Submit</button>
+                  <button type="submit" class="btn btn-primary" name="Submit_Admin_Panel_Delete_Skills_Badge">Submit</button>
                 </div>
               </form>
             </div>
@@ -3690,7 +3693,7 @@ $user_data_admin_subjects_undergraduate = mysqli_fetch_all($run_query_admin_inde
           ?>
             <div class="card card-primary col-lg-12">
               <div class="card-header">
-                <h3 class="card-title">Update Home Page Details</h3>
+                <h3 class="card-title">Add Certificate(s)</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
@@ -3724,7 +3727,7 @@ $user_data_admin_subjects_undergraduate = mysqli_fetch_all($run_query_admin_inde
                 <!-- /.card-body -->
 
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Submit</button>
+                  <button type="submit" class="btn btn-primary" name="Submit_Admin_Panel_Add_Certificate">Submit</button>
                 </div>
               </form>
             </div>
@@ -3734,7 +3737,7 @@ $user_data_admin_subjects_undergraduate = mysqli_fetch_all($run_query_admin_inde
           ?>
             <div class="card card-primary col-lg-12">
               <div class="card-header">
-                <h3 class="card-title">Update Home Page Details</h3>
+                <h3 class="card-title">Update Certificate Detail(s)</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
@@ -3768,7 +3771,7 @@ $user_data_admin_subjects_undergraduate = mysqli_fetch_all($run_query_admin_inde
                 <!-- /.card-body -->
 
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Submit</button>
+                  <button type="submit" class="btn btn-primary" name="Submit_Admin_Panel_Modify_Certificate">Submit</button>
                 </div>
               </form>
             </div>
@@ -3778,7 +3781,7 @@ $user_data_admin_subjects_undergraduate = mysqli_fetch_all($run_query_admin_inde
           ?>
             <div class="card card-primary col-lg-12">
               <div class="card-header">
-                <h3 class="card-title">Update Home Page Details</h3>
+                <h3 class="card-title">Delete Certificate</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
@@ -3812,7 +3815,7 @@ $user_data_admin_subjects_undergraduate = mysqli_fetch_all($run_query_admin_inde
                 <!-- /.card-body -->
 
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Submit</button>
+                  <button type="submit" class="btn btn-primary" name="Submit_Admin_Panel_Delete_Certificate">Submit</button>
                 </div>
               </form>
             </div>
@@ -3822,7 +3825,7 @@ $user_data_admin_subjects_undergraduate = mysqli_fetch_all($run_query_admin_inde
           ?>
             <div class="card card-primary col-lg-12">
               <div class="card-header">
-                <h3 class="card-title">Update Home Page Details</h3>
+                <h3 class="card-title">Add Course Company</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
@@ -3856,7 +3859,7 @@ $user_data_admin_subjects_undergraduate = mysqli_fetch_all($run_query_admin_inde
                 <!-- /.card-body -->
 
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Submit</button>
+                  <button type="submit" class="btn btn-primary" name="Submit_Admin_Panel_Add_Course_Company">Submit</button>
                 </div>
               </form>
             </div>
@@ -3866,7 +3869,7 @@ $user_data_admin_subjects_undergraduate = mysqli_fetch_all($run_query_admin_inde
           ?>
             <div class="card card-primary col-lg-12">
               <div class="card-header">
-                <h3 class="card-title">Update Home Page Details</h3>
+                <h3 class="card-title">Modify Course Company Details</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
@@ -3900,7 +3903,7 @@ $user_data_admin_subjects_undergraduate = mysqli_fetch_all($run_query_admin_inde
                 <!-- /.card-body -->
 
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Submit</button>
+                  <button type="submit" class="btn btn-primary" name="Submit_Admin_Panel_Modify_Course_Company">Submit</button>
                 </div>
               </form>
             </div>
@@ -3910,7 +3913,7 @@ $user_data_admin_subjects_undergraduate = mysqli_fetch_all($run_query_admin_inde
           ?>
             <div class="card card-primary col-lg-12">
               <div class="card-header">
-                <h3 class="card-title">Update Home Page Details</h3>
+                <h3 class="card-title">Delete Course Company Details</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
@@ -3944,7 +3947,7 @@ $user_data_admin_subjects_undergraduate = mysqli_fetch_all($run_query_admin_inde
                 <!-- /.card-body -->
 
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Submit</button>
+                  <button type="submit" class="btn btn-primary" name="Submit_Admin_Panel_Delete_Course_Company">Submit</button>
                 </div>
               </form>
             </div>
@@ -3954,7 +3957,7 @@ $user_data_admin_subjects_undergraduate = mysqli_fetch_all($run_query_admin_inde
           ?>
             <div class="card card-primary col-lg-12">
               <div class="card-header">
-                <h3 class="card-title">Update Home Page Details</h3>
+                <h3 class="card-title">Add Course Detail(s)</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
@@ -3988,7 +3991,7 @@ $user_data_admin_subjects_undergraduate = mysqli_fetch_all($run_query_admin_inde
                 <!-- /.card-body -->
 
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Submit</button>
+                  <button type="submit" class="btn btn-primary" name="Submit_Admin_Panel_Add_Course">Submit</button>
                 </div>
               </form>
             </div>
@@ -3998,7 +4001,7 @@ $user_data_admin_subjects_undergraduate = mysqli_fetch_all($run_query_admin_inde
           ?>
             <div class="card card-primary col-lg-12">
               <div class="card-header">
-                <h3 class="card-title">Update Home Page Details</h3>
+                <h3 class="card-title">Update Course Detail(s)</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
@@ -4032,7 +4035,7 @@ $user_data_admin_subjects_undergraduate = mysqli_fetch_all($run_query_admin_inde
                 <!-- /.card-body -->
 
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Submit</button>
+                  <button type="submit" class="btn btn-primary" name="Submit_Admin_Panel_Modify_Course">Submit</button>
                 </div>
               </form>
             </div>
@@ -4042,7 +4045,7 @@ $user_data_admin_subjects_undergraduate = mysqli_fetch_all($run_query_admin_inde
           ?>
             <div class="card card-primary col-lg-12">
               <div class="card-header">
-                <h3 class="card-title">Update Home Page Details</h3>
+                <h3 class="card-title">Delete Course Detail(s)</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
@@ -4076,7 +4079,7 @@ $user_data_admin_subjects_undergraduate = mysqli_fetch_all($run_query_admin_inde
                 <!-- /.card-body -->
 
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Submit</button>
+                  <button type="submit" class="btn btn-primary" name="Submit_Admin_Panel_Delete_Course">Submit</button>
                 </div>
               </form>
             </div>
@@ -4086,7 +4089,7 @@ $user_data_admin_subjects_undergraduate = mysqli_fetch_all($run_query_admin_inde
           ?>
             <div class="card card-primary col-lg-12">
               <div class="card-header">
-                <h3 class="card-title">Update Home Page Details</h3>
+                <h3 class="card-title">Update Resume Page</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
@@ -4120,7 +4123,7 @@ $user_data_admin_subjects_undergraduate = mysqli_fetch_all($run_query_admin_inde
                 <!-- /.card-body -->
 
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Submit</button>
+                  <button type="submit" class="btn btn-primary" name="Submit_Admin_Panel_Update_Resume_Page">Submit</button>
                 </div>
               </form>
             </div>
@@ -4130,7 +4133,7 @@ $user_data_admin_subjects_undergraduate = mysqli_fetch_all($run_query_admin_inde
           ?>
             <div class="card card-primary col-lg-12">
               <div class="card-header">
-                <h3 class="card-title">Update Home Page Details</h3>
+                <h3 class="card-title">Update Admin Account Details</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
@@ -4164,7 +4167,7 @@ $user_data_admin_subjects_undergraduate = mysqli_fetch_all($run_query_admin_inde
                 <!-- /.card-body -->
 
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Submit</button>
+                  <button type="submit" class="btn btn-primary" name="Submit_Admin_Panel_Update_Admin_Account_Page">Submit</button>
                 </div>
               </form>
             </div>
@@ -4174,7 +4177,7 @@ $user_data_admin_subjects_undergraduate = mysqli_fetch_all($run_query_admin_inde
           ?>
             <div class="card card-primary col-lg-12">
               <div class="card-header">
-                <h3 class="card-title">Update Home Page Details</h3>
+                <h3 class="card-title">Update SEO Settings</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
@@ -4208,7 +4211,7 @@ $user_data_admin_subjects_undergraduate = mysqli_fetch_all($run_query_admin_inde
                 <!-- /.card-body -->
 
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Submit</button>
+                  <button type="submit" class="btn btn-primary" name="Submit_Admin_Panel_Update_SEO_Settings">Submit</button>
                 </div>
               </form>
             </div>
