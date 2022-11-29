@@ -2201,28 +2201,21 @@ $user_data_admin_subjects_undergraduate = mysqli_fetch_all($run_query_admin_inde
                     <label for="exampleInputEmail1">ZIP Code</label>
                     <input type="number" class="form-control" id="Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_ZIP_Code" name="Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_ZIP_Code" value="<?php print($user_data_admin_personal_details[0][12]);?>" placeholder="Enter ZIP Code">
                   </div>
-                  <!--div class="form-group">
-                    <label for="exampleInputEmail1">Show Icons</label><br>
-                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
-                    <label class="custom-control-label" for="customSwitch1">Show Icons</label>
-                    <input type="checkbox" class="custom-control-input" id="customSwitch13" name="showIconsPersonalDetails">
-                  </div-->
-                  <!-- <div class="form-group">
-                    <label for="exampleInputFile">Profile Image</label>
-                    <div class="input-group">
-                      <div class="custom-file">
-                        <input type="file" class="custom-file-input" id="Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Profile_Image" name="Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Profile_Image" >
-                        <label class="custom-file-label" for="exampleInputFile">Choose file</label>
-                      </div>
-                      <div class="input-group-append">
-                        <span class="input-group-text">Upload</span>
-                      </div>
-                    </div>
-                  </div> -->
                   <div class="form-group">
-                    <div class="custom-control custom-switch custom-switch-off-danger cuwtom-switch-on-success">
-                      <input id="Toggle_Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Show_Icons" name="Toggle_Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Show_Icons" class="custom-control-input" type="checkbox">
-                      <label class="custom-control-label" for="customSwitch13">Show Icons</label>
+                    <label for="exampleInputFile">Profile Image (Public Link)</label>
+                    <input type="text" class="form-control" id="Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Profile_Image" name="Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Profile_Image" value="<?php print($user_data_admin_personal_details[0][16]);?>" placeholder="Enter Public Link of Irofile Image">
+                    <img src="<?php print($user_data_admin_personal_details[0][16]);?>" alt="Image Not Found" height="190" width="150">
+                  </div>
+                  <div class="form-group">
+                    <div class="custom-control custom-switch custom-switch-off-danger custom-switch-on-success">
+                      <input id="Toggle_Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Show_Icons" name="Toggle_Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Show_Icons" class="custom-control-input" type="checkbox"
+                      <?php
+                      if($user_data_admin_personal_details[0][15]){
+                        echo "checked";
+                      }
+                      ?>
+                      >
+                      <label class="custom-control-label" for="Toggle_Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Show_Icons">Show Icons</label>
                     </div>
                   </div>  
                 </div>
