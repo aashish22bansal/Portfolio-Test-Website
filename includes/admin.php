@@ -1,5 +1,5 @@
 <?php
-print_r($_POST);
+// print_r($_POST);
 // CONNECTING TO DATABASE
 require('../includes/db.php');
 
@@ -41,23 +41,23 @@ if(isset($_POST['update-section'])){
 }
 
 if(isset($_POST['Submit_Admin_Panel_Update_Home_Page_Details'])){
-    $Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Name = $_POST['Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Name'];
-    $Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Previous_Email = $_POST['Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Previous_Email'];
-    $Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Email = $_POST['Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Email'];
-    $Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Mobile = $_POST['Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Mobile'];
-    $Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Description = $_POST['Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Description'];
-    $Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Day_of_Birth = $_POST['Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Day_of_Birth'];
-    $Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Month_of_Birth = $_POST['Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Month_of_Birth'];
-    $Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Year_of_Birth = $_POST['Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Year_of_Birth'];
-    $Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Address_in_Full = $_POST['Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Address_in_Full'];
-    $Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Country_of_Residence = $_POST['Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Country_of_Residence'];
-    $Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_State_of_Residence = $_POST['Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_State_of_Residence'];
-    $Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_District_of_Residence = $_POST['Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_District_of_Residence'];
-    $Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_City = $_POST['Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_City'];
-    $Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Street_Address = $_POST['Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Street_Address'];
-    $Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_ZIP_Code = $_POST['Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_ZIP_Code'];
-    $Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Profile_Image = $_POST['Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Profile_Image'];
-    $Toggle_Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Show_Icons = $_POST['Toggle_Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Show_Icons'];
+    $Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Name = $_POST['Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Name'] ?? 0;
+    $Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Previous_Email = $_POST['Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Previous_Email'] ?? 0;
+    $Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Email = $_POST['Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Email'] ?? 0;
+    $Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Mobile = $_POST['Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Mobile'] ?? 0;
+    $Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Description = $_POST['Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Description'] ?? 0;
+    $Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Day_of_Birth = $_POST['Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Day_of_Birth'] ?? 0;
+    $Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Month_of_Birth = $_POST['Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Month_of_Birth'] ?? 0;
+    $Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Year_of_Birth = $_POST['Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Year_of_Birth'] ?? 0;
+    $Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Address_in_Full = $_POST['Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Address_in_Full'] ?? 0;
+    $Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Country_of_Residence = $_POST['Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Country_of_Residence'] ?? 0;
+    $Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_State_of_Residence = $_POST['Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_State_of_Residence'] ?? 0;
+    $Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_District_of_Residence = $_POST['Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_District_of_Residence'] ?? 0;
+    $Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_City = $_POST['Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_City'] ?? 0;
+    $Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Street_Address = $_POST['Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Street_Address'] ?? 0;
+    $Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_ZIP_Code = $_POST['Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_ZIP_Code'] ?? 0;
+    $Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Profile_Image = $_POST['Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Profile_Image'] ?? 0;
+    $Toggle_Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Show_Icons = $_POST['Toggle_Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Show_Icons'] ?? 0;
     // print($Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Name);
     $query_Submit_Admin_Panel_Update_Home_Page_Details = "UPDATE $databaseName.personal_details SET ";
     $query_Submit_Admin_Panel_Update_Home_Page_Details.= "email='$Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Email', ";

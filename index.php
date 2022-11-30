@@ -129,20 +129,24 @@
 						</div>
 					</div>
 					<?php
-					$allowed_hosts = array('localhost');
-					if (isset($_SERVER['HTTP_HOST']) || in_array($_SERVER['HTTP_HOST'], $allowed_hosts)) {
-						// header($_SERVER['SERVER_PROTOCOL'].' 400 Bad Request');
-						// exit;
-						print("hkugkugukgyugukygyukgkhujbyhjvyhjvj");
-					}
+					// $allowed_hosts = array('localhost');
+					// if (isset($_SERVER['HTTP_HOST']) || in_array($_SERVER['HTTP_HOST'], $allowed_hosts)) {
+					// 	// header($_SERVER['SERVER_PROTOCOL'].' 400 Bad Request');
+					// 	// exit;
+					// 	print("hkugkugukgyugukygyukgkhujbyhjvyhjvj");
+					// }
+					// header("Content-Type: image/jpeg");
+					// header("Content-Length: " . filesize("$user_data_personal_details[0][16]"));
+					// readfile("$user_data_personal_details[0][16]"); 
 					?>
 					<div class="col-lg-3 pl-md-5 py-5">
 						<div class="card" style="width: 23rem;">
-							<img class="card-img-top" src="images/301395867_3173014973028972_4641983149066889399_n.jpg" alt="Card image cap">
+
+							<img class="card-img-top" src="images/301395867_3173014973028972_4641983149066889399_n.jpg" alt="Card image cap" /><?php print($user_data_personal_details[0][16]);?>
 							<div class="card-body">
 								<h5 class="card-title">Contact Me</h5>
-								<p class="card-text"><?php print($user_data_home['Subtitle']); ?></p>
-								<a href="contact.php" class="btn btn-primary">Contact me</a>
+								<p class="card-text"><?php print($user_data_personal_details[0][14]); ?></p>
+								<a href="contact.php" class="btn btn-primary" target="_blank">Contact me</a>
 							</div>
 						</div>
 					</div>

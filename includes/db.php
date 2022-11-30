@@ -69,7 +69,9 @@
     $user_data_section_control = mysqli_fetch_array($run_section_control);
     $user_data_social_media = mysqli_fetch_all($run_social_media);
 
-    $query_personal_details = "";
+    $query_personal_details = "SELECT * FROM $databaseName.personal_details WHERE email='analyst.aashish@gmail.com';";
+    $run_query_personal_details = mysqli_query($connection, $query_personal_details);
+    $user_data_personal_details = mysqli_fetch_all($run_query_personal_details);
 
 
     // Checking the obtained Data
