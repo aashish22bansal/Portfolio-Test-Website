@@ -142,7 +142,7 @@
 					<div class="col-lg-3 pl-md-5 py-5">
 						<div class="card" style="width: 23rem;">
 
-							<img class="card-img-top" src="images/301395867_3173014973028972_4641983149066889399_n.jpg" alt="Card image cap" /><?php print($user_data_personal_details[0][16]);?>
+							<img class="card-img-top" src="images/" alt="Card image cap" /><?php print($user_data_personal_details[0][16]);?>
 							<div class="card-body">
 								<h5 class="card-title">Contact Me</h5>
 								<p class="card-text"><?php print($user_data_personal_details[0][14]); ?></p>
