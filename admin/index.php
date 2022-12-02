@@ -2209,11 +2209,11 @@ $user_data_admin_subjects_undergraduate = mysqli_fetch_all($run_query_admin_inde
                   <div class="form-group">
                     <div class="custom-control custom-switch custom-switch-off-danger custom-switch-on-success">
                       <input id="Toggle_Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Show_Icons" name="Toggle_Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Show_Icons" class="custom-control-input" type="checkbox"
-                      <?php
-                      if($user_data_admin_personal_details[0][15]){
-                        echo "checked";
-                      }
-                      ?>
+                        <?php
+                        if($user_data_admin_personal_details[0][15]){
+                          echo "checked";
+                        }
+                        ?>
                       >
                       <label class="custom-control-label" for="Toggle_Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Show_Icons">Show Icons</label>
                     </div>
@@ -2231,7 +2231,7 @@ $user_data_admin_subjects_undergraduate = mysqli_fetch_all($run_query_admin_inde
           ?>
             <div class="card card-primary col-lg-12">
               <div class="card-header">
-                <h3 class="card-title">Update About Page Details</h3>
+                <h3 class="card-title">Update Section Details</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
@@ -2279,93 +2279,89 @@ $user_data_admin_subjects_undergraduate = mysqli_fetch_all($run_query_admin_inde
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              <form method="POST" action="">
+              <form method="POST" action="../includes/admin.php">
                 <div class="card-body">
                   <div class="form-group">
                     <label for="exampleInputEmail1">Name</label>
-                    <input type="text" class="form-control" id="Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Name" value="<?php print($user_data_admin_personal_details[0][2]);?>" placeholder="Enter Your Name">
+                    <input type="text" class="form-control" id="Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Name" name="Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Name" value="<?php print($user_data_admin_personal_details[0][2]);?>" placeholder="Enter Your Name">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Previous Email Address</label>
+                    <input type="email" class="form-control" id="Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Previous_Email" name="Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Previous_Email" placeholder="Enter New Email Address">
                   </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">Email Address</label>
-                    <input type="email" class="form-control" id="Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Email" value="<?php print($user_data_admin_personal_details[0][0]);?>" placeholder="Enter Email Address">
+                    <input type="email" class="form-control" id="Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Email" name="Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Email" value="<?php print($user_data_admin_personal_details[0][0]);?>" placeholder="Enter Email Address">
                   </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">Phone Number</label>
-                    <input type="text" class="form-control" id="Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Mobile" value="<?php print($user_data_admin_personal_details[0][3]);?>" placeholder="Enter Mobile Number">
+                    <input type="text" class="form-control" id="Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Mobile" name="Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Mobile" value="<?php print($user_data_admin_personal_details[0][3]);?>" placeholder="Enter Mobile Number">
                   </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">Description about self</label>
-                    <input type="textbox" class="form-control" id="Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Description" value="<?php print($user_data_admin_personal_details[0][14]);?>" placeholder="Enter Description">
+                    <input type="textbox" class="form-control" id="Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Description" name="Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Description" value="<?php print($user_data_admin_personal_details[0][14]);?>" placeholder="Enter Description">
                   </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">Day of Birth</label>
-                    <input type="number" class="form-control" id="Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Day_of_Birth" value="<?php print($user_data_admin_personal_details[0][6]);?>" placeholder="Enter Your Day of Birth">
+                    <input type="number" class="form-control" id="Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Day_of_Birth" name="Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Day_of_Birth" value="<?php print($user_data_admin_personal_details[0][6]);?>" placeholder="Enter Your Day of Birth">
                   </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">Month of Birth</label>
-                    <input type="text" class="form-control" id="Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Month_of_Birth" value="<?php print($user_data_admin_personal_details[0][5]);?>" placeholder="Enter Your Month of Birth">
+                    <input type="text" class="form-control" id="Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Month_of_Birth" name="Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Month_of_Birth" value="<?php print($user_data_admin_personal_details[0][5]);?>" placeholder="Enter Your Month of Birth">
                   </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">Year of Birth</label>
-                    <input type="number" class="form-control" id="Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Year_of_Birth" value="<?php print($user_data_admin_personal_details[0][4]);?>" placeholder="Enter Your Year of Birth">
+                    <input type="number" class="form-control" id="Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Year_of_Birth" name="Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Year_of_Birth" value="<?php print($user_data_admin_personal_details[0][4]);?>" placeholder="Enter Your Year of Birth">
                   </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">Address (in Full)</label>
-                    <input type="text" class="form-control" id="Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_" value="<?php print($user_data_admin_personal_details[0][13]);?>" placeholder="Enter Your Address">
+                    <input type="text" class="form-control" id="Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Address_in_Full" name="Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Address_in_Full" value="<?php print($user_data_admin_personal_details[0][13]);?>" placeholder="Enter Your Address">
                   </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">Country of Residence</label>
-                    <input type="text" class="form-control" id="Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_" value="<?php print($user_data_admin_personal_details[0][7]);?>" placeholder="Enter Country of Residence">
+                    <input type="text" class="form-control" id="Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Country_of_Residence" name="Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Country_of_Residence" value="<?php print($user_data_admin_personal_details[0][7]);?>" placeholder="Enter Country of Residence">
                   </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">State of Residence</label>
-                    <input type="text" class="form-control" id="Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_" value="<?php print($user_data_admin_personal_details[0][8]);?>" placeholder="Enter State of Residence">
+                    <input type="text" class="form-control" id="Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_State_of_Residence" name="Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_State_of_Residence" value="<?php print($user_data_admin_personal_details[0][8]);?>" placeholder="Enter State of Residence">
                   </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">Distrit of Residence</label>
-                    <input type="text" class="form-control" id="Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_" value="<?php print($user_data_admin_personal_details[0][9]);?>" placeholder="Enter Distrit of Residence">
+                    <input type="text" class="form-control" id="Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_District_of_Residence" name="Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_District_of_Residence" value="<?php print($user_data_admin_personal_details[0][9]);?>" placeholder="Enter Distrit of Residence">
                   </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">City</label>
-                    <input type="text" class="form-control" id="Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_" value="<?php print($user_data_admin_personal_details[0][10]);?>" placeholder="Enter City">
+                    <input type="text" class="form-control" id="Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_City" name="Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_City" value="<?php print($user_data_admin_personal_details[0][10]);?>" placeholder="Enter City">
                   </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">Street Address</label>
-                    <input type="text" class="form-control" id="Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_" value="<?php print($user_data_admin_personal_details[0][11]);?>" placeholder="Enter Street Address">
+                    <input type="text" class="form-control" id="Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Street_Address" name="Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Street_Address" value="<?php print($user_data_admin_personal_details[0][11]);?>" placeholder="Enter Street Address">
                   </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">ZIP Code</label>
-                    <input type="number" class="form-control" id="Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_" value="<?php print($user_data_admin_personal_details[0][12]);?>" placeholder="Enter ZIP Code">
-                  </div>
-                  <div class="form-group custom-control custom-switch custom-switch-off-danger custom-switch-on-success">
-                    <!-- <label for="exampleInputEmail1">Show Icons</label><br> -->
-                    <!-- <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email"> -->
-                    <label class="custom-control-label" for="customSwitch1">Show Icons</label>
-                    <input type="checkbox" class="custom-control-input" id="customSwitch13" name="showIconsPersonalDetails"
-                      <?php
-                      print_r($user_data_admin_personal_details[0]);
-                      if($user_data_admin_personal_details[0][15]=="on"){
-                        echo "checked";
-                      }
-                      ?>
-                    />
+                    <input type="number" class="form-control" id="Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_ZIP_Code" name="Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_ZIP_Code" value="<?php print($user_data_admin_personal_details[0][12]);?>" placeholder="Enter ZIP Code">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputFile">Profile Image</label>
-                    <div class="input-group">
-                      <div class="custom-file">
-                        <input type="file" class="custom-file-input" id="Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_">
-                        <label class="custom-file-label" for="exampleInputFile">Choose file</label>
-                      </div>
-                      <div class="input-group-append">
-                        <span class="input-group-text">Upload</span>
-                      </div>
-                    </div>
+                    <label for="exampleInputFile">Profile Image (Public Link)</label>
+                    <input type="text" class="form-control" id="Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Profile_Image" name="Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Profile_Image" value="<?php print($user_data_admin_personal_details[0][16]);?>" placeholder="Enter Public Link of Irofile Image">
+                    <img src="<?php print($user_data_admin_personal_details[0][16]);?>" alt="Image Not Found" height="190" width="150">
                   </div>
+                  <div class="form-group">
+                    <div class="custom-control custom-switch custom-switch-off-danger custom-switch-on-success">
+                      <input id="Toggle_Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Show_Icons" name="Toggle_Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Show_Icons" class="custom-control-input" type="checkbox"
+                        <?php
+                        if($user_data_admin_personal_details[0][15]){
+                          echo "checked";
+                        }
+                        ?>
+                      >
+                      <label class="custom-control-label" for="Toggle_Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Show_Icons">Show Icons</label>
+                    </div>
+                  </div>  
                 </div>
                 <!-- /.card-body -->
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary" name="Submit_Admin_Panel_Update_Personal_Details">Submit</button>
+                  <button type="submit" class="btn btn-primary" value="Save Changes" id="Submit_Admin_Panel_Update_Personal_Details" name="Submit_Admin_Panel_Update_Home_Page_Details">Submit</button>
                 </div>
               </form>
             </div>

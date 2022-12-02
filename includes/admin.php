@@ -2,6 +2,7 @@
 // print_r($_POST);
 // CONNECTING TO DATABASE
 require('../includes/db.php');
+require('../functions/functions.php');
 
 if(isset($_POST['update-section'])){
     $admin_page_update_section_section_control_home = $_POST['section_control_home'] ?? 0;
@@ -58,37 +59,107 @@ if(isset($_POST['Submit_Admin_Panel_Update_Home_Page_Details'])){
     $Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_ZIP_Code = $_POST['Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_ZIP_Code'] ?? 0;
     $Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Profile_Image = $_POST['Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Profile_Image'] ?? 0;
     $Toggle_Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Show_Icons = $_POST['Toggle_Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Show_Icons'] ?? 0;
+    // print("<br>");
+    // print("<br>");
+    // print("<br>");
     // print($Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Name);
     $query_Submit_Admin_Panel_Update_Home_Page_Details = "UPDATE $databaseName.personal_details SET ";
     $query_Submit_Admin_Panel_Update_Home_Page_Details.= "email='$Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Email', ";
     $query_Submit_Admin_Panel_Update_Home_Page_Details.= "Name='$Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Name', ";
     $query_Submit_Admin_Panel_Update_Home_Page_Details.= "contact_mobile='$Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Mobile', ";
-    $query_Submit_Admin_Panel_Update_Home_Page_Details.= "BirthYear=$Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Year_of_Birth, ";
-    $query_Submit_Admin_Panel_Update_Home_Page_Details.= "BirthMonth='$Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Month_of_Birth', ";
-    $query_Submit_Admin_Panel_Update_Home_Page_Details.= "BirthDate=$Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Day_of_Birth, ";
+    $query_Submit_Admin_Panel_Update_Home_Page_Details.= "birth_year=$Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Year_of_Birth, ";
+    $query_Submit_Admin_Panel_Update_Home_Page_Details.= "birth_month='$Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Month_of_Birth', ";
+    $query_Submit_Admin_Panel_Update_Home_Page_Details.= "birth_date=$Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Day_of_Birth, ";
     $query_Submit_Admin_Panel_Update_Home_Page_Details.= "address_country='$Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Country_of_Residence', ";
     $query_Submit_Admin_Panel_Update_Home_Page_Details.= "address_state='$Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_State_of_Residence', ";
     $query_Submit_Admin_Panel_Update_Home_Page_Details.= "address_district='$Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_District_of_Residence', ";
     $query_Submit_Admin_Panel_Update_Home_Page_Details.= "address_city='$Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_City', ";
     $query_Submit_Admin_Panel_Update_Home_Page_Details.= "address_street='$Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Street_Address', ";
     $query_Submit_Admin_Panel_Update_Home_Page_Details.= "address_pincode=$Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_ZIP_Code, ";
-    $query_Submit_Admin_Panel_Update_Home_Page_Details.= "FullAddress='$Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Address_in_Full', ";
+    $query_Submit_Admin_Panel_Update_Home_Page_Details.= "full_address='$Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Address_in_Full', ";
     $query_Submit_Admin_Panel_Update_Home_Page_Details.= "Description='$Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Description', ";
-    $query_Submit_Admin_Panel_Update_Home_Page_Details.= "show_icons='$Toggle_Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Show_Icons' ";
+    $query_Submit_Admin_Panel_Update_Home_Page_Details.= "show_icons='$Toggle_Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Show_Icons', ";
+    $query_Submit_Admin_Panel_Update_Home_Page_Details.= "profile_image_link='$Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Profile_Image' ";
     $query_Submit_Admin_Panel_Update_Home_Page_Details.= "WHERE email='$Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Previous_Email';";
     // print("<br>");
+    // print("<br>");
+    // print("<br>");
     // print($query_Submit_Admin_Panel_Update_Home_Page_Details);
+    // print("akjlsdfklasndfklasndfklnaskdfjnasjdfnkjlasndfkjasdkfnakjsndfkjaskdfaskdf");
     $run_query_Submit_Admin_Panel_Update_Home_Page_Details = mysqli_query($connection, $query_Submit_Admin_Panel_Update_Home_Page_Details);
-
-    print($run_query_Submit_Admin_Panel_Update_Home_Page_Details);
+    // print("jdjfjasdfkajsdf");
+    // print($run_query_Submit_Admin_Panel_Update_Home_Page_Details);
     if($run_query_Submit_Admin_Panel_Update_Home_Page_Details){
         echo "<script>window.location.href = '../admin/index.php';</script>";
     }
+    // else{
+    //     print("<br>");
+    //     print("<br>");
+    //     print("<br>");
+    //     echo "Query Not responding!";
+    // }
 }
 
 if(isset($_POST['Submit_Admin_Panel_Update_About_Page_Details'])){}
 
-if(isset($_POST['Submit_Admin_Panel_Update_Personal_Details'])){}
+if(isset($_POST['Submit_Admin_Panel_Update_Personal_Details'])){
+    $Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Name = $_POST['Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Name'] ?? 0;
+    $Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Previous_Email = $_POST['Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Previous_Email'] ?? 0;
+    $Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Email = $_POST['Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Email'] ?? 0;
+    $Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Mobile = $_POST['Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Mobile'] ?? 0;
+    $Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Description = $_POST['Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Description'] ?? 0;
+    $Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Day_of_Birth = $_POST['Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Day_of_Birth'] ?? 0;
+    $Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Month_of_Birth = $_POST['Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Month_of_Birth'] ?? 0;
+    $Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Year_of_Birth = $_POST['Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Year_of_Birth'] ?? 0;
+    $Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Address_in_Full = $_POST['Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Address_in_Full'] ?? 0;
+    $Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Country_of_Residence = $_POST['Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Country_of_Residence'] ?? 0;
+    $Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_State_of_Residence = $_POST['Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_State_of_Residence'] ?? 0;
+    $Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_District_of_Residence = $_POST['Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_District_of_Residence'] ?? 0;
+    $Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_City = $_POST['Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_City'] ?? 0;
+    $Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Street_Address = $_POST['Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Street_Address'] ?? 0;
+    $Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_ZIP_Code = $_POST['Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_ZIP_Code'] ?? 0;
+    $Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Profile_Image = $_POST['Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Profile_Image'] ?? 0;
+    $Toggle_Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Show_Icons = $_POST['Toggle_Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Show_Icons'] ?? 0;
+    // print("<br>");
+    // print("<br>");
+    // print("<br>");
+    // print($Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Name);
+    $query_Submit_Admin_Panel_Update_Home_Page_Details = "UPDATE $databaseName.personal_details SET ";
+    $query_Submit_Admin_Panel_Update_Home_Page_Details.= "email='$Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Email', ";
+    $query_Submit_Admin_Panel_Update_Home_Page_Details.= "Name='$Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Name', ";
+    $query_Submit_Admin_Panel_Update_Home_Page_Details.= "contact_mobile='$Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Mobile', ";
+    $query_Submit_Admin_Panel_Update_Home_Page_Details.= "birth_year=$Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Year_of_Birth, ";
+    $query_Submit_Admin_Panel_Update_Home_Page_Details.= "birth_month='$Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Month_of_Birth', ";
+    $query_Submit_Admin_Panel_Update_Home_Page_Details.= "birth_date=$Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Day_of_Birth, ";
+    $query_Submit_Admin_Panel_Update_Home_Page_Details.= "address_country='$Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Country_of_Residence', ";
+    $query_Submit_Admin_Panel_Update_Home_Page_Details.= "address_state='$Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_State_of_Residence', ";
+    $query_Submit_Admin_Panel_Update_Home_Page_Details.= "address_district='$Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_District_of_Residence', ";
+    $query_Submit_Admin_Panel_Update_Home_Page_Details.= "address_city='$Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_City', ";
+    $query_Submit_Admin_Panel_Update_Home_Page_Details.= "address_street='$Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Street_Address', ";
+    $query_Submit_Admin_Panel_Update_Home_Page_Details.= "address_pincode=$Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_ZIP_Code, ";
+    $query_Submit_Admin_Panel_Update_Home_Page_Details.= "full_address='$Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Address_in_Full', ";
+    $query_Submit_Admin_Panel_Update_Home_Page_Details.= "Description='$Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Description', ";
+    $query_Submit_Admin_Panel_Update_Home_Page_Details.= "show_icons='$Toggle_Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Show_Icons', ";
+    $query_Submit_Admin_Panel_Update_Home_Page_Details.= "profile_image_link='$Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Profile_Image' ";
+    $query_Submit_Admin_Panel_Update_Home_Page_Details.= "WHERE email='$Admin_Panel_Update_Home_Page_Details_Form_Personal_Details_Previous_Email';";
+    // print("<br>");
+    // print("<br>");
+    // print("<br>");
+    // print($query_Submit_Admin_Panel_Update_Home_Page_Details);
+    // print("akjlsdfklasndfklasndfklnaskdfjnasjdfnkjlasndfkjasdkfnakjsndfkjaskdfaskdf");
+    $run_query_Submit_Admin_Panel_Update_Home_Page_Details = mysqli_query($connection, $query_Submit_Admin_Panel_Update_Home_Page_Details);
+    // print("jdjfjasdfkajsdf");
+    // print($run_query_Submit_Admin_Panel_Update_Home_Page_Details);
+    if($run_query_Submit_Admin_Panel_Update_Home_Page_Details){
+        echo "<script>window.location.href = '../admin/index.php';</script>";
+    }
+    // else{
+    //     print("<br>");
+    //     print("<br>");
+    //     print("<br>");
+    //     echo "Query Not responding!";
+    // }
+}
 
 if(isset($_POST['Submit_Admin_Panel_Update_Social_Media_Details'])){}
 

@@ -15,7 +15,7 @@
     session_start();
 
     //removing error reporting
-    error_reporting(0);
+    // error_reporting(0);
 
     // Creating a Connection
     $connection = new mysqli($servername, $username, $password, $databaseName);
