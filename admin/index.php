@@ -2375,59 +2375,135 @@ $user_data_admin_subjects_undergraduate = mysqli_fetch_all($run_query_admin_inde
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              <form method="POST" action="">
+              <form method="POST" action="../includes/admin.php">
                 <div class="card-body">
                   Please provide the full active link for the particular Social Media Platform.
                 </div>
                 <div class="card-body">
                   <div class="form-group">
+                    <label for="Admin_Panel_Update_Social_Media_Details_Form_email">Email address</label>
+                    <input type="email" class="form-control" id="Admin_Panel_Update_Social_Media_Details_Form_email" name="Admin_Panel_Update_Social_Media_Details_Form_email" value="<?php print($user_data_admin_social_media[0][0]);?>" placeholder="Enter email">
+                  </div>
+                  <div class="form-group">
                     <label for="Admin_Panel_Update_Social_Media_Details_Form_LinkedIn">LinkedIn</label>
                     <!-- <input type="text" class="form-control" id="Admin_Panel_Update_Social_Media_Details_Form_LinkedIn" name="Admin_Panel_Update_Social_Media_Details_Form_LinkedIn" value="<?php //print($user_data_admin_social_media[0][1]);?>" placeholder="Enter Your Name"> -->
                     <div class="input-group">
                       <div class="custom-file">
-                        <input type="text" class="form-control" name="Admin_Panel_Update_Social_Media_Details_Form_LinkedIn" id="Admin_Panel_Update_Social_Media_Details_Form_LinkedIn" value="<?php print($user_data_admin_social_media[0][1]);?>" placeholder="Enter Your Name">
+                        <input type="text" class="form-control" name="Admin_Panel_Update_Social_Media_Details_Form_LinkedIn" id="Admin_Panel_Update_Social_Media_Details_Form_LinkedIn" value="<?php print($user_data_admin_social_media[0][2]);?>" placeholder="Enter New Link">
                         <!-- <label class="custom-file-label" for="Admin_Panel_Update_Social_Media_Details_Form_LinkedIn"></label> -->
                       </div>
                       <div class="input-group-append">
-                        <span class="input-group-text">Open Link</span>
+                        <span class="input-group-text"><a href="<?php print($user_data_admin_social_media[0][1]);?>" target="_blank">Open Stored Link</a></span>
                       </div>
                     </div>
                   </div>
                   <div class="form-group">
-                    <label for="Admin_Panel_Update_Home_Page_Details_Form_Facebookl">Facebook</label>
-                    <input type="text" class="form-control" id="Admin_Panel_Update_Home_Page_Details_Form_Facebookl" name="Admin_Panel_Update_Home_Page_Details_Form_Facebookl" value="<?php print($user_data_admin_social_media[0][2]);?>" placeholder="Enter Link">
+                    <label for="Admin_Panel_Update_Social_Media_Details_Form_Facebook">Facebook</label>
+                    <!-- <input type="text" class="form-control" id="Admin_Panel_Update_Social_Media_Details_Form_Facebook" name="Admin_Panel_Update_Social_Media_Details_Form_Facebook" value="<?php //print($user_data_admin_social_media[0][1]);?>" placeholder="Enter Your Name"> -->
+                    <div class="input-group">
+                      <div class="custom-file">
+                        <input type="text" class="form-control" name="Admin_Panel_Update_Social_Media_Details_Form_Facebook" id="Admin_Panel_Update_Social_Media_Details_Form_Facebook" value="<?php print($user_data_admin_social_media[0][3]);?>" placeholder="Enter New Link">
+                        <!-- <label class="custom-file-label" for="Admin_Panel_Update_Social_Media_Details_Form_Facebook"></label> -->
+                      </div>
+                      <div class="input-group-append">
+                        <span class="input-group-text"><a href="<?php print($user_data_admin_social_media[0][2]);?>" target="_blank">Open Stored Link</a></span>
+                      </div>
+                    </div>
                   </div>
                   <div class="form-group">
-                    <label for="Admin_Panel_Update_Home_Page_Details_Form_Instagram">Instagram</label>
-                    <input type="text" class="form-control" id="Admin_Panel_Update_Home_Page_Details_Form_Instagram" name="Admin_Panel_Update_Home_Page_Details_Form_Instagram" value="<?php print($user_data_admin_social_media[0][3]);?>" placeholder="Enter Link">
+                    <label for="Admin_Panel_Update_Social_Media_Details_Form_Instagram">Instagram</label>
+                    <!-- <input type="text" class="form-control" id="Admin_Panel_Update_Social_Media_Details_Form_Instagram" name="Admin_Panel_Update_Social_Media_Details_Form_Instagram" value="<?php //print($user_data_admin_social_media[0][1]);?>" placeholder="Enter New Link"> -->
+                    <div class="input-group">
+                      <div class="custom-file">
+                        <input type="text" class="form-control" name="Admin_Panel_Update_Social_Media_Details_Form_Instagram" id="Admin_Panel_Update_Social_Media_Details_Form_Instagram" value="<?php print($user_data_admin_social_media[0][4]);?>" placeholder="Enter New Link">
+                        <!-- <label class="custom-file-label" for="Admin_Panel_Update_Social_Media_Details_Form_LinkedIn"></label> -->
+                      </div>
+                      <div class="input-group-append">
+                        <span class="input-group-text"><a href="<?php print($user_data_admin_social_media[0][3]);?>" target="_blank">Open Stored Link</a></span>
+                      </div>
+                    </div>
                   </div>
                   <div class="form-group">
-                    <label for="Admin_Panel_Update_Home_Page_Details_Form_YouTube">YouTube</label>
-                    <input type="text" class="form-control" id="Admin_Panel_Update_Home_Page_Details_Form_YouTube" name="Admin_Panel_Update_Home_Page_Details_Form_YouTube" value="<?php print($user_data_admin_social_media[0][4]);?>" placeholder="Enter Link">
+                    <label for="Admin_Panel_Update_Social_Media_Details_Form_YouTube">YouTube</label>
+                    <!-- <input type="text" class="form-control" id="Admin_Panel_Update_Social_Media_Details_Form_YouTube" name="Admin_Panel_Update_Social_Media_Details_Form_YouTube" value="<?php //print($user_data_admin_social_media[0][1]);?>" placeholder="Enter New Link"> -->
+                    <div class="input-group">
+                      <div class="custom-file">
+                        <input type="text" class="form-control" name="Admin_Panel_Update_Social_Media_Details_Form_YouTube" id="Admin_Panel_Update_Social_Media_Details_Form_YouTube" value="<?php print($user_data_admin_social_media[0][5]);?>" placeholder="Enter New Link">
+                        <!-- <label class="custom-file-label" for="Admin_Panel_Update_Social_Media_Details_Form_LinkedIn"></label> -->
+                      </div>
+                      <div class="input-group-append">
+                        <span class="input-group-text"><a href="<?php print($user_data_admin_social_media[0][4]);?>" target="_blank">Open Stored Link</a></span>
+                      </div>
+                    </div>
                   </div>
                   <div class="form-group">
-                    <label for="Admin_Panel_Update_Home_Page_Details_Form_GitHub">GitHub</label>
-                    <input type="text" class="form-control" id="Admin_Panel_Update_Home_Page_Details_Form_GitHub" name="Admin_Panel_Update_Home_Page_Details_Form_GitHub" value="<?php print($user_data_admin_social_media[0][5]);?>" placeholder="Enter Link">
+                    <label for="Admin_Panel_Update_Social_Media_Details_Form_GitHub">GitHub</label>
+                    <!-- <input type="text" class="form-control" id="Admin_Panel_Update_Social_Media_Details_Form_GitHub" name="Admin_Panel_Update_Social_Media_Details_Form_GitHub" value="<?php //print($user_data_admin_social_media[0][1]);?>" placeholder="Enter New Link"> -->
+                    <div class="input-group">
+                      <div class="custom-file">
+                        <input type="text" class="form-control" name="Admin_Panel_Update_Social_Media_Details_Form_GitHub" id="Admin_Panel_Update_Social_Media_Details_Form_GitHub" value="<?php print($user_data_admin_social_media[0][6]);?>" placeholder="Enter New Link">
+                        <!-- <label class="custom-file-label" for="Admin_Panel_Update_Social_Media_Details_Form_GitHub"></label> -->
+                      </div>
+                      <div class="input-group-append">
+                        <span class="input-group-text"><a href="<?php print($user_data_admin_social_media[0][5]);?>" target="_blank">Open Stored Link</a></span>
+                      </div>
+                    </div>
                   </div>
                   <div class="form-group">
-                    <label for="Admin_Panel_Update_Home_Page_Details_Form_HackerRank">HackerRank</label>
-                    <input type="text" class="form-control" id="Admin_Panel_Update_Home_Page_Details_Form_HackerRank" name="Admin_Panel_Update_Home_Page_Details_Form_HackerRank" value="<?php print($user_data_admin_social_media[0][6]);?>" placeholder="Enter Link">
+                    <label for="Admin_Panel_Update_Social_Media_Details_Form_HackerRank">HackerRank</label>
+                    <!-- <input type="text" class="form-control" id="Admin_Panel_Update_Social_Media_Details_Form_HackerRank" name="Admin_Panel_Update_Social_Media_Details_Form_HackerRank" value="<?php //print($user_data_admin_social_media[0][6]);?>" placeholder="Enter New Link"> -->
+                    <div class="input-group">
+                      <div class="custom-file">
+                        <input type="text" class="form-control" name="Admin_Panel_Update_Social_Media_Details_Form_HackerRank" id="Admin_Panel_Update_Social_Media_Details_Form_HackerRank" value="<?php print($user_data_admin_social_media[0][7]);?>" placeholder="Enter New Link">
+                        <!-- <label class="custom-file-label" for="Admin_Panel_Update_Social_Media_Details_Form_HackerRank"></label> -->
+                      </div>
+                      <div class="input-group-append">
+                        <span class="input-group-text"><a href="<?php print($user_data_admin_social_media[0][6]);?>" target="_blank">Open Stored Link</a></span>
+                      </div>
+                    </div>
                   </div>
                   <div class="form-group">
-                    <label for="Admin_Panel_Update_Home_Page_Details_Form_CodeChef">CodeChef</label>
-                    <input type="text" class="form-control" id="Admin_Panel_Update_Home_Page_Details_Form_CodeChef" name="Admin_Panel_Update_Home_Page_Details_Form_CodeChef" value="<?php print($user_data_admin_social_media[0][7]);?>" placeholder="Enter Link">
+                    <label for="Admin_Panel_Update_Social_Media_Details_Form_CodeChef">CodeChef</label>
+                    <!-- <input type="text" class="form-control" id="Admin_Panel_Update_Social_Media_Details_Form_CodeChef" name="Admin_Panel_Update_Social_Media_Details_Form_CodeChef" value="<?php //print($user_data_admin_social_media[0][1]);?>" placeholder="Enter New Link"> -->
+                    <div class="input-group">
+                      <div class="custom-file">
+                        <input type="text" class="form-control" name="Admin_Panel_Update_Social_Media_Details_Form_CodeChef" id="Admin_Panel_Update_Social_Media_Details_Form_CodeChef" value="<?php print($user_data_admin_social_media[0][8]);?>" placeholder="Enter New Link">
+                        <!-- <label class="custom-file-label" for="Admin_Panel_Update_Social_Media_Details_Form_CodeChef"></label> -->
+                      </div>
+                      <div class="input-group-append">
+                        <span class="input-group-text"><a href="<?php print($user_data_admin_social_media[0][7]);?>" target="_blank">Open Stored Link</a></span>
+                      </div>
+                    </div>
                   </div>
                   <div class="form-group">
-                    <label for="Admin_Panel_Update_Home_Page_Details_Form_CodeForces">CodeForces</label>
-                    <input type="text" class="form-control" id="Admin_Panel_Update_Home_Page_Details_Form_CodeForces" name="Admin_Panel_Update_Home_Page_Details_Form_CodeForces" value="<?php print($user_data_admin_social_media[0][8]);?>" placeholder="Enter Link">
+                    <label for="Admin_Panel_Update_Social_Media_Details_Form_CodeForces">CodeForces</label>
+                    <!-- <input type="text" class="form-control" id="Admin_Panel_Update_Social_Media_Details_Form_CodeForces" name="Admin_Panel_Update_Social_Media_Details_Form_CodeForces" value="<?php //print($user_data_admin_social_media[0][1]);?>" placeholder="Enter New Link"> -->
+                    <div class="input-group">
+                      <div class="custom-file">
+                        <input type="text" class="form-control" name="Admin_Panel_Update_Social_Media_Details_Form_CodeForces" id="Admin_Panel_Update_Social_Media_Details_Form_CodeForces" value="<?php print($user_data_admin_social_media[0][9]);?>" placeholder="Enter New Link">
+                        <!-- <label class="custom-file-label" for="Admin_Panel_Update_Social_Media_Details_Form_CodeForces"></label> -->
+                      </div>
+                      <div class="input-group-append">
+                        <span class="input-group-text"><a href="<?php print($user_data_admin_social_media[0][8]);?>" target="_blank">Open Stored Link</a></span>
+                      </div>
+                    </div>
                   </div>
                   <div class="form-group">
-                    <label for="Admin_Panel_Update_Home_Page_Details_Form_LeetCode">LeetCode</label>
-                    <input type="text" class="form-control" id="Admin_Panel_Update_Home_Page_Details_Form_LeetCode" name="Admin_Panel_Update_Home_Page_Details_Form_LeetCode" value="<?php print($user_data_admin_social_media[0][9]);?>" placeholder="Enter Link">
+                    <label for="Admin_Panel_Update_Social_Media_Details_Form_LeetCode">LeetCode</label>
+                    <!-- <input type="text" class="form-control" id="Admin_Panel_Update_Social_Media_Details_Form_LeetCode" name="Admin_Panel_Update_Social_Media_Details_Form_LeetCode" value="<?php //print($user_data_admin_social_media[0][1]);?>" placeholder="Enter New Link"> -->
+                    <div class="input-group">
+                      <div class="custom-file">
+                        <input type="text" class="form-control" name="Admin_Panel_Update_Social_Media_Details_Form_LeetCode" id="Admin_Panel_Update_Social_Media_Details_Form_LeetCode" value="<?php print($user_data_admin_social_media[0][10]);?>" placeholder="Enter New Link">
+                        <!-- <label class="custom-file-label" for="Admin_Panel_Update_Social_Media_Details_Form_LeetCode"></label> -->
+                      </div>
+                      <div class="input-group-append">
+                        <span class="input-group-text"><a href="<?php print($user_data_admin_social_media[0][9]);?>" target="_blank">Open Stored Link</a></span>
+                      </div>
+                    </div>
                   </div>
                   <div class="form-group">
                     <label for="Admin_Panel_Update_Home_Page_Details_Form_Resume">Resume</label>
-                    <input type="text" class="form-control" id="Admin_Panel_Update_Home_Page_Details_Form_Resume" name="Admin_Panel_Update_Home_Page_Details_Form_Resume" value="<?php print($user_data_admin_social_media[0][0]);?>" placeholder="Enter Link">
+                    <input type="text" class="form-control" id="Admin_Panel_Update_Home_Page_Details_Form_Resume" name="Admin_Panel_Update_Home_Page_Details_Form_Resume" value="<?php print($user_data_admin_social_media[0][1]);?>" placeholder="Enter Link">
                     <br>
                     <style>
                       .pdfobject-container { height: 500px;}
@@ -2450,7 +2526,7 @@ $user_data_admin_subjects_undergraduate = mysqli_fetch_all($run_query_admin_inde
                     <embed src="<?php print($user_data_admin_social_media[0][0]);?>" width="500" height="375" type="application/pdf">
                     <!-- <script>PDFObject.embed("<?php print($user_data_admin_social_media[0][0]);?>", "#DISPLAY_CURRENT_RESUME");</script> -->
                   </div>
-                  <div class="form-group">
+                  <!-- <div class="form-group">
                     <label for="exampleInputFile">File input</label>
                     <div class="input-group">
                       <div class="custom-file">
@@ -2461,7 +2537,7 @@ $user_data_admin_subjects_undergraduate = mysqli_fetch_all($run_query_admin_inde
                         <span class="input-group-text">Upload</span>
                       </div>
                     </div>
-                  </div>
+                  </div> -->
                 </div>
                 <div class="card-footer">
                   <button type="submit" class="btn btn-primary" id="Submit_Admin_Panel_Update_Social_Media_Details" name="Submit_Admin_Panel_Update_Social_Media_Details">Submit</button>

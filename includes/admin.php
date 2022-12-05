@@ -161,7 +161,38 @@ if(isset($_POST['Submit_Admin_Panel_Update_Personal_Details'])){
     // }
 }
 
-if(isset($_POST['Submit_Admin_Panel_Update_Social_Media_Details'])){}
+if(isset($_POST['Submit_Admin_Panel_Update_Social_Media_Details'])){
+    $Admin_Panel_Update_Social_Media_Details_email = $_POST['Admin_Panel_Update_Social_Media_Details_Form_email'];
+    $Admin_Panel_Update_Social_Media_Details_LinkedIn = $_POST['Admin_Panel_Update_Social_Media_Details_Form_LinkedIn'] ?? 0;
+    $Admin_Panel_Update_Social_Media_Details_Facebook = $_POST['Admin_Panel_Update_Social_Media_Details_Form_Facebook'] ?? 0;
+    $Admin_Panel_Update_Social_Media_Details_Instagram = $_POST['Admin_Panel_Update_Social_Media_Details_Form_Instagram'] ?? 0;
+    $Admin_Panel_Update_Social_Media_Details_YouTube = $_POST['Admin_Panel_Update_Social_Media_Details_Form_YouTube'] ?? 0;
+    $Admin_Panel_Update_Social_Media_Details_GitHub = $_POST['Admin_Panel_Update_Social_Media_Details_Form_GitHub'] ?? 0;
+    $Admin_Panel_Update_Social_Media_Details_HackerRank = $_POST['Admin_Panel_Update_Social_Media_Details_Form_HackerRank'] ?? 0;
+    $Admin_Panel_Update_Social_Media_Details_CodeChef = $_POST['Admin_Panel_Update_Social_Media_Details_Form_CodeChef'] ?? 0;
+    $Admin_Panel_Update_Social_Media_Details_CodeForces = $_POST['Admin_Panel_Update_Social_Media_Details_Form_CodeForces'] ?? 0;
+    $Admin_Panel_Update_Social_Media_Details_LeetCode = $_POST['Admin_Panel_Update_Social_Media_Details_Form_LeetCode'] ?? 0;
+    $Admin_Panel_Update_Social_Media_Details_Resume = $_POST['Admin_Panel_Update_Home_Page_Details_Form_Resume'] ?? 0;
+
+    $query_Admin_Panel_Update_Social_Media_Details = "UPDATE $databaseName.social_media SET ";
+    $query_Admin_Panel_Update_Social_Media_Details.= "Link_Resume='$Admin_Panel_Update_Social_Media_Details_Resume', ";
+    $query_Admin_Panel_Update_Social_Media_Details.= "Link_LinkedIn='$Admin_Panel_Update_Social_Media_Details_LinkedIn', ";
+    $query_Admin_Panel_Update_Social_Media_Details.= "Link_Facebook='$Admin_Panel_Update_Social_Media_Details_Facebook', ";
+    $query_Admin_Panel_Update_Social_Media_Details.= "Link_Instagram='$Admin_Panel_Update_Social_Media_Details_Instagram', ";
+    $query_Admin_Panel_Update_Social_Media_Details.= "Link_YouTube='$Admin_Panel_Update_Social_Media_Details_YouTube', ";
+    $query_Admin_Panel_Update_Social_Media_Details.= "Link_GitHub='$Admin_Panel_Update_Social_Media_Details_GitHub', ";
+    $query_Admin_Panel_Update_Social_Media_Details.= "Link_HackerRank='$Admin_Panel_Update_Social_Media_Details_HackerRank', ";
+    $query_Admin_Panel_Update_Social_Media_Details.= "Link_CodeChef='$Admin_Panel_Update_Social_Media_Details_CodeChef', ";
+    $query_Admin_Panel_Update_Social_Media_Details.= "Link_CodeForces='$Admin_Panel_Update_Social_Media_Details_CodeForces', ";
+    $query_Admin_Panel_Update_Social_Media_Details.= "Link_LeetCode='$Admin_Panel_Update_Social_Media_Details_LeetCode' ";
+    $query_Admin_Panel_Update_Social_Media_Details.= "WHERE email='$Admin_Panel_Update_Social_Media_Details_email';";
+
+    $run_query_Admin_Panel_Update_Social_Media_Details = mysqli_query($connection, $query_Admin_Panel_Update_Social_Media_Details);
+
+    if($run_query_Admin_Panel_Update_Social_Media_Details){
+        echo "<script>window.location.href = '../admin/index.php';</script>";
+    }
+}
 
 if(isset($_POST['Submit_Admin_Panel_Add_Education_Details'])){}
 
