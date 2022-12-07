@@ -194,9 +194,61 @@ if(isset($_POST['Submit_Admin_Panel_Update_Social_Media_Details'])){
     }
 }
 
-if(isset($_POST['Submit_Admin_Panel_Add_Education_Details'])){}
+if(isset($_POST['Submit_Admin_Panel_Add_Education_Details'])){
+    $Admin_Panel_Add_Education_Details_Education_Category = $_POST['Admin_Panel_Add_Education_Details_Education_Category'] ?? 0;
+    $Admin_Panel_Add_Education_Details_Name_Of_Institute = $_POST['Admin_Panel_Add_Education_Details_Name_Of_Institute'] ?? 0;
+    $Admin_Panel_Add_Education_Details_City = $_POST['Admin_Panel_Add_Education_Details_City'] ?? 0;
+    $Admin_Panel_Add_Education_Details_Program = $_POST['Admin_Panel_Add_Education_Details_Program'] ?? 0;
+    $Admin_Panel_Add_Education_Details_Department = $_POST['Admin_Panel_Add_Education_Details_Department'] ?? 0;
+    $Admin_Panel_Add_Education_Details_Start_Year = $_POST['Admin_Panel_Add_Education_Details_Start_Year'] ?? 0;
+    $Admin_Panel_Add_Education_Details_End_Year = $_POST['Admin_Panel_Add_Education_Details_End_Year'] ?? 0;
+    $Admin_Panel_Add_Education_Details_Score = $_POST['Admin_Panel_Add_Education_Details_Score'] ?? 0;
+    
+    $query_Admin_Panel_Add_Education_Details = "INSERT INTO $databaseName.education(NameOfCollege, City, Program, Department, StartYear, EndYear, Score, EducationCategory) VALUES(";
+    $query_Admin_Panel_Add_Education_Details.= "'$Admin_Panel_Add_Education_Details_Name_Of_Institute', ";
+    $query_Admin_Panel_Add_Education_Details.= "'$Admin_Panel_Add_Education_Details_City', ";
+    $query_Admin_Panel_Add_Education_Details.= "'$Admin_Panel_Add_Education_Details_Program', ";
+    $query_Admin_Panel_Add_Education_Details.= "'$Admin_Panel_Add_Education_Details_Department', ";
+    $query_Admin_Panel_Add_Education_Details.= "$Admin_Panel_Add_Education_Details_Start_Year, ";
+    $query_Admin_Panel_Add_Education_Details.= "$Admin_Panel_Add_Education_Details_End_Year, ";
+    $query_Admin_Panel_Add_Education_Details.= "'$Admin_Panel_Add_Education_Details_Score', ";
+    $query_Admin_Panel_Add_Education_Details.= "'$Admin_Panel_Add_Education_Details_Education_Category');";
 
-if(isset($_POST['Submit_Admin_Panel_Update_Matriculation_Details'])){}
+    $run_query_Admin_Panel_Add_Education_Details = mysqli_query($connection, $query_Admin_Panel_Add_Education_Details);
+
+    if($run_query_Admin_Panel_Add_Education_Details){
+        echo "<script>window.location.href = '../admin/index.php';</script>";
+    }
+
+}
+
+if(isset($_POST['Submit_Admin_Panel_Update_Matriculation_Details'])){
+    $Admin_Panel_Update_Matriculation_Details_Education_Category = $_POST['Admin_Panel_Update_Matriculation_Details_Education_Category'] ?? 0;
+    $Admin_Panel_Update_Matriculation_Details_Name_Of_Institute = $_POST['Admin_Panel_Update_Matriculation_Details_Name_Of_Institute'] ?? 0;
+    $Admin_Panel_Update_Matriculation_Details_City = $_POST['Admin_Panel_Update_Matriculation_Details_City'] ?? 0;
+    $Admin_Panel_Update_Matriculation_Details_Program = $_POST['Admin_Panel_Update_Matriculation_Details_Program'] ?? 0;
+    $Admin_Panel_Update_Matriculation_Details_Department = $_POST['Admin_Panel_Update_Matriculation_Details_Department'] ?? 0;
+    $Admin_Panel_Update_Matriculation_Details_Start_Year = $_POST['Admin_Panel_Update_Matriculation_Details_Start_Year'] ?? 0;
+    $Admin_Panel_Update_Matriculation_Details_End_Year = $_POST['Admin_Panel_Update_Matriculation_Details_End_Year'] ?? 0;
+    $Admin_Panel_Update_Matriculation_Details_Score = $_POST['Admin_Panel_Update_Matriculation_Details_Score'] ?? 0;
+    
+    $query_Admin_Panel_Update_Matriculation_Details = "UPDATE $databaseName.education SET";
+    $query_Admin_Panel_Update_Matriculation_Details.= "NameOfCollege='$Admin_Panel_Add_Education_Details_Name_Of_Institute', ";
+    $query_Admin_Panel_Update_Matriculation_Details.= "City='$Admin_Panel_Add_Education_Details_City', ";
+    $query_Admin_Panel_Update_Matriculation_Details.= "Program='$Admin_Panel_Add_Education_Details_Program', ";
+    $query_Admin_Panel_Update_Matriculation_Details.= "Department='$Admin_Panel_Add_Education_Details_Department', ";
+    $query_Admin_Panel_Update_Matriculation_Details.= "StartYear=$Admin_Panel_Add_Education_Details_Start_Year, ";
+    $query_Admin_Panel_Update_Matriculation_Details.= "EndYear=$Admin_Panel_Add_Education_Details_End_Year, ";
+    $query_Admin_Panel_Update_Matriculation_Details.= "Score='$Admin_Panel_Add_Education_Details_Score', ";
+    $query_Admin_Panel_Update_Matriculation_Details.= "EducationCategory='$Admin_Panel_Add_Education_Details_Education_Category';";
+    $query_Admin_Panel_Update_Matriculation_Details.= "WHERE EducationCategory='Matriculation';";
+
+    $run_query_Admin_Panel_Update_Matriculation_Details = mysqli_query($connection, $query_Admin_Panel_Update_Matriculation_Details);
+
+    if($run_query_Admin_Panel_Update_Matriculation_Details){
+        echo "<script>window.location.href = '../admin/index.php';</script>";
+    }
+}
 
 if(isset($_POST['Submit_Admin_Panel_Update_Preuniversity_Details'])){}
 

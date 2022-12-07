@@ -2554,37 +2554,45 @@ $user_data_admin_subjects_undergraduate = mysqli_fetch_all($run_query_admin_inde
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              <form>
+              <form method="POST" action="../includes/admin.php">
                 <div class="card-body">
                   <div class="form-group">
-                    <label for="exampleInputEmail1">Email address</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                    <label for="Admin_Panel_Add_Education_Details_Education_Category">Education Category</label>
+                    <input type="text" class="form-control" id="Admin_Panel_Add_Education_Details_Education_Category" name="Admin_Panel_Add_Education_Details_Education_Category" placeholder="Enter Education Category">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputPassword1">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    <label for="Admin_Panel_Add_Education_Details_Name_Of_Institute">Name of Institute</label>
+                    <input type="text" class="form-control" id="Admin_Panel_Add_Education_Details_Name_Of_Institute" name="Admin_Panel_Add_Education_Details_Name_Of_Institute" placeholder="Enter Name of Institute">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputFile">File input</label>
-                    <div class="input-group">
-                      <div class="custom-file">
-                        <input type="file" class="custom-file-input" id="exampleInputFile">
-                        <label class="custom-file-label" for="exampleInputFile">Choose file</label>
-                      </div>
-                      <div class="input-group-append">
-                        <span class="input-group-text">Upload</span>
-                      </div>
-                    </div>
+                    <label for="Admin_Panel_Add_Education_Details_City">City</label>
+                    <input type="text" class="form-control" id="Admin_Panel_Add_Education_Details_City" name="Admin_Panel_Add_Education_Details_City" placeholder="Enter City">
                   </div>
-                  <div class="form-check">
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                  <div class="form-group">
+                    <label for="Admin_Panel_Add_Education_Details_Program">Program</label>
+                    <input type="text" class="form-control" id="Admin_Panel_Add_Education_Details_Program" name="Admin_Panel_Add_Education_Details_Program" placeholder="Enter Program">
+                  </div>
+                  <div class="form-group">
+                    <label for="Admin_Panel_Add_Education_Details_Department">Department</label>
+                    <input type="text" class="form-control" id="Admin_Panel_Add_Education_Details_Department" name="Admin_Panel_Add_Education_Details_Department" placeholder="Enter Department">
+                  </div>
+                  <div class="form-group">
+                    <label for="Admin_Panel_Add_Education_Details_Start_Year">Start Year</label>
+                    <input type="number" class="form-control" id="Admin_Panel_Add_Education_Details_Start_Year" name="Admin_Panel_Add_Education_Details_Start_Year" placeholder="Enter Start Year">
+                  </div>
+                  <div class="form-group">
+                    <label for="Admin_Panel_Add_Education_Details_End_Year">End Year</label>
+                    <input type="number" class="form-control" id="Admin_Panel_Add_Education_Details_End_Year" name="Admin_Panel_Add_Education_Details_End_Year" placeholder="Enter End Year">
+                  </div>
+                  <div class="form-group">
+                    <label for="Admin_Panel_Add_Education_Details_Score">Score (mention CGPA/Percentage in format: "CGPA: XX.YY or Percentage: XX.YY%")</label>
+                    <input type="text" class="form-control" id="Admin_Panel_Add_Education_Details_Score" name="Admin_Panel_Add_Education_Details_Score" placeholder="Enter Score">
                   </div>
                 </div>
                 <!-- /.card-body -->
 
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary" name="Submit_Admin_Panel_Add_Education_Details">Submit</button>
+                  <button type="submit" class="btn btn-primary" id="Submit_Admin_Panel_Add_Education_Details" name="Submit_Admin_Panel_Add_Education_Details">Submit</button>
                 </div>
               </form>
             </div>
@@ -2598,37 +2606,45 @@ $user_data_admin_subjects_undergraduate = mysqli_fetch_all($run_query_admin_inde
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              <form>
+              <form method="POST" action="../includes/admin.php">
                 <div class="card-body">
                   <div class="form-group">
-                    <label for="exampleInputEmail1">Email address</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                    <label for="Admin_Panel_Update_Matriculation_Details_Education_Category">Education Category</label>
+                    <input type="text" class="form-control" value=<?php print($user_data_admin_education[1][7]);?> id="Admin_Panel_Update_Matriculation_Details_Education_Category" name="Admin_Panel_Update_Matriculation_Details_Education_Category" placeholder="Enter Education Category">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputPassword1">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    <label for="Admin_Panel_Update_Matriculation_Details_Name_Of_Institute">Name of Institute</label>
+                    <input type="text" class="form-control" value=<?php print($user_data_admin_education[1][0]);?> id="Admin_Panel_Update_Matriculation_Details_Name_Of_Institute" name="Admin_Panel_Update_Matriculation_Details_Name_Of_Institute" placeholder="Enter Name of Institute">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputFile">File input</label>
-                    <div class="input-group">
-                      <div class="custom-file">
-                        <input type="file" class="custom-file-input" id="exampleInputFile">
-                        <label class="custom-file-label" for="exampleInputFile">Choose file</label>
-                      </div>
-                      <div class="input-group-append">
-                        <span class="input-group-text">Upload</span>
-                      </div>
-                    </div>
+                    <label for="Admin_Panel_Update_Matriculation_Details_City">City</label>
+                    <input type="text" class="form-control" value=<?php print($user_data_admin_education[1][1]);?> id="Admin_Panel_Update_Matriculation_Details_City" name="Admin_Panel_Update_Matriculation_Details_City" placeholder="Enter City">
                   </div>
-                  <div class="form-check">
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                  <div class="form-group">
+                    <label for="Admin_Panel_Update_Matriculation_Details_Program">Program</label>
+                    <input type="text" class="form-control" value=<?php print($user_data_admin_education[1][2]);?> id="Admin_Panel_Update_Matriculation_Details_Program" name="Admin_Panel_Update_Matriculation_Details_Program" placeholder="Enter Program">
+                  </div>
+                  <div class="form-group">
+                    <label for="Admin_Panel_Update_Matriculation_Details_Department">Department</label>
+                    <input type="text" class="form-control" value=<?php print($user_data_admin_education[1][3]);?> id="Admin_Panel_Update_Matriculation_Details_Department" name="Admin_Panel_Update_Matriculation_Details_Department" placeholder="Enter Department">
+                  </div>
+                  <div class="form-group">
+                    <label for="Admin_Panel_Update_Matriculation_Details_Start_Year">Start Year</label>
+                    <input type="number" class="form-control" value=<?php print($user_data_admin_education[1][4]);?> id="Admin_Panel_Update_Matriculation_Details_Start_Year" name="Admin_Panel_Update_Matriculation_Details_Start_Year" placeholder="Enter Start Year">
+                  </div>
+                  <div class="form-group">
+                    <label for="Admin_Panel_Update_Matriculation_Details_End_Year">End Year</label>
+                    <input type="number" class="form-control" value=<?php print($user_data_admin_education[1][5]);?> id="Admin_Panel_Update_Matriculation_Details_End_Year" name="Admin_Panel_Update_Matriculation_Details_End_Year" placeholder="Enter End Year">
+                  </div>
+                  <div class="form-group">
+                    <label for="Admin_Panel_Update_Matriculation_Details_Score">Score (mention CGPA/Percentage in format: "CGPA: XX.YY or Percentage: XX.YY%")</label>
+                    <input type="text" class="form-control" value=<?php print($user_data_admin_education[1][6]);?> id="Submit_Admin_Panel_Update_Matriculation_Details_Score" name="Admin_Panel_Update_Matriculation_Details_Score" placeholder="Enter Score">
                   </div>
                 </div>
                 <!-- /.card-body -->
 
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary" name="Submit_Admin_Panel_Update_Matriculation_Details">Submit</button>
+                  <button type="submit" class="btn btn-primary" id="Submit_Admin_Panel_Update_Matriculation_Details" name="Submit_Admin_Panel_Update_Matriculation_Details">Submit</button>
                 </div>
               </form>
             </div>
@@ -2642,31 +2658,39 @@ $user_data_admin_subjects_undergraduate = mysqli_fetch_all($run_query_admin_inde
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              <form>
-                <div class="card-body">
+              <form method="POST" action="../includes/admin.php">
+              <div class="card-body">
                   <div class="form-group">
-                    <label for="exampleInputEmail1">Email address</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                    <label for="Admin_Panel_Update_Matriculation_Details_Education_Category">Education Category</label>
+                    <input type="text" class="form-control" value=<?php print($user_data_admin_education[2][7]);?> id="Admin_Panel_Update_Matriculation_Details_Education_Category" name="Admin_Panel_Update_Matriculation_Details_Education_Category" placeholder="Enter Education Category">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputPassword1">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    <label for="Admin_Panel_Update_Matriculation_Details_Name_Of_Institute">Name of Institute</label>
+                    <input type="text" class="form-control" value=<?php print($user_data_admin_education[2][0]);?> id="Admin_Panel_Update_Matriculation_Details_Name_Of_Institute" name="Admin_Panel_Update_Matriculation_Details_Name_Of_Institute" placeholder="Enter Name of Institute">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputFile">File input</label>
-                    <div class="input-group">
-                      <div class="custom-file">
-                        <input type="file" class="custom-file-input" id="exampleInputFile">
-                        <label class="custom-file-label" for="exampleInputFile">Choose file</label>
-                      </div>
-                      <div class="input-group-append">
-                        <span class="input-group-text">Upload</span>
-                      </div>
-                    </div>
+                    <label for="Admin_Panel_Update_Matriculation_Details_City">City</label>
+                    <input type="text" class="form-control" value=<?php print($user_data_admin_education[2][1]);?> id="Admin_Panel_Update_Matriculation_Details_City" name="Admin_Panel_Update_Matriculation_Details_City" placeholder="Enter City">
                   </div>
-                  <div class="form-check">
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                  <div class="form-group">
+                    <label for="Admin_Panel_Update_Matriculation_Details_Program">Program</label>
+                    <input type="text" class="form-control" value=<?php print($user_data_admin_education[2][2]);?> id="Admin_Panel_Update_Matriculation_Details_Program" name="Admin_Panel_Update_Matriculation_Details_Program" placeholder="Enter Program">
+                  </div>
+                  <div class="form-group">
+                    <label for="Admin_Panel_Update_Matriculation_Details_Department">Department</label>
+                    <input type="text" class="form-control" value=<?php print($user_data_admin_education[2][3]);?> id="Admin_Panel_Update_Matriculation_Details_Department" name="Admin_Panel_Update_Matriculation_Details_Department" placeholder="Enter Department">
+                  </div>
+                  <div class="form-group">
+                    <label for="Admin_Panel_Update_Matriculation_Details_Start_Year">Start Year</label>
+                    <input type="number" class="form-control" value=<?php print($user_data_admin_education[2][4]);?> id="Admin_Panel_Update_Matriculation_Details_Start_Year" name="Admin_Panel_Update_Matriculation_Details_Start_Year" placeholder="Enter Start Year">
+                  </div>
+                  <div class="form-group">
+                    <label for="Admin_Panel_Update_Matriculation_Details_End_Year">End Year</label>
+                    <input type="number" class="form-control" value=<?php print($user_data_admin_education[2][5]);?> id="Admin_Panel_Update_Matriculation_Details_End_Year" name="Admin_Panel_Update_Matriculation_Details_End_Year" placeholder="Enter End Year">
+                  </div>
+                  <div class="form-group">
+                    <label for="Admin_Panel_Update_Matriculation_Details_Score">Score (mention CGPA/Percentage in format: "CGPA: XX.YY or Percentage: XX.YY%")</label>
+                    <input type="text" class="form-control" value=<?php print($user_data_admin_education[2][6]);?> id="Submit_Admin_Panel_Update_Matriculation_Details_Score" name="Admin_Panel_Update_Matriculation_Details_Score" placeholder="Enter Score">
                   </div>
                 </div>
                 <!-- /.card-body -->
@@ -2686,31 +2710,39 @@ $user_data_admin_subjects_undergraduate = mysqli_fetch_all($run_query_admin_inde
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              <form>
-                <div class="card-body">
+              <form method="POST" action="../includes/admin.php">
+              <div class="card-body">
                   <div class="form-group">
-                    <label for="exampleInputEmail1">Email address</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                    <label for="Admin_Panel_Update_Matriculation_Details_Education_Category">Education Category</label>
+                    <input type="text" class="form-control" value=<?php print($user_data_admin_education[0][7]);?> id="Admin_Panel_Update_Matriculation_Details_Education_Category" name="Admin_Panel_Update_Matriculation_Details_Education_Category" placeholder="Enter Education Category">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputPassword1">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    <label for="Admin_Panel_Update_Matriculation_Details_Name_Of_Institute">Name of Institute</label>
+                    <input type="text" class="form-control" value=<?php print($user_data_admin_education[0][0]);?> id="Admin_Panel_Update_Matriculation_Details_Name_Of_Institute" name="Admin_Panel_Update_Matriculation_Details_Name_Of_Institute" placeholder="Enter Name of Institute">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputFile">File input</label>
-                    <div class="input-group">
-                      <div class="custom-file">
-                        <input type="file" class="custom-file-input" id="exampleInputFile">
-                        <label class="custom-file-label" for="exampleInputFile">Choose file</label>
-                      </div>
-                      <div class="input-group-append">
-                        <span class="input-group-text">Upload</span>
-                      </div>
-                    </div>
+                    <label for="Admin_Panel_Update_Matriculation_Details_City">City</label>
+                    <input type="text" class="form-control" value=<?php print($user_data_admin_education[0][1]);?> id="Admin_Panel_Update_Matriculation_Details_City" name="Admin_Panel_Update_Matriculation_Details_City" placeholder="Enter City">
                   </div>
-                  <div class="form-check">
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                  <div class="form-group">
+                    <label for="Admin_Panel_Update_Matriculation_Details_Program">Program</label>
+                    <input type="text" class="form-control" value=<?php print($user_data_admin_education[0][2]);?> id="Admin_Panel_Update_Matriculation_Details_Program" name="Admin_Panel_Update_Matriculation_Details_Program" placeholder="Enter Program">
+                  </div>
+                  <div class="form-group">
+                    <label for="Admin_Panel_Update_Matriculation_Details_Department">Department</label>
+                    <input type="text" class="form-control" value=<?php print($user_data_admin_education[0][3]);?> id="Admin_Panel_Update_Matriculation_Details_Department" name="Admin_Panel_Update_Matriculation_Details_Department" placeholder="Enter Department">
+                  </div>
+                  <div class="form-group">
+                    <label for="Admin_Panel_Update_Matriculation_Details_Start_Year">Start Year</label>
+                    <input type="number" class="form-control" value=<?php print($user_data_admin_education[0][4]);?> id="Admin_Panel_Update_Matriculation_Details_Start_Year" name="Admin_Panel_Update_Matriculation_Details_Start_Year" placeholder="Enter Start Year">
+                  </div>
+                  <div class="form-group">
+                    <label for="Admin_Panel_Update_Matriculation_Details_End_Year">End Year</label>
+                    <input type="number" class="form-control" value=<?php print($user_data_admin_education[0][5]);?> id="Admin_Panel_Update_Matriculation_Details_End_Year" name="Admin_Panel_Update_Matriculation_Details_End_Year" placeholder="Enter End Year">
+                  </div>
+                  <div class="form-group">
+                    <label for="Admin_Panel_Update_Matriculation_Details_Score">Score (mention CGPA/Percentage in format: "CGPA: XX.YY or Percentage: XX.YY%")</label>
+                    <input type="text" class="form-control" value=<?php print($user_data_admin_education[0][6]);?> id="Submit_Admin_Panel_Update_Matriculation_Details_Score" name="Admin_Panel_Update_Matriculation_Details_Score" placeholder="Enter Score">
                   </div>
                 </div>
                 <!-- /.card-body -->
