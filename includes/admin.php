@@ -250,9 +250,61 @@ if(isset($_POST['Submit_Admin_Panel_Update_Matriculation_Details'])){
     }
 }
 
-if(isset($_POST['Submit_Admin_Panel_Update_Preuniversity_Details'])){}
+if(isset($_POST['Submit_Admin_Panel_Update_Preuniversity_Details'])){
+    $Admin_Panel_Update_Preuniversity_Details_Education_Category = $_POST['Admin_Panel_Update_Preuniversity_Details_Education_Category'] ?? 0;
+    $Admin_Panel_Update_Preuniversity_Details_Name_Of_Institute = $_POST['Admin_Panel_Update_Preuniversity_Details_Name_Of_Institute'] ?? 0;
+    $Admin_Panel_Update_Preuniversity_Details_City = $_POST['Admin_Panel_Update_Preuniversity_Details_City'] ?? 0;
+    $Admin_Panel_Update_Preuniversity_Details_Program = $_POST['Admin_Panel_Update_Preuniversity_Details_Program'] ?? 0;
+    $Admin_Panel_Update_Preuniversity_Details_Department = $_POST['Admin_Panel_Update_Preuniversity_Details_Department'] ?? 0;
+    $Admin_Panel_Update_Preuniversity_Details_Start_Year = $_POST['Admin_Panel_Update_Preuniversity_Details_Start_Year'] ?? 0;
+    $Admin_Panel_Update_Preuniversity_Details_End_Year = $_POST['Admin_Panel_Update_Preuniversity_Details_End_Year'] ?? 0;
+    $Admin_Panel_Update_Preuniversity_Details_Score = $_POST['Admin_Panel_Update_Preuniversity_Details_Score'] ?? 0;
 
-if(isset($_POST['Submit_Admin_Panel_Update_Undergraduate_Details'])){}
+    $query_Admin_Panel_Update_Preuniversity_Details = "UPDATE $databaseName.education SET";
+    $query_Admin_Panel_Update_Preuniversity_Details.= "NameOfCollege='$Admin_Panel_Update_Preuniversity_Details_Name_Of_Institute', ";
+    $query_Admin_Panel_Update_Preuniversity_Details.= "City='$Admin_Panel_Update_Preuniversity_Details_City', ";
+    $query_Admin_Panel_Update_Preuniversity_Details.= "Program='$Admin_Panel_Update_Preuniversity_Details_Program', ";
+    $query_Admin_Panel_Update_Preuniversity_Details.= "Department='$Admin_Panel_Update_Preuniversity_Details_Department', ";
+    $query_Admin_Panel_Update_Preuniversity_Details.= "StartYear='$Admin_Panel_Update_Preuniversity_Details_Start_Year', ";
+    $query_Admin_Panel_Update_Preuniversity_Details.= "EndYear='$Admin_Panel_Update_Preuniversity_Details_End_Year', ";
+    $query_Admin_Panel_Update_Preuniversity_Details.= "Score='$Admin_Panel_Update_Preuniversity_Details_Score', ";
+    $query_Admin_Panel_Update_Preuniversity_Details.= "EducationCategory='$Admin_Panel_Update_Preuniversity_Details_Education_Category' ";
+    $query_Admin_Panel_Update_Preuniversity_Details.= "WHERE=EducationCategory='$Admin_Panel_Update_Preuniversity_Details_Education_Category'; ";
+
+    $run_query_Admin_Panel_Update_Preuniversity_Details = mysqli_query($connection, $query_Admin_Panel_Update_Preuniversity_Details);
+
+    if($run_query_Admin_Panel_Update_Preuniversity_Details){
+        echo "<script>window.location.href = '../admin/index.php';</script>";
+    }
+}
+
+if(isset($_POST['Submit_Admin_Panel_Update_Undergraduate_Details'])){
+    $Admin_Panel_Update_Undergraduate_Details_Education_Category = $_POST['Admin_Panel_Update_Undergraduate_Details_Education_Category'] ?? 0;
+    $Admin_Panel_Update_Undergraduate_Details_Name_Of_Institute = $_POST['Admin_Panel_Update_Undergraduate_Details_Name_Of_Institute'] ?? 0;
+    $Admin_Panel_Update_Undergraduate_Details_City = $_POST['Admin_Panel_Update_Undergraduate_Details_City'] ?? 0;
+    $Admin_Panel_Update_Undergraduate_Details_Program = $_POST['Admin_Panel_Update_Undergraduate_Details_Program'] ?? 0;
+    $Admin_Panel_Update_Undergraduate_Details_Department = $_POST['Admin_Panel_Update_Undergraduate_Details_Department'] ?? 0;
+    $Admin_Panel_Update_Undergraduate_Details_Start_Year = $_POST['Admin_Panel_Update_Undergraduate_Details_Start_Year'] ?? 0;
+    $Admin_Panel_Update_Undergraduate_Details_End_Year = $_POST['Admin_Panel_Update_Undergraduate_Details_End_Year'] ?? 0;
+    $Admin_Panel_Update_Undergraduate_Details_Score = $_POST['Admin_Panel_Update_Undergraduate_Details_Score'] ?? 0;
+
+    $query_Admin_Panel_Update_Undergraduate_Details = "UPDATE $databaseName.education SET";
+    $query_Admin_Panel_Update_Undergraduate_Details.= "NameOfCollege='$Admin_Panel_Update_Undergraduate_Details_Name_Of_Institute', ";
+    $query_Admin_Panel_Update_Undergraduate_Details.= "City='$Admin_Panel_Update_Undergraduate_Details_City', ";
+    $query_Admin_Panel_Update_Undergraduate_Details.= "Program='$Admin_Panel_Update_Undergraduate_Details_Program', ";
+    $query_Admin_Panel_Update_Undergraduate_Details.= "Department='$Admin_Panel_Update_Undergraduate_Details_Department', ";
+    $query_Admin_Panel_Update_Undergraduate_Details.= "StartYear='$Admin_Panel_Update_Undergraduate_Details_Start_Year', ";
+    $query_Admin_Panel_Update_Undergraduate_Details.= "EndYear='$Admin_Panel_Update_Undergraduate_Details_End_Year', ";
+    $query_Admin_Panel_Update_Undergraduate_Details.= "Score='$Admin_Panel_Update_Undergraduate_Details_Score', ";
+    $query_Admin_Panel_Update_Undergraduate_Details.= "EducationCategory='$Admin_Panel_Update_Undergraduate_Details_Education_Category' ";
+    $query_Admin_Panel_Update_Undergraduate_Details.= "WHERE EducationCategory='Unregistered'; ";
+
+    $run_query_Admin_Panel_Update_Undergraduate_Details = mysqli_query($connection, $query_Admin_Panel_Update_Undergraduate_Details);
+
+    if($run_query_Admin_Panel_Update_Undergraduate_Details){
+        echo "<script>window.location.href = '../admin/index.php';</script>";
+    }
+}
 
 if(isset($_POST['Submit_Admin_Panel_Add_Experience_Details'])){}
 
