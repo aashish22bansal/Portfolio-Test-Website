@@ -8,8 +8,16 @@
     // Assigning Database Attributes to variables
     $servername = "localhost"; //"127.0.0.1:3307";
     $username = "root"; //"id19547945_root";
-    $password = ""; //"AHgx=Wf0SXxCU5w~";
+    $password = "123Aashish456"; //"AHgx=Wf0SXxCU5w~";
     $databaseName = "id19547945_myportfolio"; //"id19547945_myportfolio";
+
+    /*
+    // CREDENTIALS IN DEPLOYMENT
+    $servername = "localhost"; //"127.0.0.1:3307";
+    $username = "id19547945_root";
+    $password = "AHgx=Wf0SXxCU5w~";
+    $databaseName = "id19547945_myportfolio"; //"id19547945_myportfolio";
+    */
 
     //starting a session
     session_start();
